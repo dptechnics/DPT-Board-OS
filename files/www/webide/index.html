@@ -1,0 +1,634 @@
+<!DOCTYPE HTML>
+<html id="htmldoc">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title data-bind="text: title">DPTechnics IDE</title>
+        <link rel="stylesheet" type="text/css" href="styles/editor.css">
+        <link rel="stylesheet" type="text/css" href="fonts/css/dpt-web-ide.css">
+        <link rel="stylesheet" type="text/css" href="styles/jquery.splitter.css">
+    </head>
+    <body>
+        <div id="editor-menu" class="menu-bar">
+            <ul>
+                <li class="menu">
+                    <span class="menu-title">File</span>
+                    <ul class="menu-body">
+                        <li class="menu-new-project"><a href="#new-project-dlg"><span class="menu-icon"><i class="icon-box"></i></span><span class="menu-item-title">New project</span><span class="menu-hotkey"></span></a></li>
+                        <li class="menu-new-file"><a href="#new-file-dlg"><span class="menu-icon"><i class="icon-doc-inv"></i></span><span class="menu-item-title">New file</span><span class="menu-hotkey">Ctrl + N</span></a></li>
+                        <li class="menu-separator"></li>
+                        <li class="menu-open-workspace"><a href="#open-workspace-dlg"><span class="menu-icon"><i class="icon-folder-open"></i></span><span class="menu-item-title">Open workspace</span><span class="menu-hotkey"></span></a></li>
+                        <li class="menu-save"><a href="#save-workspace-dlg"><span class="menu-icon"><i class="icon-floppy"></i></span><span class="menu-item-title">Save</span><span class="menu-hotkey"></span></a></li>
+                        <li class="menu-save-as"><span class="menu-icon"></span><span class="menu-item-title">Save as...</span><span class="menu-hotkey"></span></li>
+                        <li class="menu-save-all"><span class="menu-icon"></span><span class="menu-item-title">Save all</span><span class="menu-hotkey"></span></li>
+                        <li class="menu-separator"></li>
+                        <li class="menu-settings"><a href="#settings-dlg"><span class="menu-icon"><i class="icon-settings"></i></span><span class="menu-item-title">Setting</span><span class="menu-hotkey"></span></a></li>
+                        <li class="menu-separator"></li>
+                        <li class="menu-exit"><span class="menu-icon"></span><span class="menu-item-title">Exit</span><span class="menu-hotkey"></span></li>
+                    </ul>
+                </li>
+                <li class="menu">
+                    <span class="menu-title">Edit</span>
+                    <ul class="menu-body">
+                        <li class="btn-undo"><span class="menu-icon"><i class="icon-reply"></i></span><span class="menu-item-title">Undo</span><span class="menu-hotkey">Ctrl + Z</span></li>
+                        <li class="btn-redo"><span class="menu-icon"><i class="icon-forward"></i></span><span class="menu-item-title">Redo</span><span class="menu-hotkey">Ctrl + Y</span></li>
+                        <li class="menu-separator"></li>
+                        <li class="menu-cut"><span class="menu-icon"><i class="icon-scissors"></i> </span><span class="menu-item-title">Cut</span><span class="menu-hotkey">Ctrl + X</span></li>
+                        <li class="menu-copy"><span class="menu-icon"><i class="icon-docs"></i></span><span class="menu-item-title">Copy</span><span class="menu-hotkey">Ctrl + C</span></li>
+                        <li class="menu-paste"><span class="menu-icon"><i class="icon-paste"></i></span><span class="menu-item-title">Paste</span><span class="menu-hotkey">Ctrl + V</span></li>
+                        <li class="menu-select-all"><span class="menu-icon"></span><span class="menu-item-title">Select all</span><span class="menu-hotkey">Ctrl + A</span></li>
+                        <li class="menu-separator"></li>
+                        <li class="menu-search"><span class="menu-icon"></span><span class="menu-item-title">Search</span><span class="menu-hotkey">Ctrl + F</span></li>
+                        <li class="menu-replace"><span class="menu-icon"></span><span class="menu-item-title">Replace</span><span class="menu-hotkey">Ctrl + Shift + F</span></li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="menu-title">View</span>
+                    <ul class="menu-body">
+                        <li class="open-project-explorer"><span class="menu-icon"></span><span class="menu-item-title">Project Explorer</span><span class="menu-hotkey"></span></li>
+                        <li class="open-error-list"><span class="menu-icon"></span><span class="menu-item-title">Error List</span><span class="menu-hotkey"></span></li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="menu-title">Help</span>
+                    <ul class="menu-body">
+                        <li class="menu-tutorials"><span class="menu-icon"></span><span class="menu-item-title">Tutorials</span><span class="menu-hotkey"></span></li>
+                        <li class="menu-help-index"><span class="menu-icon"></span><span class="menu-item-title">Help index</span><span class="menu-hotkey"></span></li>
+                        <li class="menu-separator"></li>
+                        <li class="menu-check-updates"><span class="menu-icon"></span><span class="menu-item-title">Check updates</span><span class="menu-hotkey"></span></li>
+                        <li class="menu-about"><span class="menu-icon"></span><span class="menu-item-title">About</span><span class="menu-hotkey"></span></li>
+                    </ul>
+                </li>
+
+
+                <li class="menu-right">
+                    <span class="menu-title">Language</span>
+                    <ul class="menu-body">
+                        <li>EN</li>
+                        <li>NL</li>
+                    </ul>
+                </li>
+                <li class="menu-right">
+                    <span class="menu-title btn-fullscreen">Toggle fullscreen</span>
+                </li>
+            </ul>
+        </div>
+
+        <div id="editor-buttons" class="menu-bar">
+            <ul>
+                <li class="menu-btn btn-new-file"><i class="icon-doc-inv"></i></li>
+                <li class="menu-btn btn-new-project"><i class="icon-box"></i></li>
+                <li class="menu-btn btn-save-all"><i class="icon-floppy"></i></li>
+                <li class="menu-btn-separator">&nbsp;</li>
+                <li class="menu-btn btn-undo"><i class="icon-reply"></i></li>
+                <li class="menu-btn btn-redo"><i class="icon-forward"></i></li>
+                <li class="menu-btn-separator">&nbsp;</li>
+                <li class="menu-btn btn-play"><i class="icon-play"></i></li>
+                <li class="menu-btn btn-halt"><i class="icon-stop"></i></li>
+            </ul>
+        </div>
+
+        <div id="menu-field-separator"></div>
+
+        <div id="splitpane">
+            <div id="project-explorer" class="pane">
+                <div class="panel-title-bar">
+                    Project explorer
+                    <i class="icon-minus-squared panel-title-btn close-project-explorer"></i>
+                </div>
+                
+                
+                
+                <ol class="tree" >
+                    <li class="treenode">
+                        <label for="folder1">Folder 1</label> <input type="checkbox"  id="folder1" /> 
+                        <ol>
+                            <li class="file"><a href="">File 1</a></li>
+                            <li class="treenode">
+                                <label for="subfolder1">Subfolder 1</label> <input type="checkbox" id="subfolder1" /> 
+                                <ol>
+                                    <li class="file"><a href="">Filey 1</a></li>
+                                    <li class="treenode">
+                                        <label for="subsubfolder1">Subfolder 1</label> <input type="checkbox" id="subsubfolder1" /> 
+                                        <ol>
+                                            <li class="file"><a href="">File 1</a></li>
+                                            <li class="treenode">
+                                                <label for="subsubfolder2">Subfolder 1</label> <input type="checkbox" id="subsubfolder2" /> 
+                                                <ol>
+                                                    <li class="file">Subfile 1</a></li>
+                                                    <li class="file"><a href="">Subfile 2</a></li>
+                                                    <li class="file"><a href="">Subfile 3</a></li>
+                                                    <li class="file"><a href="">Subfile 4</a></li>
+                                                    <li class="file"><a href="">Subfile 5</a></li>
+                                                    <li class="file"><a href="">Subfile 6</a></li>
+                                                </ol>
+                                            </li>
+                                        </ol>
+                                    </li>
+                                    <li class="file"><a href="">File 3</a></li>
+                                    <li class="file"><a href="">File 4</a></li>
+                                    <li class="file"><a href="">File 5</a></li>
+                                    <li class="file"><a href="">File 6</a></li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>
+                    <li class="treenode">
+                        <label for="folder1">Folder 1</label> <input type="checkbox"  id="folder1" /> 
+                        <ol>
+                            <li class="file"><a href="">File 1</a></li>
+                            <li class="treenode">
+                                <label for="subfolder1">Subfolder 1</label> <input type="checkbox" id="subfolder1" /> 
+                                <ol>
+                                    <li class="file"><a href="">Filey 1</a></li>
+                                    <li class="treenode">
+                                        <label for="subsubfolder1">Subfolder 1</label> <input type="checkbox" id="subsubfolder1" /> 
+                                        <ol>
+                                            <li class="file"><a href="">File 1</a></li>
+                                            <li class="treenode">
+                                                <label for="subsubfolder2">Subfolder 1</label> <input type="checkbox" id="subsubfolder2" /> 
+                                                <ol>
+                                                    <li class="file"><a href="">Subfile 1</a></li>
+                                                    <li class="file"><a href="">Subfile 2</a></li>
+                                                    <li class="file"><a href="">Subfile 3</a></li>
+                                                    <li class="file"><a href="">Subfile 4</a></li>
+                                                    <li class="file"><a href="">Subfile 5</a></li>
+                                                    <li class="file"><a href="">Subfile 6</a></li>
+                                                </ol>
+                                            </li>
+                                        </ol>
+                                    </li>
+                                    <li class="file"><a href="">File 3</a></li>
+                                    <li class="file"><a href="">File 4</a></li>
+                                    <li class="file"><a href="">File 5</a></li>
+                                    <li class="file"><a href="">File 6</a></li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+            <div id="horizontal-splitpane">
+                <div id="tabbed-filepane">
+                    <div id="editor-tabs">
+                        <ul data-bind="foreach: opentabs">
+                            <li data-bind="css: { activetab: active }, click: tabswitch" ><span data-bind="text: filename"></span><i class="icon-cancel panel-title-btn"></i></li>
+                        </ul>
+                    </div>
+                    <div id="editor-develop-mode">
+                        <ul>
+                            <li class="menu-btn btn-text-mode"><i class="icon-text-mode"></i></li>
+                            <li class="menu-btn btn-design-mode"><i class="icon-design-mode"></i></li>
+                            <li class="menu-btn btn-splitview-mode active"><i class="icon-splitview-mode"></i></li>
+                        </ul>
+                    </div>
+                    <div id="develop-split-pane">
+                        <div id="language-editor"></div>
+                        <div id="blockly-editor">
+                            <xml id="toolbox" style="display: none">
+                                <category name="Controls">
+                                    <block type="controls_if"></block>
+                                    <block type="function_thread"></block>
+                                    <block type="function_wait"></block>
+                                    <block type="controls_settimeout"></block>
+                                    <block type="controls_whileUntil"></block>
+                                    <block type="controls_repeat"></block>
+                                    <block type="controls_repeat_ext">
+                                        <value name="TIMES">
+                                            <block type="math_number">
+                                                <field name="NUM">10</field>
+                                            </block>
+                                        </value>
+                                    </block>
+                                    <block type="controls_for">
+                                        <value name="FROM">
+                                            <block type="math_number">
+                                                <field name="NUM">1</field>
+                                            </block>
+                                        </value>
+                                        <value name="TO">
+                                            <block type="math_number">
+                                                <field name="NUM">10</field>
+                                            </block>
+                                        </value>
+                                        <value name="BY">
+                                            <block type="math_number">
+                                                <field name="NUM">1</field>
+                                            </block>
+                                        </value>
+                                    </block>
+                                    <block type="controls_forEach"></block>
+                                    <block type="controls_flow_statements"></block>
+                                </category>
+                                <category name="Logic">
+                                    <block type="logic_compare"></block>
+                                    <block type="logic_operation"></block>
+                                    <block type="logic_negate"></block>
+                                    <block type="logic_null"></block>
+                                    <block type="logic_boolean"></block>
+                                    <block type="logic_ternary"></block>
+                                </category>
+                                <category name="Math">
+                                    <block type="math_number">
+                                        <field name="NUM">10</field>
+                                    </block>                                    
+                                    <block type="math_arithmetic"></block>
+                                    <block type="math_single"></block>
+                                    <block type="math_constant"></block>
+                                    <block type="math_number_property"></block>
+                                    <block type="math_change">
+                                        <value name="DELTA">
+                                            <block type="math_number">
+                                                <field name="NUM">1</field>
+                                            </block>
+                                        </value>                                        
+                                    </block>
+                                    <block type="math_round"></block>
+                                    <block type="math_trig"></block>
+                                    <block type="math_on_list"></block>
+                                    <block type="math_modulo"></block>
+                                    <block type="math_constrain">
+                                        <value name="LOW">
+                                            <block type="math_number">
+                                                <field name="NUM">1</field>
+                                            </block>
+                                        </value>
+                                        <value name="HIGH">
+                                            <block type="math_number">
+                                                <field name="NUM">100</field>
+                                            </block>
+                                        </value>
+                                    </block>
+                                    <block type="math_random_int">
+                                        <value name="FROM">
+                                            <block type="math_number">
+                                                <field name="NUM">1</field>
+                                            </block>
+                                        </value>
+                                        <value name="TO">
+                                            <block type="math_number">
+                                                <field name="NUM">100</field>
+                                            </block>
+                                        </value>
+                                    </block>
+                                    <block type="math_random_float"></block>
+                                </category>
+                                <category name="Text">
+                                    <block type="text"></block>
+                                    <block type="text_join"></block>
+                                    <block type="text_append">
+                                        <value name="TEXT">
+                                            <block type="text"></block>
+                                        </value>
+                                    </block>
+                                    <block type="text_length"></block>
+                                    <block type="text_isEmpty"></block>
+                                    <block type="text_indexOf">
+                                        <value name="VALUE">
+                                            <block type="variables_get">
+                                                <field name="VAR">text</field>
+                                            </block>
+                                        </value>
+                                    </block>
+                                    <block type="text_charAt">
+                                        <value name="VALUE">
+                                            <block type="variables_get">
+                                                <field name="VAR">text</field>
+                                            </block>
+                                        </value>      
+                                    </block>
+                                    <block type="text_getSubstring">
+                                        <value name="STRING">
+                                            <block type="variables_get">
+                                                <field name="VAR">text</field>
+                                            </block>
+                                        </value>
+                                    </block>
+                                    <block type="text_changeCase"></block>
+                                    <block type="text_trim"></block>
+                                    <block type="text_prompt"></block>
+                                    <block type="text_prompt_ext">
+                                        <value name="TEXT">
+                                            <block type="text"></block>
+                                        </value>
+                                    </block>
+                                    <block type="text_print"></block>
+                                </category>
+                                <category name="Lists">
+                                    <block type="lists_create_empty"></block>
+                                    <block type="lists_create_with"></block>
+                                    <block type="lists_repeat">
+                                        <value name="NUM">
+                                            <block type="math_number">
+                                                <field name="NUM">5</field>
+                                            </block>
+                                        </value>
+                                    </block>
+                                    <block type="lists_length"></block>
+                                    <block type="lists_isEmpty"></block>
+                                    <block type="lists_indexOf">
+                                        <value name="VALUE">
+                                            <block type="variables_get">
+                                                <field name="VAR">list</field>
+                                            </block>
+                                        </value>
+                                    </block>
+                                    <block type="lists_getIndex">
+                                        <value name="VALUE">
+                                            <block type="variables_get">
+                                                <field name="VAR">list</field>
+                                            </block>
+                                        </value>
+                                    </block>
+                                    <block type="lists_setIndex">
+                                        <value name="LIST">
+                                            <block type="variables_get">
+                                                <field name="VAR">list</field>
+                                            </block>
+                                        </value>
+                                    </block>
+                                    <block type="lists_getSublist">
+                                        <value name="LIST">
+                                            <block type="variables_get">
+                                                <field name="VAR">list</field>
+                                            </block>
+                                        </value>
+                                    </block>
+                                    <block type="lists_split">
+                                        <value name="DELIM">
+                                            <block type="text">
+                                                <field name="TEXT">,</field>
+                                            </block>
+                                        </value>
+                                    </block>
+                                </category>
+                                <sep></sep>
+                                <category name="Variables" custom="VARIABLE"></category>
+                                <category name="Functions" custom="PROCEDURE"></category>
+                                <sep></sep>
+                                <category name="Robot-Controls">
+                                    <block type="robot_move">
+                                        <value name="MOVE">
+                                            <block type="math_number">
+                                                <field name="NUM">5</field>
+                                            </block>
+                                        </value>
+                                    </block>
+                                    <block type="robot_spin"></block>
+                                </category>
+                                <category name="DPT-Board-IO">
+                                    <block type="gpio_set_state">
+                                        <value name="PIN">
+                                            <block type="math_number">
+                                                <field name="NUM">6</field>
+                                            </block>
+                                        </value>
+                                    </block>
+                                    <block type="gpio_toggle_pin"></block>
+                                </category>
+                            </xml>                 
+                        </div>
+                    </div>                    
+                </div>
+                <div id="error-list" class="pane">
+                    <div class="panel-title-bar" id="bottompanel-bar">
+                        <div id="output-tabs">
+                            <ul>
+                                <li class="active btn-error-list">Code assistance</li>
+                                <li class="btn-console">Console</li>
+                            </ul>
+                        </div>
+
+                        <i class="icon-minus-squared panel-title-btn close-error-list"></i>
+                    </div>
+                    <div class="panel-body">
+                        <div class="error-list-pnl">
+                            <table id="error-list" class="scrolltable">
+                                <thead>
+                                    <tr>
+                                        <td class="err-icon"></td>
+                                        <td class="description">Description</td>
+                                        <td class="filename">File</td>
+                                        <td class="line-nr">Line</td>
+                                        <td class="col-nr">Column</td>
+                                    </tr>
+                                </thead>
+                                <tbody data-bind="foreach: codeAnnotations">
+                                    <tr>
+                                        <td class="err-icon"><i data-bind="css: type"></i></td>
+                                        <td class="description" data-bind="text: text"></td>
+                                        <td class="filename">my_robot.js</td>
+                                        <td class="line-nr" data-bind="text: row"></td>
+                                        <td class="col-nr" data-bind="text: column"></td>
+                                    </tr>
+                                </tbody> 
+                            </table>
+                        </div>
+                        <div id="console-pnl" class="console-pnl hidden">
+                            <pre id="console-pnl-out">
+                                
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="statusbar">
+            <span>Ready to run</span>
+            <ul class="statusbar-right">
+                <li>DPTechnics</li>
+                <li class="statusbar-separator">&nbsp;</li>
+                <li>INS</li>
+            </ul>
+        </div>        
+
+        <!-- **************************************************** Dialog Section *********************************************************************** -->
+        
+        <!-- New project dialog -->
+        <div id="new-project-dlg" class="modalDialog">
+            <div>
+                <div class="topstrip">
+                    <p>Create new project</p>
+                    <a href="#close" title="Close" class="close">X</a>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Choose the type of project you want to create:
+                    </p>
+                    <form>
+                        <div class="modal-option-entry">
+                            <h4><input type="radio" name="projecttype" value="robot" checked />DPT-Robot project</h4>
+                            <p>
+                                Write programs to control the DPT-Robot. You have Blockly and Javascript, can ask 
+                                user input, ... but there is no HTML/CSS involved. 
+                            </p>
+                        </div>
+                        <div class="modal-option-entry">
+                            <h4><input type="radio" name="projecttype" value="iot" />DPT-Board IoT project</h4>
+                            <p>
+                                Quickly make a user interface with template buttons and controls. Use Javascript and HTML
+                                to make modern IoT apps fast. 
+                            </p>
+                        </div>
+                        <div class="modal-option-entry">
+                            <h4><input type="radio" name="projecttype" value="website" />HTML5 application</h4>
+                            <p>
+                                Create an HTML5 website and run it directly from the board or an external server
+                                of your own. 
+                            </p>
+                        </div>
+                    </form>                  
+                </div>
+                <div class="modal-buttons">
+                    <button>Ok</button>
+                    <a href="#close"><button>Cancel</button></a>
+                </div>
+            </div>
+        </div>
+        <!-- End dialog -->
+        
+        <!-- New file dialog -->
+        <div id="new-file-dlg" class="modalDialog">
+            <div>
+                <div class="topstrip">
+                    <p>Create project</p>
+                    <a href="#close" title="Close" class="close">X</a>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        Filetype: 
+                        <select name="filetype">
+                            <option value="javascript" selected>Javascript</option>
+                            <option value="html">HTML</option>
+                            <option value="css">CSS</option>
+                        </select>
+                        <p>
+                            Filename: <input type="text" name="filename" />
+                        </p>
+                    </form>                  
+                </div>
+                <div class="modal-buttons">
+                    <button id="new-file-dlg-create-btn">Create</button>
+                    <a href="#close"><button>Cancel</button></a>
+                </div>
+            </div>
+        </div>
+        <!-- End dialog -->
+        
+        <!-- Save workspace project dialog -->
+        <div id="save-workspace-dlg" class="modalDialog">
+            <div>
+                <div class="topstrip">
+                    <p>Save your workspace</p>
+                    <a href="#close" title="Close" class="close">X</a>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        How do you wan't to save your workspace:
+                    </p>
+                    <form>
+                        <div class="modal-option-entry">
+                            <h4><input type="radio" name="storagetype" value="localstorage" checked />Localstorage</h4>
+                            <p>
+                                Save your workspace to your browser. Very convenient if you always use your own 
+                                computer to work in the DPTechnics WEB IDE.
+                            </p>
+                        </div>
+                        <div class="modal-option-entry">
+                            <h4><input type="radio" name="storagetype" value="download" />Download</h4>
+                            <p>
+                                Download the application to your local computer so you can open it later from
+                                any device and/or DPT-Board.
+                            </p>
+                        </div>
+                        <div class="modal-option-entry">
+                            <h4><input type="radio" name="storagetype" value="onboard" disabled/>On the DPT-Board</h4>
+                            <p>
+                                This option is coming in a next release of the DPTechnics WEB IDE. 
+                            </p>
+                        </div>
+                    </form>                  
+                </div>
+                <div class="modal-buttons">
+                    <button>Save workspace</button>
+                    <a href="#close"><button>Cancel</button></a>
+                </div>
+            </div>
+        </div>
+        <!-- End dialog -->
+        
+        <!-- Open workspace project dialog -->
+        <div id="open-workspace-dlg" class="modalDialog">
+            <div>
+                <div class="topstrip">
+                    <p>Open a workspace</p>
+                    <a href="#close" title="Close" class="close">X</a>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Click the 'Open workspace' button if you want to open a workspace
+                        previously saved in local storage.
+                    </p>
+                    <p>
+                        Select a file if you want to import a workspace from your 
+                        computer: <input type="file" name="input-file" id="open-workspace-file-select" />
+                    </p>
+                </div>
+                <div class="modal-buttons">
+                    <button>Open workspace</button>
+                    <a href="#close"><button>Cancel</button></a>
+                </div>
+            </div>
+        </div>
+        <!-- End dialog -->
+        
+        <!-- Settings dialog -->
+        <div id="settings-dlg" class="modalDialog">
+            <div>
+                <div class="topstrip">
+                    <p>Settings</p>
+                    <a href="#close" title="Close" class="close">X</a>
+                </div>
+                <div class="modal-body">
+                    <h2 class="modal-title">Editor</h2>
+                    <p>Text-size: </p>
+                    <select class="changeFontSize">
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="14" selected>14</option>
+                        <option value="16">16</option>
+                        <option value="18">18</option>
+                        <option value="20">20</option>
+                        <option value="22">22</option>
+                        <option value="24">24</option>
+                        <option value="26">26</option>
+                        <option value="28">28</option>
+                        <option value="36">36</option>
+                        <option value="48">48</option>
+                        <option value="72">72</option>
+                    </select>
+                    <p> Pts</p>
+                </div>
+            </div>
+        </div>
+        <!-- End dialog -->
+
+        <script src="scripts/sprintf.min.js"></script>
+        <script src="scripts/i18n.js"></script>
+        <script src="scripts/jquery-1.11.0.min.js"></script>
+        <script src="scripts/knockout-3.1.0.js"></script>
+        <script src="scripts/src-min-noconflict/ace.js" charset="utf-8"></script>
+        <script src="scripts/src-min-noconflict/ext-language_tools.js"></script>
+        <script src="scripts/jquery.splitter-0.14.0.js"></script>              
+        <script src="scripts/blockly_compressed.js"></script>
+        <script src="scripts/blocks_compressed.js"></script>        
+        <script src="scripts/msg/js/en.js"></script>
+        <script src="scripts/javascript_compressed.js"></script>
+        <script src="scripts/custom_blocks.js"></script>
+        <script src="scripts/viewmodel.js"></script>
+    </body>
+</html>

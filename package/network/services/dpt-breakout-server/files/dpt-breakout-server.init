@@ -1,0 +1,10 @@
+#!/bin/sh /etc/rc.common
+# Copyright (C) 2015 Daan Pape
+
+START=50
+STOP=20
+
+start() {
+	echo "Starting DPTechnics dpt-breakout-server"
+	/usr/sbin/dpt-breakout-server
+}

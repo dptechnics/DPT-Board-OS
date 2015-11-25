@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html id="htmldoc">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-bind="text: title">Breakout board</title>
+<link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="styles/bootstrap-switch.min.css">
+<link rel="stylesheet" type="text/css" href="styles/global.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+<style>
+	.btn-desc {
+		display: inline-block;
+		width: 130px;
+	}
+	
+	.btn-dpt {
+		padding-top: 4px;
+		padding-bottom:4px;
+		margin-left: 10px;
+	}
+	
+	.dpt-btn-row {
+		padding-bottom: 10px;
+		padding-top: 10px;
+		border-bottom: 1px solid #EEE;
+		border-top: 1px solid #EEE;
+	}
+</style>
+
+</head>
+<body>
+
+<div id="extern-menu"></div>
+
+<div class="container maincontainer">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">Robot control</h3>
+		</div>
+		<div class="panel-body centertext">
+			<button type="button" class="btn btn-default btn-lg dpt-arrow-btn" id="btn-forward"><span class="glyphicon glyphicon-arrow-up"></span></button><br/>
+			<button type="button" class="btn btn-default btn-lg dpt-arrow-btn" id="btn-left"><span class="glyphicon glyphicon-arrow-left"></span></button>
+			<button type="button" class="btn btn-default btn-lg dpt-arrow-btn" id="btn-backward"><span class="glyphicon glyphicon-arrow-down"></span></button>
+			<button type="button" class="btn btn-default btn-lg dpt-arrow-btn" id="btn-right"><span class="glyphicon glyphicon-arrow-right"></span></button>
+		</div>
+	</div>
+	
+</div>
+
+<script src="scripts/sprintf.min.js"></script>
+<script src="scripts/i18n.js"></script>
+<script src="scripts/jquery-1.11.0.min.js"></script>
+<script src="scripts/knockout-3.1.0.js"></script>
+<script src="scripts/bootstrap.min.js"></script>
+<script src="scripts/bootstrap-switch.min.js"></script>
+<script src="scripts/bootstrap-switch-knockout.js"></script>
+<script src="scripts/dpt-board.js"></script>
+<script src="scripts/global.js"></script>
+<script src="scripts/dpt-robot.js"></script>
+<script src="scripts/robotControlViewModel.js"></script>
+<script>
+    DPT_AJAX_PREFIX = "/";
+</script>
+</body>
+</html>

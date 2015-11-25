@@ -1,0 +1,26 @@
+# DPT-Module Wireless configuration
+# (C) 2015 Daan Pape, DPTechnics
+
+config wifi-device radio0
+	option type		mac80211
+	option channel		auto
+	option path		'platform/ar933x_wmac'
+	option htmode		ht20
+	option disabled 	0
+
+config wifi-iface cfg
+	option device		radio0
+	option network		cfgnet
+	option mode		ap
+	option ssid		'DPT-Module'
+	option encryption	none
+	option disabled 	0
+
+config wifi-iface client
+	option device		radio0
+	option network		wlanwan
+	option mode		sta
+	option ssid		''
+	option encryption	'psk2'
+	option key		''
+	option disabled		1

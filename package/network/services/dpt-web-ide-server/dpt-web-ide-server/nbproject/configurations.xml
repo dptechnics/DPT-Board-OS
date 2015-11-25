@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="95">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="/home/dpape/buildserverhome/dpt-board-os/package/network/services/dpt-web-ide-server/src"
+        name="1">
+      <in>config.c</in>
+      <in>config.h</in>
+      <in>http.c</in>
+      <in>http.h</in>
+      <in>ide-interactive.c</in>
+      <in>ide-interactive.h</in>
+      <in>ide-run.c</in>
+      <in>ide-run.h</in>
+      <in>logger.c</in>
+      <in>logger.h</in>
+      <in>main.c</in>
+      <in>main.h</in>
+      <in>mimetypes.h</in>
+      <in>process.c</in>
+      <in>process.h</in>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>/home/dpape/buildserverhome/breakoutopenwrt/package/network/services/dpt-webid-server/src/CMakeLists.txt</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>../src</Elem>
+  </sourceRootList>
+  <projectmakefile>/home/dpape/buildserverhome/breakoutopenwrt/package/network/services/dpt-webid-server/src/CMakeLists.txt</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>/home/dpape/buildserverhome/breakoutopenwrt/package/network/services/dpt-webid-server/src</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f CMakeLists.txt</buildCommand>
+          <cleanCommand>${MAKE} -f CMakeLists.txt clean</cleanCommand>
+          <executablePath></executablePath>
+          <cTool>
+            <incDir>
+              <pElem>/home/dpape/lib</pElem>
+            </incDir>
+          </cTool>
+        </makeTool>
+      </makefileType>
+      <item path="/home/dpape/buildserverhome/dpt-board-os/package/network/services/dpt-web-ide-server/src/config.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="/home/dpape/buildserverhome/dpt-board-os/package/network/services/dpt-web-ide-server/src/config.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/dpape/buildserverhome/dpt-board-os/package/network/services/dpt-web-ide-server/src/http.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="/home/dpape/buildserverhome/dpt-board-os/package/network/services/dpt-web-ide-server/src/http.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/dpape/buildserverhome/dpt-board-os/package/network/services/dpt-web-ide-server/src/ide-interactive.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="/home/dpape/buildserverhome/dpt-board-os/package/network/services/dpt-web-ide-server/src/ide-interactive.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/dpape/buildserverhome/dpt-board-os/package/network/services/dpt-web-ide-server/src/ide-run.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="/home/dpape/buildserverhome/dpt-board-os/package/network/services/dpt-web-ide-server/src/ide-run.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/dpape/buildserverhome/dpt-board-os/package/network/services/dpt-web-ide-server/src/logger.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="/home/dpape/buildserverhome/dpt-board-os/package/network/services/dpt-web-ide-server/src/logger.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/dpape/buildserverhome/dpt-board-os/package/network/services/dpt-web-ide-server/src/main.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="/home/dpape/buildserverhome/dpt-board-os/package/network/services/dpt-web-ide-server/src/main.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/dpape/buildserverhome/dpt-board-os/package/network/services/dpt-web-ide-server/src/mimetypes.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/dpape/buildserverhome/dpt-board-os/package/network/services/dpt-web-ide-server/src/process.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="/home/dpape/buildserverhome/dpt-board-os/package/network/services/dpt-web-ide-server/src/process.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

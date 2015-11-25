@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<html id="htmldoc">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title data-bind="text: title">Breakout board</title>
+        <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="styles/global.css">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        
+        <style>
+            .correct-margin {
+                margin-top: -5px;
+            }
+            
+            .inline {
+                display: inline;
+            }
+            
+            .ul-no-padding {
+                padding-left: 0px;
+            }
+            
+            .fullwidth {
+                width: 100%;
+            }
+            
+            .loader-icon {
+                height: 22px;
+                padding-right: 10px;
+                padding-left: 10px;
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="extern-menu"></div>
+
+        <div class="container maincontainer">
+            <!-- Status overview -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title inline" data-bind="text: firmwareStatusTitle">Firmware status</h3>
+                    <button type="button" class="btn btn-primary btn-sm pull-right correct-margin" data-bind="text: firmwareCheckBtn" id="checkFirmwareBtn">Check for updates</button>
+                    <img src="images/loader.gif" alt="loader" class="pull-right loader-icon" id="firmware-check-loader"/>
+                </div>
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <colgroup>
+                                <col class="col-xs-1">
+                                <col class="col-xs-7">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td class="bold" data-bind="text: firmwareStatus">Status</td>
+                                    <td ><span class="label" data-bind="text: firmwareStatusLabel, css: firmwareStatusStyle"></span></td>
+                                </tr>
+                                <tr>
+                                    <td class="bold" data-bind="text: firmwareRelease">Release date</td>
+                                    <td data-bind="text: releasedate"></td>
+                                </tr>
+                                <tr>
+                                    <td class="bold" data-bind="text: firmwareVersion">Version</td>
+                                    <td data-bind="text: version"></td>
+                                </tr>
+                                <tr>
+                                    <td class="bold" data-bind="text: firmwareChangelog">Changelog</td>
+                                    <td ><ul class="ul-no-padding" data-bind="foreach: changelog"><li data-bind="text: change"></li></ul></td>
+                                </tr>
+                                <tr>
+                                    <td class="bold" data-bind="text: firmwareDownloaded">Downloaded</td>
+                                    <td><span class="label" data-bind="text: firmwareDownloadLabel, css: firmwareDownloadStyle"></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Firmware actions -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title inline" data-bind="text: firmwareActionsTitle">Firmware actions</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <colgroup>
+                                <col class="col-xs-1">
+                                <col class="col-xs-7">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td ><button class="btn btn-success btn-sm correct-margin fullwidth" data-bind="text: firmwareDownloadBtn" id="firmware-download-btn">Download</button></td>
+                                    <td>
+                                        <img src="images/loader.gif" alt="loader" class="loader-icon" id="firmware-download-loader"/>
+                                        <span data-bind="text: firmwareDownloadInfo">Download latest firmware</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="centertext"><input type="checkbox" id="firmware-keep-settings-chk" checked="checked"/></td>
+                                    <td data-bind="text: firmwareKeepSettings">Keep settings on firmware install. You must keep settings if your device is connected to the BlueCherry platform! Otherways the BlueCherry connection will no longer work. Non-default apps will be removed on upgrade</td>
+                                </tr>
+                                <tr>
+                                    <td ><button class="btn btn-danger btn-sm correct-margin fullwidth" data-bind="text: firmwareInstallBtn" id="firmware-install-btn">Install</button></td>
+                                    <td data-bind="text: firmwareInstallInfo">Download latest firmware</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="scripts/sprintf.min.js"></script>
+        <script src="scripts/i18n.js"></script>
+        <script src="scripts/jquery-1.11.0.min.js"></script>
+        <script src="scripts/knockout-3.1.0.js"></script>
+        <script src="scripts/bootstrap.min.js"></script>
+        <script src="scripts/dpt-board.js"></script>
+        <script src="scripts/global.js"></script>
+        <script src="scripts/dpt-modal.js"></script>
+        <script src="scripts/firmwareSettingsControlViewModel.js"></script>
+    </body>
+</html>

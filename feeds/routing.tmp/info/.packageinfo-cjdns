@@ -1,0 +1,21 @@
+Source-Makefile: feeds/routing/cjdns/Makefile
+Package: cjdns
+Submenu: Routing and Redirection
+Version: 0.16-16
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +kmod-tun +kmod-ipv6 +libnl-tiny +libpthread +librt +libuci-lua +lua-bencode +dkjson +luasocket +lua-sha2
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Encrypted near-zero-conf mesh routing protocol
+Maintainer: Lars Gierth <larsg@systemli.org>
+Source: cjdns-b2484c8c1a695a103db9e75b7b4445252ff053d6.tar.bz2
+License: GPL-3.0
+Type: ipkg
+Description: 	Cjdns implements an encrypted IPv6 network using public-key cryptography for address allocation and a distributed hash table for routing. This provides near-zero-configuration networking, and prevents many of the security and scalability issues that plague existing networks.
+https://github.com/hyperboria/cjdns
+Lars Gierth <larsg@systemli.org>
+@@
+
+

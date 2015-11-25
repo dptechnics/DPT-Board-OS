@@ -1,0 +1,54 @@
+# DPT-Module network configuration
+# (C) 2015 Daan Pape, DPTechnics
+
+config interface 'loopback'
+        option ifname 'lo'
+        option proto 'static'
+        option ipaddr '127.0.0.1'
+        option netmask '255.0.0.0'
+
+config globals 'globals'
+        option ula_prefix 'fdf5:30e2:a3c0::/48'
+
+config interface 'lan'
+        option ifname 'eth0'
+        option force_link '1'
+        option type 'bridge'
+        option proto 'static'
+        option ipaddr '192.168.60.1'
+        option netmask '255.255.255.0'
+        option ip6assign '60'
+
+config interface 'cfgnet'
+        option proto    static
+        option ipaddr   192.168.1.1
+        option netmask  255.255.255.0
+	option hostname 'DPT-Module'
+
+config interface 'wlanwan'
+	option proto 'dhcp'
+	option hostname 'DPT-Module'
+
+config interface 'wlanwan6'
+	option proto 'dhcpv6'
+	option hostname 'DPT-Module'
+
+config interface 'wan'
+        option ifname 'eth1'
+        option proto 'dhcp'
+	option hostname 'DPT-Module'
+
+config interface 'wan6'
+        option ifname '@wan'
+        option proto 'dhcpv6'
+	option hostname 'DPT-Module'
+
+config switch
+        option name 'switch0'
+        option reset '1'
+        option enable_vlan '1'
+
+config switch_vlan
+        option device 'switch0'
+        option vlan '1'
+        option ports '0 1 2 3 4'

@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html id="htmldoc">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-bind="text: title">Breakout board</title>
+<link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="styles/global.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+
+<div id="extern-menu"></div>
+
+<div class="container maincontainer">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title" data-bind="text: systemTitle">System</h3>
+		</div>
+		<div class="panel-body">
+			<div class="table-responsive">
+				<table class="table">
+					<colgroup>
+						<col class="col-xs-1">
+						<col class="col-xs-7">
+					</colgroup>
+					<tbody>
+						<tr>
+							<td class="bold" data-bind="text: overviewSysName">System name</td>
+							<td data-bind="text: dataSysName"></td>
+						</tr>
+						<tr>
+							<td class="bold" data-bind="text: overviewBoardModel">Board model</td>
+							<td data-bind="text: dataModelName"></td>
+						</tr>
+						<tr>
+							<td class="bold" data-bind="text: overviewBoardStatus">Status</td>
+							<td><span class="label label-success">Ok</span></td>
+						</tr>
+						<tr>
+							<td class="bold" data-bind="text: systemLoadStatus">System load</td>
+							<td data-bind="text: dataSystemLoad"></td>
+						</tr>
+						<tr>
+							<td class="bold" data-bind="text: ramUsageStatus">RAM usage</td>
+							<td>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" data-bind="style: {width: $root.style_ramWidth() + '%'}" >
+									<span data-bind="text: ramMessage">
+									0/0 Mb
+									</span>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title" data-bind="text: neworkTitle">Network</h3>
+		</div>
+		<div class="panel-body">
+			<div class="table-responsive">
+				<table class="table">
+					<colgroup>
+						<col class="col-xs-1">
+						<col class="col-xs-7">
+					</colgroup>
+					<tbody>
+						<tr>
+							<td class="bold" data-bind="text: networkPort1">Port 1 (LAN)</td>
+							<td><span class="label" data-bind="css: styleConnStateOne, text: textConnStateOne">no info</span></td>
+						</tr>
+						<tr>
+							<td class="bold" data-bind="text: networkPort2">Port 2 (WAN)</td>
+							<td><span class="label" data-bind="css: styleConnStateTwo, text: textConnStateTwo">no info</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title" data-bind="text: storageTitle">Storage</h3>
+		</div>
+		<div class="panel-body">
+		<div class="table-responsive">
+				<table class="table">
+					<colgroup>
+						<col class="col-xs-1">
+						<col class="col-xs-7">
+					</colgroup>
+					<tbody>
+						<tr>
+							<td class="bold" data-bind="text: storageState">Storage</td>
+							<td><span class="label" data-bind="text: textUSBStor, css: styleUSBStor"></span></td>
+						</tr>
+						<tr>
+							<td class="bold" data-bind="text: storageSpace">Space</td>
+							<td>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" data-bind="style: {width: $root.style_storageWidth() + '%'}" >
+									<span data-bind="text: storageMessage">
+									0/0 Mb
+									</span>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="scripts/sprintf.min.js"></script>
+<script src="scripts/i18n.js"></script>
+<script src="scripts/jquery-1.11.0.min.js"></script>
+<script src="scripts/knockout-3.1.0.js"></script>
+<script src="scripts/bootstrap.min.js"></script>
+<script src="scripts/dpt-board.js"></script>
+<script src="scripts/global.js"></script>
+<script src="scripts/indexViewModel.js"></script>
+</body>
+</html>

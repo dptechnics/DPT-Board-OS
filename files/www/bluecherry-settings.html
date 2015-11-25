@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html id="htmldoc">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title data-bind="text: title">DPTechnics - BlueCherry settings</title>
+        <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="styles/global.css">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        
+        <style>
+            .dpt-row:hover {
+                border: 1px solid #9ecaed !important;
+                box-shadow:0 0 10px #9ecaed  !important;
+                cursor: pointer;
+            }
+            
+            .smallholder {
+                max-width: 500px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 30px;
+            }
+            
+            #loadergif {
+                width: calc(100% + 26px);
+                margin-left: -13px;
+                height: 20px;
+                margin-top: -17px;
+                display: none;
+            }
+            
+            .info-icon {
+                width: 120px;
+            }
+            
+            .messageholder {
+                text-align: center;
+                display: none;
+            }
+            
+            #login_error {
+                color: #c9302c;
+            }
+            
+            .nodisplay {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="extern-menu"></div>
+
+        <div class="container maincontainer">
+            <!-- Status overview -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title" data-bind="text: blueCherrySettingsTitle">BlueCherry settings</h3>
+                </div>
+                
+                <div class="panel-body nodisplay" id="bluecherry_status_connected">
+                    <div class="smallholder centertext">
+                        <img src="images/success.png" alt="success" class="info-icon"/>
+                        <p>
+                            <span data-bind="text: blueCherryConnected">
+                            The device is connected to the BlueCherry platform and can be accessed from all over the world
+                            via your account. 
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="panel-body nodisplay" id="bluecherry_status_no_inet">
+                    <div class="smallholder centertext">
+                        <img src="images/warning.png" alt="success" class="info-icon"/>
+                        <p>
+                            <span data-bind="text: blueCherryNoInternet">
+                                The device is correctly configured but could not detect an active internet connection. Please
+                                check the connection. 
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="panel-body nodisplay" id="bluecherry_connect">
+                    <div data-bind="html: blueCherryConnectInfo">
+                        <p>
+                        You are about to connect your DPT-Board to the BlueCherry platform. Before you can do this
+                        you must have a BlueCherry account with credits for a board. Please press the "BlueCherry"
+                        button in the top menu if you don't have an account yet. 
+                        </p>
+                        <p>
+                        Connecting is very easy. Make sure your board has internet connection, the easiest way is 
+                        to connect a cable between your modem/router to the WAN port of the DPT-Board. Than enter
+                        your BlueCherry account credentials and that's it. Please note it may take up to 1 minute
+                        before the connection is ready. 
+                        </p>
+                        <p>
+                        If your device is connected to BlueCherry already, please do not press connect again. 
+                        </p>
+                    </div>
+                    
+                    <div id="logformholder" class="smallholder">
+                        <div id="successholder" class="messageholder">
+                            <img src="images/success.png" alt="success" id="successicon"/>
+                            <p data-bind="html: blueCherrySuccess">
+                                Your device is now connecting to the BlueCherry
+                                platform, please wait some seconds. Surf to <a href="https://platform.bluecherry.io" target="_blank">platform.bluecherry.io</a> and 
+                                from any internet connected device and you should be able to see your board. If you can't access your board immediately
+                                please reload the BlueCherry platform homepage. 
+                            </p>
+                        </div>
+                        
+                    <form id="loginform">
+                        <div class="form-group">
+                            <label for="email" ><span data-bind="text:blueCherryYourEmailAddress">Your email address</span>:</label>
+                            <input type="text" class="form-control input-lg" data-bind="attr: {placeholder: blueCherryEmailPlaceholder}" placeholder="Type your email address here" name="username" id="username">
+                        </div>
+                        <div class="form-group">
+                            <label for="password"><span data-bind="text: blueCherryYourPassword">Your BlueCherry password</span>:</label>
+                            <input type="password" class="form-control input-lg" data-bind="attr: {placeholder: blueCherryPasswordPlaceholder}" placeholder="Type in your BlueCherry password here"  name="password" id="password">
+                        </div>
+                        <div id="login_error">
+                        </div>
+                    </form>
+                    <div id="connectbtns">
+                        <img src="images/ajax-loader.gif" alt="ajaxloader" id="loadergif"/>
+                            <div class="form-group" id="btns">
+                            <button class="btn btn-primary btn-lg btn-block" id="loginbtn" data-bind="text: blueCherryConnectBtn">Connect device</button>
+                            <span><a href="https://platform.bluecherry.io/restore-password" data-bind="text: blueCherryForgotPassBtn">Forgot password?</a></span>
+                            <span class="pull-right"><a href="https://platform.bluecherry.io/register" data-bind="text: blueCherryNoAccountBtn">No BlueCherry account?</a></span>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="scripts/sprintf.min.js"></script>
+        <script src="scripts/i18n.js"></script>
+        <script src="scripts/jquery-1.11.0.min.js"></script>
+        <script src="scripts/knockout-3.1.0.js"></script>
+        <script src="scripts/bootstrap.min.js"></script>
+        <script src="scripts/dpt-board.js"></script>
+        <script src="scripts/global.js"></script>
+        <script src="scripts/dpt-modal.js"></script>
+        <script src="scripts/bluecherrySettingsControlViewModel.js"></script>
+    </body>
+</html>

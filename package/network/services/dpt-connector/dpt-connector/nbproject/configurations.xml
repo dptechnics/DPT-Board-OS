@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="95">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="/home/dpape/buildserverhome/dpt-board-os/package/network/services/dpt-connector/src"
+        name="0">
+      <in>config.c</in>
+      <in>dptnetwork.c</in>
+      <in>logger.c</in>
+      <in>main.c</in>
+      <in>ssh.c</in>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>/home/dpape/buildserverhome/dpt-board-os/package/network/services/dpt-connector/src/CMakeLists.txt</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>/home/dpape/buildserverhome/dpt-board-os/package/network/services/dpt-connector/src</Elem>
+  </sourceRootList>
+  <projectmakefile>/home/dpape/buildserverhome/dpt-board-os/package/network/services/dpt-connector/src/CMakeLists.txt</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>/home/dpape/buildserverhome/dpt-board-os/package/network/services/dpt-connector/src</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f CMakeLists.txt</buildCommand>
+          <cleanCommand>${MAKE} -f CMakeLists.txt clean</cleanCommand>
+          <executablePath></executablePath>
+          <cTool>
+            <incDir>
+              <pElem>/home/dpape/lib</pElem>
+            </incDir>
+          </cTool>
+        </makeTool>
+      </makefileType>
+      <item path="/home/dpape/buildserverhome/dpt-board-os/package/network/services/dpt-connector/src/config.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+          <incDir>
+            <pElem>/usr/include/x86_64-linux-gnu</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="/home/dpape/buildserverhome/dpt-board-os/package/network/services/dpt-connector/src/dptnetwork.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+          <incDir>
+            <pElem>/usr/include/x86_64-linux-gnu</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="/home/dpape/buildserverhome/dpt-board-os/package/network/services/dpt-connector/src/logger.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="/home/dpape/buildserverhome/dpt-board-os/package/network/services/dpt-connector/src/main.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="/home/dpape/buildserverhome/dpt-board-os/package/network/services/dpt-connector/src/ssh.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+          <incDir>
+            <pElem>/usr/include/x86_64-linux-gnu</pElem>
+          </incDir>
+        </cTool>
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<html id="htmldoc">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title data-bind="text: title">Breakout board</title>
+        <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="styles/bootstrap-switch.min.css">
+        <link rel="stylesheet" type="text/css" href="styles/global.css">
+        
+        <style>
+            .dpt-row:hover {
+                border: 1px solid #9ecaed !important;
+                box-shadow:0 0 10px #9ecaed  !important;
+                cursor: pointer;
+            }
+            
+            .wifi-strength-low {
+                width: 51px;
+                height: 51px;
+                background: url(images/signal-strength-sprite.jpg) 0 0;
+            }
+            
+            .wifi-strength-medlow {
+                width: 51px;
+                height: 51px;
+                background: url(images/signal-strength-sprite.jpg) -51px 0;
+            }
+            
+            .wifi-strength-medhigh {
+                width: 51px;
+                height: 51px;
+                background: url(images/signal-strength-sprite.jpg) -102px 0;
+            }
+            
+            .wifi-strength-high {
+                width: 51px;
+                height: 51px;
+                background: url(images/signal-strength-sprite.jpg) -153px 0;
+            }
+            
+            .wifi-strength-sec-low {
+                width: 51px;
+                height: 51px;
+                background: url(images/signal-strength-sprite.jpg) 0 51px;
+            }
+            
+            .wifi-strength-sec-medlow {
+                width: 51px;
+                height: 51px;
+                background: url(images/signal-strength-sprite.jpg) -51px 51px;
+            }
+            
+            .wifi-strength-sec-medhigh {
+                width: 51px;
+                height: 51px;
+                background: url(images/signal-strength-sprite.jpg) -102px 51px;
+            }
+            
+            .wifi-strength-sec-high {
+                width: 51px;
+                height: 51px;
+                background: url(images/signal-strength-sprite.jpg) -153px 51px;
+            }
+            
+            .wifi-ssid-name {
+                font-weight: bold;
+                font-size: 16px;
+            }
+            
+            .wifi-ssid-info {
+                margin-top: 10px;
+                color: #666666;
+            }
+            
+            .hightext {
+                line-height: 30px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="extern-menu"></div>
+
+        <div class="container maincontainer">
+            <!-- Status overview -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title" data-bind="text: WiFiStatus">WiFi status</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <colgroup>
+                                <col class="col-xs-1">
+                                <col class="col-xs-7">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td class="bold" style="border: none" colspan="2"><span data-bind="text: boardWiFiConnection" class="hightext">Board WiFi connection</span>
+                                        <button type="button" class="btn btn-primary btn-sm pull-right correct-margin" data-bind="text: editSettingsBtn" id="editBoardWiFiSettingsBtn">Edit settings</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="bold" data-bind="text: WiFiStatus">WiFi status</td>
+                                    <td ><span class="label" data-bind="css: styleBoardWiFiState, text: textBoardWiFiState">no info</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="bold" data-bind="text: WiFiSSID">WiFi name</td>
+                                    <td data-bind="text: boardWiFiSSID"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <table class="table">
+                            <colgroup>
+                                <col class="col-xs-1">
+                                <col class="col-xs-7">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td class="bold btntd" style="border: none" colspan="2"><span data-bind="text: clientWiFiConnection" class="hightext">Client WiFi connection</span>
+                                        <span class="pull-right"><input type="checkbox" data-size="large" data-on-label="On" data-off-label="Off"  id="clientWiFiBtn" data-bind="bootstrapSwitchOn: clientEnState"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="bold" data-bind="text: WiFiStatus">WiFi status</td>
+                                    <td><span class="label" data-bind="css: styleClientWiFiState, text: textClientWifiState">no info</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="bold" data-bind="text: WiFiSSID">WiFi name</td>
+                                    <td data-bind="text: clientWiFiSSID"></td>
+                                </tr>
+                                <tr>
+                                    <td class="bold" data-bind="text: WiFiSignalStrength">WiFi strength</td>
+                                    <td>
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" data-bind="style: {width: $root.clientWiFiStrength() + '%'}" >
+                                                <span data-bind="text: clientWiFiStrength">
+                                                    0
+                                                </span>%
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Available WiFi networks -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title" data-bind="text: wifiAvailableNetworks">Available WiFi networks</h3>
+                </div>
+                <div class="panel-body" data-bind="foreach: wifiNetworks">
+                    <div class="row dpt-row" data-bind="click: showConnectionModal">
+                        <div class="col-xs-11">
+                            <div class="wifi-ssid-name" data-bind="text: ssid"></div>
+                            <div class="wifi-ssid-info"><span data-bind="text: wifiSecurity"></span> : <span data-bind="text: sec_readable"></span></div>
+                        </div>
+                        <div class="col-xs-1">
+                            <img data-bind="attr:{'class' : iconclass}" src="images/transparent.png" alt="signal-strength">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="scripts/sprintf.min.js"></script>
+        <script src="scripts/i18n.js"></script>
+        <script src="scripts/jquery-1.11.0.min.js"></script>
+        <script src="scripts/knockout-3.1.0.js"></script>
+        <script src="scripts/bootstrap.min.js"></script>
+        <script src="scripts/bootstrap-switch.min.js"></script>
+        <script src="scripts/bootstrap-switch-knockout.js"></script>
+        <script src="scripts/dpt-board.js"></script>
+        <script src="scripts/global.js"></script>
+        <script src="scripts/dpt-modal.js"></script>
+        <script src="scripts/wifiSettingsControlViewModel.js"></script>
+    </body>
+</html>

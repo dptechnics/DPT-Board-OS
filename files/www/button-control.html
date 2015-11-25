@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html id="htmldoc">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-bind="text: title">Breakout board</title>
+<link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="styles/bootstrap-switch.min.css">
+<link rel="stylesheet" type="text/css" href="styles/global.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+<style>
+	.btn-desc {
+		display: inline-block;
+		width: 130px;
+	}
+	
+	.btn-dpt {
+		padding-top: 4px;
+		padding-bottom:4px;
+		margin-left: 10px;
+	}
+	
+	.dpt-btn-row {
+		border-bottom: 1px solid #EEE;
+		border-top: 1px solid #EEE;
+	}
+        
+        .iolabel {
+            display: inline-block;
+            min-width: 80px;
+        }
+        
+        .pulseinput {
+            display: inline-block;
+            width: initial;
+            max-width: 80px;
+        }
+        
+        .rowpadding {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            line-height: 30px;
+        }
+</style>
+
+</head>
+<body>
+
+<div id="extern-menu"></div>
+
+<div class="container maincontainer">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">Button control</h3>
+		</div>
+		<div class="panel-body" data-bind="foreach: buttons">
+                    <div class="row dpt-btn-row">
+                        <div class="col-sm-3">
+                            <div class="rowpadding">
+                                <div data-bind="text: 'IO Port' + number" class="iolabel"></div>
+                                <input type="checkbox" data-size="large" data-on-label="On" data-off-label="Off" data-bind="bootstrapSwitchOn: state, attr:{'id': 'iobutton-' + number}">
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="rowpadding">
+                                <input type="number" class="form-control pulseinput" data-bind="attr:{'id' : 'pulsetime-' + number}" value="500">&nbsp;ms&nbsp;&nbsp;
+                                <button class="btn btn-default" data-bind="click: $parent.pulseIOHandler">Pulse</button>
+                            </div>
+                        </div>
+                    </div>
+		</div>
+	</div>
+	
+</div>
+
+<script src="scripts/sprintf.min.js"></script>
+<script src="scripts/i18n.js"></script>
+<script src="scripts/jquery-1.11.0.min.js"></script>
+<script src="scripts/knockout-3.1.0.js"></script>
+<script src="scripts/bootstrap.min.js"></script>
+<script src="scripts/bootstrap-switch.min.js"></script>
+<script src="scripts/bootstrap-switch-knockout.js"></script>
+<script src="scripts/dpt-board.js"></script>
+<script src="scripts/global.js"></script>
+<script src="scripts/buttonControlViewModel.js"></script>
+</body>
+</html>

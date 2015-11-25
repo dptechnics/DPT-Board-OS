@@ -1,0 +1,11 @@
+<p id="wifi-modal-intro">
+    Enter the WiFi password for the network and click the connect button to make a connection to the selected wireless network.
+</p>
+<form>
+    <input type="password" name="wifi-pass" id="wifi-pass" class="form-control" placeholder="Enter WiFi key here"/>
+</form>
+
+<script>
+    $('#wifi-modal-intro').html(i18n.__("ModalWiFiIntroPassPersonal"));
+    $('#wifi-pass').attr("placeholder", i18n.__("ModalWiFiPassPersonal"));
+</script>
