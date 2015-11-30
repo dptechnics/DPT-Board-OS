@@ -2,13 +2,11 @@
 <configurationDescriptor version="95">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <df root="/home/dpape/buildserverhome/dpt-board-os/package/network/services/dpt-web-ide-server/src"
-        name="1">
+        name="0">
       <in>config.c</in>
       <in>config.h</in>
       <in>http.c</in>
       <in>http.h</in>
-      <in>ide-interactive.c</in>
-      <in>ide-interactive.h</in>
       <in>ide-run.c</in>
       <in>ide-run.h</in>
       <in>logger.c</in>
