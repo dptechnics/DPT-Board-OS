@@ -378,7 +378,6 @@ function rem_code_exec(code)
     
     try {
         socket.onopen = function() {
-            console.log('[INFO] DPT-Web IDE opened socket to remote interpreter');
             socket.send(code);
         };
         
@@ -387,10 +386,6 @@ function rem_code_exec(code)
             $('#console-pnl-out').append(msg.data);
             var height = csl[0].scrollHeight;
             csl.scrollTop(height);
-        };
-       
-        socket.onclose = function() {
-            console.log('[INFO] DPT-Web IDE remote interpreter socket closed');
         };
     } catch(ex) {
         return NULL;
@@ -404,7 +399,7 @@ function rem_code_exec(code)
 function rem_code_stop()
 {
     if(socket != null) {
-        socket.close();
+        socket.send("STOP");
     }
 }
 

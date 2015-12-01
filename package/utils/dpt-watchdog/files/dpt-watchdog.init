@@ -1,0 +1,10 @@
+#!/bin/sh /etc/rc.common
+# Copyright (C) 2015 Daan Pape
+
+START=99
+STOP=1
+
+start() {
+	echo "Starting DPTechnics dpt-watchdog"
+	/usr/sbin/dpt-watchdog
+}

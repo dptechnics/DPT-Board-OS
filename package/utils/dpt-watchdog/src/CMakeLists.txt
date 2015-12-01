@@ -1,0 +1,23 @@
+cmake_minimum_required(VERSION 2.6)
+
+PROJECT(dpt-watchdog C)
+
+INCLUDE(CheckFunctionExists)
+
+SET(CMAKE_SHARED_LIBRARY_LINK_C_FLAGS "")
+ADD_DEFINITIONS(-Os -Wall -Werror -Wmissing-declarations --std=gnu99 -g3)
+
+SET(SOURCES main.c)
+
+CHECK_FUNCTION_EXISTS(getspnam HAVE_SHADOW)
+IF(HAVE_SHADOW)
+    ADD_DEFINITIONS(-DHAVE_SHADOW)
+ENDIF()
+
+ADD_EXECUTABLE(dpt-watchdog ${SOURCES})
+TARGET_LINK_LIBRARIES(dpt-watchdog ${LIBS})
+
+INSTALL(TARGETS dpt-watchdog
+	RUNTIME DESTINATION bin
+	LIBRARY DESTINATION lib
+)
