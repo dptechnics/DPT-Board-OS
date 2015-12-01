@@ -2,7 +2,7 @@
 <configurationDescriptor version="95">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <df root="/home/dpape/buildserverhome/dpt-board-os/package/lang/dpt-js/src/src"
-        name="1">
+        name="0">
       <df name="dptfunctions">
         <df name="gpio">
           <in>dpt_gpio.c</in>
@@ -11,9 +11,6 @@
         <df name="i2c">
           <in>dpt_i2c.c</in>
           <in>dpt_i2c.h</in>
-        </df>
-        <df name="lcd">
-          <in>dpt_lcd.h</in>
         </df>
         <df name="serial">
           <in>dpt_serial.c</in>
