@@ -8,6 +8,8 @@
         <in>bluecherry_json_api.c</in>
       </df>
       <df name="combus">
+        <in>i2c.c</in>
+        <in>i2c.h</in>
         <in>spi.c</in>
       </df>
       <df name="database">
@@ -37,6 +39,14 @@
       </df>
       <df name="pwm">
         <in>pwm.c</in>
+      </df>
+      <df name="rfid">
+        <df name="pn532">
+          <in>rfid_pn532.c</in>
+          <in>rfid_pn532.h</in>
+          <in>rfid_pn532_json_api.c</in>
+          <in>rfid_pn532_json_api.h</in>
+        </df>
       </df>
       <df name="system">
         <in>system.c</in>
@@ -92,12 +102,18 @@
           <cleanCommand>${MAKE} -f CMakeLists.txt clean</cleanCommand>
           <executablePath></executablePath>
           <cTool>
+            <standard>3</standard>
             <incDir>
               <pElem>/home/dpape/lib</pElem>
             </incDir>
           </cTool>
         </makeTool>
       </makefileType>
+      <item path="../src/rfid/pn532/rfid_pn532_json_api.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
       <item path="/home/dpape/buildserverhome/dpt-board-os/package/network/services/dpt-breakout-server/src/api.c"
             ex="false"
             tool="0"
@@ -117,6 +133,16 @@
             ex="false"
             tool="0"
             flavor2="2">
+      </item>
+      <item path="/home/dpape/buildserverhome/dpt-board-os/package/network/services/dpt-breakout-server/src/combus/i2c.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="/home/dpape/buildserverhome/dpt-board-os/package/network/services/dpt-breakout-server/src/combus/i2c.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
       <item path="/home/dpape/buildserverhome/dpt-board-os/package/network/services/dpt-breakout-server/src/combus/spi.c"
             ex="false"
@@ -232,6 +258,21 @@
             ex="false"
             tool="0"
             flavor2="2">
+      </item>
+      <item path="/home/dpape/buildserverhome/dpt-board-os/package/network/services/dpt-breakout-server/src/rfid/pn532/rfid_pn532.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="/home/dpape/buildserverhome/dpt-board-os/package/network/services/dpt-breakout-server/src/rfid/pn532/rfid_pn532.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/dpape/buildserverhome/dpt-board-os/package/network/services/dpt-breakout-server/src/rfid/pn532/rfid_pn532_json_api.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
       </item>
       <item path="/home/dpape/buildserverhome/dpt-board-os/package/network/services/dpt-breakout-server/src/system/system.c"
             ex="false"

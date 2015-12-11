@@ -10,6 +10,8 @@
         <in>bluecherry_json_api.h</in>
       </df>
       <df name="combus">
+        <in>i2c.c</in>
+        <in>i2c.h</in>
         <in>spi.c</in>
         <in>spi.h</in>
       </df>
@@ -55,6 +57,14 @@
         <in>pwm.c</in>
         <in>pwm.h</in>
       </df>
+      <df name="rfid">
+        <df name="pn532">
+          <in>rfid_pn532.c</in>
+          <in>rfid_pn532.h</in>
+          <in>rfid_pn532_json_api.c</in>
+          <in>rfid_pn532_json_api.h</in>
+        </df>
+      </df>
       <df name="system">
         <in>system.c</in>
         <in>system.h</in>
@@ -62,6 +72,8 @@
         <in>system_json_api.h</in>
       </df>
       <df name="tempsensor">
+        <df name="ds18b20">
+        </df>
         <in>tempsensor.c</in>
         <in>tempsensor.h</in>
         <in>tempsensor_json_api.c</in>
