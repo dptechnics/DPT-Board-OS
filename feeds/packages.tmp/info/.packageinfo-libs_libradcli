@@ -1,6 +1,6 @@
 Source-Makefile: feeds/packages/libs/libradcli/Makefile
 Package: libradcli
-Version: 1.2.3-1
+Version: 1.2.5-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +RADCLI_TLS:libgnutls +libnettle
 Conflicts: 
 Menu-Depends: 
@@ -9,7 +9,7 @@ Section: libs
 Category: Libraries
 Title: A library for radius clients
 Maintainer: Nikos Mavrogiannopoulos <nmav@gnutls.org>
-Source: radcli-1.2.3.tar.gz
+Source: radcli-1.2.5.tar.gz
 Type: ipkg
 Description: A library for radius clients
 http://radcli.github.io/radcli/

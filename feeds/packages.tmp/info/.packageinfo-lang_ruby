@@ -1,7 +1,7 @@
 Source-Makefile: feeds/packages/lang/ruby/Makefile
 Package: ruby
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libruby
 Conflicts: 
 Menu-Depends: 
@@ -12,7 +12,7 @@ Section: lang
 Category: Languages
 Title: Ruby scripting language (interpreter)
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -26,7 +26,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 @@
 
 Package: libruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpthread +librt +libgmp
 Conflicts: 
 Menu-Depends: 
@@ -37,7 +37,7 @@ Section: libs
 Category: Libraries
 Title: Ruby scripting language (shared library)
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -48,7 +48,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-stdlib
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-misc +ruby-bigdecimal +ruby-cgi +ruby-csv +ruby-datetime +ruby-dbm +ruby-debuglib +ruby-digest +ruby-drb +ruby-enc +ruby-enc-extra +ruby-erb +ruby-gdbm +ruby-gems +ruby-json +ruby-io-console +ruby-irb +ruby-fiddle +ruby-filelib +ruby-logger +ruby-math +ruby-minitest +ruby-mkmf +ruby-multithread +ruby-nkf +ruby-net +ruby-openssl +ruby-optparse +ruby-patterns +ruby-powerassert +ruby-prettyprint +ruby-pstore +ruby-psych +ruby-racc +ruby-rake +ruby-rbconfig +ruby-rdoc +ruby-readline +ruby-rexml +ruby-rinda +ruby-ripper +ruby-rss +ruby-sdbm +ruby-shell +ruby-socket +ruby-testunit +ruby-unicodenormalize +ruby-uri +ruby-webrick +ruby-xmlrpc +ruby-yaml +ruby-zlib
 Conflicts: 
 Menu-Depends: 
@@ -59,7 +59,7 @@ Section: lang
 Category: Languages
 Title: Ruby standard libraries (metadata for all stdlib subsets)
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -72,7 +72,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-bigdecimal
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -83,7 +83,7 @@ Section: lang
 Category: Languages
 Title: Arbitrary-precision decimal floating-point lib for Ruby
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -95,7 +95,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-cgi
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-filelib +ruby-pstore
 Conflicts: 
 Menu-Depends: 
@@ -106,7 +106,7 @@ Section: lang
 Category: Languages
 Title: Ruby CGI support toolkit
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -117,7 +117,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-csv
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-patterns +ruby-datetime +ruby-enc
 Conflicts: 
 Menu-Depends: 
@@ -128,7 +128,7 @@ Section: lang
 Category: Languages
 Title: Ruby scripting language CSV library
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -140,7 +140,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-datetime
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -151,7 +151,7 @@ Section: lang
 Category: Languages
 Title: Ruby scripting language date library
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -163,7 +163,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-dbm
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +libdb47
 Conflicts: 
 Menu-Depends: 
@@ -174,7 +174,7 @@ Section: lang
 Category: Languages
 Title: Ruby support for dbm
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -187,7 +187,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-debuglib
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-multithread +ruby-prettyprint
 Conflicts: 
 Menu-Depends: 
@@ -198,7 +198,7 @@ Section: lang
 Category: Languages
 Title: Ruby scripting language debug library
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -216,7 +216,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-digest
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +RUBY_DIGEST_USE_OPENSSL:libopenssl
 Conflicts: 
 Menu-Depends: 
@@ -227,7 +227,7 @@ Section: lang
 Category: Languages
 Title: Ruby Digest Library
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -253,7 +253,7 @@ Config:
 
 Package: ruby-drb
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-filelib +ruby-patterns +ruby-socket
 Conflicts: 
 Menu-Depends: 
@@ -264,7 +264,7 @@ Section: lang
 Category: Languages
 Title: Ruby distributed object system
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -276,7 +276,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-enc
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -287,7 +287,7 @@ Section: lang
 Category: Languages
 Title: Ruby character re-coding library charset (small subset)
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -308,7 +308,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-enc-extra
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-enc
 Conflicts: 
 Menu-Depends: 
@@ -319,7 +319,7 @@ Section: lang
 Category: Languages
 Title: Ruby character re-coding library charset (extra subset)
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -377,7 +377,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-erb
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-cgi
 Conflicts: 
 Menu-Depends: 
@@ -388,7 +388,7 @@ Section: lang
 Category: Languages
 Title: Ruby scripting language (embedded interpreter)
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -400,7 +400,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-fiddle
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +libffi
 Conflicts: 
 Menu-Depends: 
@@ -411,7 +411,7 @@ Section: lang
 Category: Languages
 Title: A libffi wrapper for Ruby
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -423,7 +423,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-filelib
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-enc +ruby-misc
 Conflicts: 
 Menu-Depends: 
@@ -434,7 +434,7 @@ Section: lang
 Category: Languages
 Title: Ruby scripting language File utils library
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -453,7 +453,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-gdbm
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +libgdbm
 Conflicts: 
 Menu-Depends: 
@@ -464,7 +464,7 @@ Section: lang
 Category: Languages
 Title: Ruby support for gdbm
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -476,7 +476,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-gems
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-net +ruby-rdoc
 Conflicts: 
 Menu-Depends: 
@@ -487,7 +487,7 @@ Section: lang
 Category: Languages
 Title: Ruby gems packet management
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -499,7 +499,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-io-console
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -510,7 +510,7 @@ Section: lang
 Category: Languages
 Title: Ruby scripting language Console interface
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -522,7 +522,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-irb
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-debuglib +ruby-filelib +ruby-math
 Conflicts: 
 Menu-Depends: 
@@ -533,7 +533,7 @@ Section: lang
 Category: Languages
 Title: Ruby scripting language (interactive shell)
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -545,7 +545,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-json
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-datetime +ruby-misc
 Conflicts: 
 Menu-Depends: 
@@ -556,7 +556,7 @@ Section: lang
 Category: Languages
 Title: Ruby support for JSON
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -568,7 +568,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-logger
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-multithread
 Conflicts: 
 Menu-Depends: 
@@ -579,7 +579,7 @@ Section: lang
 Category: Languages
 Title: Ruby scripting language logger and syslog library
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -594,7 +594,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-math
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-patterns
 Conflicts: 
 Menu-Depends: 
@@ -605,7 +605,7 @@ Section: lang
 Category: Languages
 Title: Ruby scripting language math library
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -627,7 +627,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-minitest
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-gems
 Conflicts: 
 Menu-Depends: 
@@ -638,7 +638,7 @@ Section: lang
 Category: Languages
 Title: Gem minitest shipped with Ruby
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -650,7 +650,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-misc
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -661,7 +661,7 @@ Section: lang
 Category: Languages
 Title: Ruby standard libraries subset (miscelaneous files)
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -697,7 +697,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-mkmf
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-filelib +ruby-optparse +ruby-rbconfig
 Conflicts: 
 Menu-Depends: 
@@ -708,7 +708,7 @@ Section: lang
 Category: Languages
 Title: Ruby scripting language makefile library
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -720,7 +720,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-multithread
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-misc
 Conflicts: 
 Menu-Depends: 
@@ -731,7 +731,7 @@ Section: lang
 Category: Languages
 Title: Ruby scripting language multithread library
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -751,7 +751,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-net
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-datetime +ruby-digest +ruby-filelib +ruby-uri
 Conflicts: 
 Menu-Depends: 
@@ -762,7 +762,7 @@ Section: lang
 Category: Languages
 Title: Ruby Network Protocols Library
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -774,7 +774,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-nkf
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-enc
 Conflicts: 
 Menu-Depends: 
@@ -785,7 +785,7 @@ Section: lang
 Category: Languages
 Title: Ruby Network Kanji Filter
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -797,7 +797,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-openssl
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-enc +libopenssl +ruby-misc
 Conflicts: 
 Menu-Depends: 
@@ -808,7 +808,7 @@ Section: lang
 Category: Languages
 Title: Ruby support for openssl
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -820,7 +820,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-optparse
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-misc
 Conflicts: 
 Menu-Depends: 
@@ -831,7 +831,7 @@ Section: lang
 Category: Languages
 Title: Ruby command-line option analysis
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -843,7 +843,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-patterns
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-multithread
 Conflicts: 
 Menu-Depends: 
@@ -854,7 +854,7 @@ Section: lang
 Category: Languages
 Title: Ruby design patterns implementation
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -869,7 +869,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-powerassert
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-ripper
 Conflicts: 
 Menu-Depends: 
@@ -880,7 +880,7 @@ Section: lang
 Category: Languages
 Title: Gem power_assert shipped with Ruby
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -894,7 +894,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-prettyprint
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-misc
 Conflicts: 
 Menu-Depends: 
@@ -905,7 +905,7 @@ Section: lang
 Category: Languages
 Title: Ruby PrettyPrint librart
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -919,7 +919,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-pstore
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-digest +ruby-enc
 Conflicts: 
 Menu-Depends: 
@@ -930,7 +930,7 @@ Section: lang
 Category: Languages
 Title: Ruby scripting language file based persistence
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -942,7 +942,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-psych
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-bigdecimal +ruby-datetime +ruby-misc +ruby-enc +libyaml
 Conflicts: 
 Menu-Depends: 
@@ -953,7 +953,7 @@ Section: lang
 Category: Languages
 Title: Ruby scripting language YAML parser and emitter
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -965,7 +965,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-racc
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -976,7 +976,7 @@ Section: lang
 Category: Languages
 Title: LALR parser generator in Ruby
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -988,7 +988,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-rake
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-datetime +ruby-filelib +ruby-optparse +ruby-patterns +ruby-rbconfig
 Conflicts: 
 Menu-Depends: 
@@ -999,7 +999,7 @@ Section: lang
 Category: Languages
 Title: Ruby scripting language Ruby Rake (make replacement)
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1011,7 +1011,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-rbconfig
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -1022,7 +1022,7 @@ Section: lang
 Category: Languages
 Title: Ruby scripting language Ruby RbConfig
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1034,7 +1034,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-rdoc
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-erb +ruby-irb +ruby-json +ruby-racc +ruby-rake +ruby-yaml +ruby-zlib
 Conflicts: 
 Menu-Depends: 
@@ -1045,7 +1045,7 @@ Section: lang
 Category: Languages
 Title: Ruby scripting language (documentation generator)
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1057,7 +1057,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-readline
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +libncurses +libreadline
 Conflicts: 
 Menu-Depends: 
@@ -1068,7 +1068,7 @@ Section: lang
 Category: Languages
 Title: Ruby support for readline
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1080,7 +1080,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-rexml
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-patterns +ruby-enc
 Conflicts: 
 Menu-Depends: 
@@ -1091,7 +1091,7 @@ Section: lang
 Category: Languages
 Title: Ruby XML toolkit
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1103,7 +1103,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-rinda
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-drb
 Conflicts: 
 Menu-Depends: 
@@ -1114,7 +1114,7 @@ Section: lang
 Category: Languages
 Title: Ruby Linda paradigm implementation
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1126,7 +1126,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-ripper
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -1137,7 +1137,7 @@ Section: lang
 Category: Languages
 Title: Ruby script parser
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1149,7 +1149,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-rss
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-net +ruby-nkf +ruby-rexml
 Conflicts: 
 Menu-Depends: 
@@ -1160,7 +1160,7 @@ Section: lang
 Category: Languages
 Title: Ruby RSS toolkit
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1172,7 +1172,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-sdbm
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -1183,7 +1183,7 @@ Section: lang
 Category: Languages
 Title: Ruby simple file-based key-value dbm implementation
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1195,7 +1195,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-shell
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-patterns
 Conflicts: 
 Menu-Depends: 
@@ -1206,7 +1206,7 @@ Section: lang
 Category: Languages
 Title: Ruby idiomatic Ruby interface
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1218,7 +1218,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-socket
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-multithread
 Conflicts: 
 Menu-Depends: 
@@ -1229,7 +1229,7 @@ Section: lang
 Category: Languages
 Title: Ruby scripting language socket support
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1247,7 +1247,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-testunit
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-csv +ruby-erb +ruby-optparse +ruby-powerassert +ruby-prettyprint +ruby-rexml +ruby-yaml
 Conflicts: 
 Menu-Depends: 
@@ -1258,7 +1258,7 @@ Section: lang
 Category: Languages
 Title: Gem test-unit shipped with Ruby
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1270,7 +1270,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-unicodenormalize
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-enc +ruby-enc-extra
 Conflicts: 
 Menu-Depends: 
@@ -1281,7 +1281,7 @@ Section: lang
 Category: Languages
 Title: Ruby String additions for Unicode normalization
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1293,7 +1293,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-uri
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-socket +ruby-enc
 Conflicts: 
 Menu-Depends: 
@@ -1304,7 +1304,7 @@ Section: lang
 Category: Languages
 Title: Ruby library to handle URI
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1316,7 +1316,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-webrick
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-erb +ruby-net +ruby-patterns +ruby-rbconfig
 Conflicts: 
 Menu-Depends: 
@@ -1327,7 +1327,7 @@ Section: lang
 Category: Languages
 Title: Ruby Web server toolkit
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1339,7 +1339,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-xmlrpc
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-rexml +ruby-webrick
 Conflicts: 
 Menu-Depends: 
@@ -1350,7 +1350,7 @@ Section: lang
 Category: Languages
 Title: Ruby XML-RPC toolkit
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1362,7 +1362,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-yaml
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-dbm +ruby-pstore +ruby-psych
 Conflicts: 
 Menu-Depends: 
@@ -1373,7 +1373,7 @@ Section: lang
 Category: Languages
 Title: Ruby YAML toolkit
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1385,7 +1385,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-zlib
 Submenu: Ruby
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +zlib
 Conflicts: 
 Menu-Depends: 
@@ -1396,7 +1396,7 @@ Section: lang
 Category: Languages
 Title: Ruby support for zlib
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-2.2.3.tar.bz2
+Source: ruby-2.2.4.tar.bz2
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg

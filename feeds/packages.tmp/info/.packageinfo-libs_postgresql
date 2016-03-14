@@ -21,7 +21,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 Package: pgsql-cli
 Submenu: database
 Version: 9.4.4-1
-Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpq @USE_UCLIBC:+librt
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpq +USE_UCLIBC:librt
 Conflicts: 
 Menu-Depends: 
 Provides: 
@@ -40,7 +40,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 Package: pgsql-server
 Submenu: database
 Version: 9.4.4-1
-Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpq @USE_UCLIBC:+librt
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpq +USE_UCLIBC:librt
 Conflicts: 
 Menu-Depends: 
 Provides: 

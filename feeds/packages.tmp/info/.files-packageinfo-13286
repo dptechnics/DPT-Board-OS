@@ -257,6 +257,7 @@ net/aria2
 net/bcp38
 net/bind
 net/bmon
+net/bridge-utils
 net/bwm-ng
 net/cgi-io
 net/coova-chilli
@@ -466,6 +467,7 @@ utils/rpcd-mod-lxc
 utils/rrdtool1
 utils/rtklib
 utils/rtl-sdr
+utils/sane-backends
 utils/screen
 utils/serialconsole
 utils/shadow

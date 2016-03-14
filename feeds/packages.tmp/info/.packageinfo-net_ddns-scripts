@@ -1,7 +1,7 @@
 Source-Makefile: feeds/packages/net/ddns-scripts/Makefile
 Package: ddns-scripts
 Submenu: IP Addresses and Names
-Version: 2.4.3-1
+Version: 2.4.3-2
 Depends:  
 Conflicts: 
 Menu-Depends: 
@@ -28,7 +28,7 @@ Config:
 		  - log file support
 		  - support to run once
 		.
-		Version: 2.4.3-1
+		Version: 2.4.3-2
 		Info   : http://wiki.openwrt.org/doc/howto/ddns.client
 		.
 		Christian Schoenebeck <christian.schoenebeck@gmail.com>
@@ -36,7 +36,7 @@ Config:
 
 Package: ddns-scripts_cloudflare
 Submenu: IP Addresses and Names
-Version: 2.4.3-1
+Version: 2.4.3-2
 Depends:  ddns-scripts
 Conflicts: 
 Menu-Depends: 
@@ -54,7 +54,7 @@ Christian Schoenebeck <christian.schoenebeck@gmail.com>
 
 Package: ddns-scripts_no-ip_com
 Submenu: IP Addresses and Names
-Version: 2.4.3-1
+Version: 2.4.3-2
 Depends:  ddns-scripts
 Conflicts: 
 Menu-Depends: 
@@ -72,7 +72,7 @@ Christian Schoenebeck <christian.schoenebeck@gmail.com>
 
 Package: ddns-scripts_nsupdate
 Submenu: IP Addresses and Names
-Version: 2.4.3-1
+Version: 2.4.3-2
 Depends:  ddns-scripts +bind-client
 Conflicts: 
 Menu-Depends: 

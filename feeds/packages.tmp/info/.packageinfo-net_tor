@@ -1,6 +1,6 @@
 Source-Makefile: feeds/packages/net/tor/Makefile
 Package: tor
-Version: 0.2.5.12-1
+Version: 0.2.7.6-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libevent2 +libopenssl +libpthread +librt
 Conflicts: 
 Menu-Depends: 
@@ -11,7 +11,7 @@ Category: Network
 Title: An anonymous Internet communication system
 Maintainer: Hauke Mehrtens <hauke@hauke-m.de>
 Require-User: tor=52:tor=52
-Source: tor-0.2.5.12.tar.gz
+Source: tor-0.2.7.6.tar.gz
 LicenseFiles: LICENSE
 Type: ipkg
 Description:  Tor is a toolset for a wide range of organizations and people that want to
@@ -25,7 +25,7 @@ Hauke Mehrtens <hauke@hauke-m.de>
 @@
 
 Package: tor-fw-helper
-Version: 0.2.5.12-1
+Version: 0.2.7.6-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +tor +libminiupnpc +libnatpmp
 Conflicts: 
 Menu-Depends: 
@@ -36,7 +36,7 @@ Category: Network
 Title: Firewall helper for tor
 Maintainer: Hauke Mehrtens <hauke@hauke-m.de>
 Require-User: tor=52:tor=52
-Source: tor-0.2.5.12.tar.gz
+Source: tor-0.2.7.6.tar.gz
 LicenseFiles: LICENSE
 Type: ipkg
 Description:  Tor is a toolset for a wide range of organizations and people that want to
@@ -50,7 +50,7 @@ Hauke Mehrtens <hauke@hauke-m.de>
 @@
 
 Package: tor-geoip
-Version: 0.2.5.12-1
+Version: 0.2.7.6-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +tor
 Conflicts: 
 Menu-Depends: 
@@ -61,7 +61,7 @@ Category: Network
 Title: GeoIP db for tor
 Maintainer: Hauke Mehrtens <hauke@hauke-m.de>
 Require-User: tor=52:tor=52
-Source: tor-0.2.5.12.tar.gz
+Source: tor-0.2.7.6.tar.gz
 LicenseFiles: LICENSE
 Type: ipkg
 Description:  Tor is a toolset for a wide range of organizations and people that want to

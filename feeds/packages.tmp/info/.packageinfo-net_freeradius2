@@ -1,7 +1,7 @@
 Source-Makefile: feeds/packages/net/freeradius2/Makefile
 Package: freeradius2
 Submenu: FreeRADIUS (version 2)
-Version: 2.2.8-1
+Version: 2.2.8-2
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libltdl +libreadline +freeradius2-common
 Conflicts: 
 Menu-Depends: 
@@ -24,7 +24,7 @@ Config:
 
 Package: freeradius2-common
 Submenu: FreeRADIUS (version 2)
-Version: 2.2.8-1
+Version: 2.2.8-2
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpthread +FREERADIUS_OPENSSL:libopenssl
 Conflicts: 
 Menu-Depends: 
@@ -44,7 +44,7 @@ Daniel Golle <daniel@makrotopia.org>
 
 Package: freeradius2-democerts
 Submenu: FreeRADIUS (version 2)
-Version: 2.2.8-1
+Version: 2.2.8-2
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread freeradius2
 Conflicts: 
 Menu-Depends: 
@@ -64,7 +64,7 @@ Daniel Golle <daniel@makrotopia.org>
 
 Package: freeradius2-mod-chap
 Submenu: FreeRADIUS (version 2)
-Version: 2.2.8-1
+Version: 2.2.8-2
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread freeradius2
 Conflicts: 
 Menu-Depends: 
@@ -84,7 +84,7 @@ Daniel Golle <daniel@makrotopia.org>
 
 Package: freeradius2-mod-detail
 Submenu: FreeRADIUS (version 2)
-Version: 2.2.8-1
+Version: 2.2.8-2
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread freeradius2
 Conflicts: 
 Menu-Depends: 
@@ -104,7 +104,7 @@ Daniel Golle <daniel@makrotopia.org>
 
 Package: freeradius2-mod-eap
 Submenu: FreeRADIUS (version 2)
-Version: 2.2.8-1
+Version: 2.2.8-2
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread freeradius2
 Conflicts: 
 Menu-Depends: 
@@ -124,7 +124,7 @@ Daniel Golle <daniel@makrotopia.org>
 
 Package: freeradius2-mod-eap-gtc
 Submenu: FreeRADIUS (version 2)
-Version: 2.2.8-1
+Version: 2.2.8-2
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread freeradius2-mod-eap
 Conflicts: 
 Menu-Depends: 
@@ -144,7 +144,7 @@ Daniel Golle <daniel@makrotopia.org>
 
 Package: freeradius2-mod-eap-md5
 Submenu: FreeRADIUS (version 2)
-Version: 2.2.8-1
+Version: 2.2.8-2
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread freeradius2-mod-eap
 Conflicts: 
 Menu-Depends: 
@@ -164,7 +164,7 @@ Daniel Golle <daniel@makrotopia.org>
 
 Package: freeradius2-mod-eap-mschapv2
 Submenu: FreeRADIUS (version 2)
-Version: 2.2.8-1
+Version: 2.2.8-2
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread freeradius2-mod-eap +freeradius2-mod-mschap
 Conflicts: 
 Menu-Depends: 
@@ -184,7 +184,7 @@ Daniel Golle <daniel@makrotopia.org>
 
 Package: freeradius2-mod-eap-peap
 Submenu: FreeRADIUS (version 2)
-Version: 2.2.8-1
+Version: 2.2.8-2
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread freeradius2-mod-eap @FREERADIUS_OPENSSL
 Conflicts: 
 Menu-Depends: 
@@ -204,7 +204,7 @@ Daniel Golle <daniel@makrotopia.org>
 
 Package: freeradius2-mod-eap-tls
 Submenu: FreeRADIUS (version 2)
-Version: 2.2.8-1
+Version: 2.2.8-2
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread freeradius2-mod-eap @FREERADIUS_OPENSSL
 Conflicts: 
 Menu-Depends: 
@@ -224,7 +224,7 @@ Daniel Golle <daniel@makrotopia.org>
 
 Package: freeradius2-mod-eap-ttls
 Submenu: FreeRADIUS (version 2)
-Version: 2.2.8-1
+Version: 2.2.8-2
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread freeradius2-mod-eap-tls
 Conflicts: 
 Menu-Depends: 
@@ -244,7 +244,7 @@ Daniel Golle <daniel@makrotopia.org>
 
 Package: freeradius2-mod-exec
 Submenu: FreeRADIUS (version 2)
-Version: 2.2.8-1
+Version: 2.2.8-2
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread freeradius2
 Conflicts: 
 Menu-Depends: 
@@ -264,7 +264,7 @@ Daniel Golle <daniel@makrotopia.org>
 
 Package: freeradius2-mod-attr-rewrite
 Submenu: FreeRADIUS (version 2)
-Version: 2.2.8-1
+Version: 2.2.8-2
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread freeradius2
 Conflicts: 
 Menu-Depends: 
@@ -284,7 +284,7 @@ Daniel Golle <daniel@makrotopia.org>
 
 Package: freeradius2-mod-files
 Submenu: FreeRADIUS (version 2)
-Version: 2.2.8-1
+Version: 2.2.8-2
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread freeradius2
 Conflicts: 
 Menu-Depends: 
@@ -304,7 +304,7 @@ Daniel Golle <daniel@makrotopia.org>
 
 Package: freeradius2-mod-passwd
 Submenu: FreeRADIUS (version 2)
-Version: 2.2.8-1
+Version: 2.2.8-2
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread freeradius2
 Conflicts: 
 Menu-Depends: 
@@ -324,7 +324,7 @@ Daniel Golle <daniel@makrotopia.org>
 
 Package: freeradius2-mod-ldap
 Submenu: FreeRADIUS (version 2)
-Version: 2.2.8-1
+Version: 2.2.8-2
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread freeradius2 +libopenldap
 Conflicts: 
 Menu-Depends: 
@@ -344,7 +344,7 @@ Daniel Golle <daniel@makrotopia.org>
 
 Package: freeradius2-mod-mschap
 Submenu: FreeRADIUS (version 2)
-Version: 2.2.8-1
+Version: 2.2.8-2
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread freeradius2
 Conflicts: 
 Menu-Depends: 
@@ -364,7 +364,7 @@ Daniel Golle <daniel@makrotopia.org>
 
 Package: freeradius2-mod-pap
 Submenu: FreeRADIUS (version 2)
-Version: 2.2.8-1
+Version: 2.2.8-2
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread freeradius2
 Conflicts: 
 Menu-Depends: 
@@ -384,7 +384,7 @@ Daniel Golle <daniel@makrotopia.org>
 
 Package: freeradius2-mod-preprocess
 Submenu: FreeRADIUS (version 2)
-Version: 2.2.8-1
+Version: 2.2.8-2
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread freeradius2
 Conflicts: 
 Menu-Depends: 
@@ -404,7 +404,7 @@ Daniel Golle <daniel@makrotopia.org>
 
 Package: freeradius2-mod-realm
 Submenu: FreeRADIUS (version 2)
-Version: 2.2.8-1
+Version: 2.2.8-2
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread freeradius2
 Conflicts: 
 Menu-Depends: 
@@ -424,7 +424,7 @@ Daniel Golle <daniel@makrotopia.org>
 
 Package: freeradius2-mod-sql
 Submenu: FreeRADIUS (version 2)
-Version: 2.2.8-1
+Version: 2.2.8-2
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread freeradius2
 Conflicts: 
 Menu-Depends: 
@@ -444,7 +444,7 @@ Daniel Golle <daniel@makrotopia.org>
 
 Package: freeradius2-mod-sql-mysql
 Submenu: FreeRADIUS (version 2)
-Version: 2.2.8-1
+Version: 2.2.8-2
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread freeradius2-mod-sql +libmysqlclient-r
 Conflicts: 
 Menu-Depends: 
@@ -464,7 +464,7 @@ Daniel Golle <daniel@makrotopia.org>
 
 Package: freeradius2-mod-sql-pgsql
 Submenu: FreeRADIUS (version 2)
-Version: 2.2.8-1
+Version: 2.2.8-2
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread freeradius2-mod-sql +libpq
 Conflicts: 
 Menu-Depends: 
@@ -484,7 +484,7 @@ Daniel Golle <daniel@makrotopia.org>
 
 Package: freeradius2-mod-sql-sqlite
 Submenu: FreeRADIUS (version 2)
-Version: 2.2.8-1
+Version: 2.2.8-2
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread freeradius2-mod-sql +libsqlite3
 Conflicts: 
 Menu-Depends: 
@@ -504,7 +504,7 @@ Daniel Golle <daniel@makrotopia.org>
 
 Package: freeradius2-mod-sqlcounter
 Submenu: FreeRADIUS (version 2)
-Version: 2.2.8-1
+Version: 2.2.8-2
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread freeradius2-mod-sql
 Conflicts: 
 Menu-Depends: 
@@ -524,7 +524,7 @@ Daniel Golle <daniel@makrotopia.org>
 
 Package: freeradius2-mod-sqllog
 Submenu: FreeRADIUS (version 2)
-Version: 2.2.8-1
+Version: 2.2.8-2
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread freeradius2
 Conflicts: 
 Menu-Depends: 
@@ -544,7 +544,7 @@ Daniel Golle <daniel@makrotopia.org>
 
 Package: freeradius2-mod-radutmp
 Submenu: FreeRADIUS (version 2)
-Version: 2.2.8-1
+Version: 2.2.8-2
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread freeradius2
 Conflicts: 
 Menu-Depends: 
@@ -564,7 +564,7 @@ Daniel Golle <daniel@makrotopia.org>
 
 Package: freeradius2-mod-logintime
 Submenu: FreeRADIUS (version 2)
-Version: 2.2.8-1
+Version: 2.2.8-2
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread freeradius2
 Conflicts: 
 Menu-Depends: 
@@ -584,7 +584,7 @@ Daniel Golle <daniel@makrotopia.org>
 
 Package: freeradius2-mod-expr
 Submenu: FreeRADIUS (version 2)
-Version: 2.2.8-1
+Version: 2.2.8-2
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread freeradius2
 Conflicts: 
 Menu-Depends: 
@@ -604,7 +604,7 @@ Daniel Golle <daniel@makrotopia.org>
 
 Package: freeradius2-mod-attr-filter
 Submenu: FreeRADIUS (version 2)
-Version: 2.2.8-1
+Version: 2.2.8-2
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread freeradius2
 Conflicts: 
 Menu-Depends: 
@@ -624,7 +624,7 @@ Daniel Golle <daniel@makrotopia.org>
 
 Package: freeradius2-mod-expiration
 Submenu: FreeRADIUS (version 2)
-Version: 2.2.8-1
+Version: 2.2.8-2
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread freeradius2
 Conflicts: 
 Menu-Depends: 
@@ -644,7 +644,7 @@ Daniel Golle <daniel@makrotopia.org>
 
 Package: freeradius2-mod-always
 Submenu: FreeRADIUS (version 2)
-Version: 2.2.8-1
+Version: 2.2.8-2
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread freeradius2
 Conflicts: 
 Menu-Depends: 
@@ -664,7 +664,7 @@ Daniel Golle <daniel@makrotopia.org>
 
 Package: freeradius2-utils
 Submenu: FreeRADIUS (version 2)
-Version: 2.2.8-1
+Version: 2.2.8-2
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +freeradius2-common
 Conflicts: 
 Menu-Depends: 

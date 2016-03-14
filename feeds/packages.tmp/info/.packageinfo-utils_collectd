@@ -1,7 +1,7 @@
 Source-Makefile: feeds/packages/utils/collectd/Makefile
 Package: collectd
 Menu: 1
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpthread +zlib +libltdl +libip4tc
 Conflicts: 
 Menu-Depends: 
@@ -19,7 +19,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-apache
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd +PACKAGE_collectd-mod-apache:libcurl
 Conflicts: 
 Menu-Depends: 
@@ -36,7 +36,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-apcups
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd
 Conflicts: 
 Menu-Depends: 
@@ -53,7 +53,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-ascent
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd +PACKAGE_collectd-mod-ascent:libcurl +PACKAGE_collectd-mod-ascent:libxml2
 Conflicts: 
 Menu-Depends: 
@@ -70,7 +70,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-bind
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd +PACKAGE_collectd-mod-bind:libcurl +PACKAGE_collectd-mod-bind:libxml2
 Conflicts: 
 Menu-Depends: 
@@ -87,7 +87,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-conntrack
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd
 Conflicts: 
 Menu-Depends: 
@@ -104,7 +104,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-contextswitch
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd
 Conflicts: 
 Menu-Depends: 
@@ -121,7 +121,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-cpu
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd
 Conflicts: 
 Menu-Depends: 
@@ -138,7 +138,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-csv
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd
 Conflicts: 
 Menu-Depends: 
@@ -155,7 +155,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-curl
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd +PACKAGE_collectd-mod-curl:libcurl
 Conflicts: 
 Menu-Depends: 
@@ -172,7 +172,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-df
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd
 Conflicts: 
 Menu-Depends: 
@@ -189,7 +189,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-disk
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd
 Conflicts: 
 Menu-Depends: 
@@ -206,7 +206,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-dns
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd +PACKAGE_collectd-mod-dns:libpcap
 Conflicts: 
 Menu-Depends: 
@@ -223,7 +223,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-email
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd
 Conflicts: 
 Menu-Depends: 
@@ -240,7 +240,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-entropy
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd
 Conflicts: 
 Menu-Depends: 
@@ -257,7 +257,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-exec
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd
 Conflicts: 
 Menu-Depends: 
@@ -274,7 +274,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-filecount
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd
 Conflicts: 
 Menu-Depends: 
@@ -291,7 +291,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-fscache
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd
 Conflicts: 
 Menu-Depends: 
@@ -308,7 +308,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-interface
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd
 Conflicts: 
 Menu-Depends: 
@@ -325,7 +325,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-iptables
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd +PACKAGE_collectd-mod-iptables:iptables +libiptc
 Conflicts: 
 Menu-Depends: 
@@ -342,7 +342,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-irq
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd
 Conflicts: 
 Menu-Depends: 
@@ -359,7 +359,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-iwinfo
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd +PACKAGE_collectd-mod-iwinfo:libiwinfo
 Conflicts: 
 Menu-Depends: 
@@ -376,7 +376,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-load
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd
 Conflicts: 
 Menu-Depends: 
@@ -393,7 +393,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-logfile
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd
 Conflicts: 
 Menu-Depends: 
@@ -410,7 +410,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-madwifi
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd
 Conflicts: 
 Menu-Depends: 
@@ -427,7 +427,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-memory
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd
 Conflicts: 
 Menu-Depends: 
@@ -444,7 +444,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-modbus
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd +PACKAGE_collectd-mod-modbus:libmodbus
 Conflicts: 
 Menu-Depends: 
@@ -461,7 +461,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-netlink
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd +PACKAGE_collectd-mod-netlink:ip @BROKEN
 Conflicts: 
 Menu-Depends: 
@@ -478,7 +478,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-network
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd
 Conflicts: 
 Menu-Depends: 
@@ -495,7 +495,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-nginx
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd +PACKAGE_collectd-mod-nginx:libcurl
 Conflicts: 
 Menu-Depends: 
@@ -512,7 +512,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-ntpd
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd
 Conflicts: 
 Menu-Depends: 
@@ -529,7 +529,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-olsrd
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd
 Conflicts: 
 Menu-Depends: 
@@ -546,7 +546,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-onewire
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd +PACKAGE_collectd-mod-onewire:libow-capi @BROKEN
 Conflicts: 
 Menu-Depends: 
@@ -563,7 +563,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-openvpn
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd
 Conflicts: 
 Menu-Depends: 
@@ -580,7 +580,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-ping
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd +PACKAGE_collectd-mod-ping:liboping
 Conflicts: 
 Menu-Depends: 
@@ -597,7 +597,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-postgresql
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd +PACKAGE_collectd-mod-postgresql:libpq
 Conflicts: 
 Menu-Depends: 
@@ -614,7 +614,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-powerdns
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd
 Conflicts: 
 Menu-Depends: 
@@ -631,7 +631,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-processes
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd
 Conflicts: 
 Menu-Depends: 
@@ -648,7 +648,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-protocols
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd
 Conflicts: 
 Menu-Depends: 
@@ -665,7 +665,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-rrdtool
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd +PACKAGE_collectd-mod-rrdtool:librrd1
 Conflicts: 
 Menu-Depends: 
@@ -682,7 +682,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-sensors
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd +PACKAGE_collectd-mod-sensors:libsensors
 Conflicts: 
 Menu-Depends: 
@@ -699,7 +699,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-snmp
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd +PACKAGE_collectd-mod-snmp:libnetsnmp
 Conflicts: 
 Menu-Depends: 
@@ -716,7 +716,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-syslog
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd
 Conflicts: 
 Menu-Depends: 
@@ -733,7 +733,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-tail
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd
 Conflicts: 
 Menu-Depends: 
@@ -750,7 +750,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-table
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd
 Conflicts: 
 Menu-Depends: 
@@ -767,7 +767,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-teamspeak2
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd
 Conflicts: 
 Menu-Depends: 
@@ -784,7 +784,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-ted
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd @((!TARGET_avr32)||BROKEN)
 Conflicts: 
 Menu-Depends: 
@@ -801,7 +801,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-tcpconns
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd
 Conflicts: 
 Menu-Depends: 
@@ -818,7 +818,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-thermal
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd
 Conflicts: 
 Menu-Depends: 
@@ -835,7 +835,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-unixsock
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd
 Conflicts: 
 Menu-Depends: 
@@ -852,7 +852,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-uptime
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd
 Conflicts: 
 Menu-Depends: 
@@ -869,7 +869,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-users
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd
 Conflicts: 
 Menu-Depends: 
@@ -886,7 +886,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-vmem
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd
 Conflicts: 
 Menu-Depends: 
@@ -903,7 +903,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-wireless
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd
 Conflicts: 
 Menu-Depends: 
@@ -920,7 +920,7 @@ Jo-Philipp Wich <jow@openwrt.org>
 @@
 
 Package: collectd-mod-write-http
-Version: 5.4.2-2
+Version: 5.4.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread collectd +PACKAGE_collectd-mod-write-http:libcurl
 Conflicts: 
 Menu-Depends: 

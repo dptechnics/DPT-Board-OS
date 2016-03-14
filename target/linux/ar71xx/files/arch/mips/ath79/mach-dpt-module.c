@@ -32,7 +32,7 @@
 #define DPT_MODULE_KEYS_DEBOUNCE_INTERVAL (3 * DPT_MODULE_KEYS_POLL_INTERVAL)	/* 3 checks must be pressed for keypress */
 
 static const char *dpt_module_part_probes[] = {
-	"tp-link",
+	"dpt-module",
 	NULL,
 };
 

@@ -1,6 +1,6 @@
 Source-Makefile: feeds/packages/net/cshark/Makefile
 Package: cshark
-Version: 2015-03-13-ab2ae2fbd72b6cbd57c95e3192edc3c1f475412b
+Version: 2015-11-24-e575ab3d35d75a6f70488001fcba45690ebe9b3e
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libjson-c +libpcap +libuci +libubox +libuclient +libustream-polarssl
 Conflicts: 
 Menu-Depends: 
@@ -9,7 +9,7 @@ Section: net
 Category: Network
 Title: CloudShark capture tool
 Maintainer: Luka Perkov <luka@openwrt.org>
-Source: cshark-2015-03-13-ab2ae2fbd72b6cbd57c95e3192edc3c1f475412b.tar.gz
+Source: cshark-2015-11-24-e575ab3d35d75a6f70488001fcba45690ebe9b3e.tar.gz
 Type: ipkg
 Description: CloudShark capture tool
 http://www.cloudshark.org/
@@ -18,7 +18,7 @@ Luka Perkov <luka@openwrt.org>
 
 Package: luci-app-cshark
 Submenu: 3. Applications
-Version: 2015-03-13-ab2ae2fbd72b6cbd57c95e3192edc3c1f475412b
+Version: 2015-11-24-e575ab3d35d75a6f70488001fcba45690ebe9b3e
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +cshark +luci
 Conflicts: 
 Menu-Depends: 
@@ -27,7 +27,7 @@ Section: luci
 Category: LuCI
 Title: Cloudshark capture tool Web UI
 Maintainer: Luka Perkov <luka@openwrt.org>
-Source: cshark-2015-03-13-ab2ae2fbd72b6cbd57c95e3192edc3c1f475412b.tar.gz
+Source: cshark-2015-11-24-e575ab3d35d75a6f70488001fcba45690ebe9b3e.tar.gz
 Type: ipkg
 Description: Cloudshark capture tool Web UI
 Luka Perkov <luka@openwrt.org>

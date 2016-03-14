@@ -1,8 +1,8 @@
 Source-Makefile: feeds/packages/utils/ncdu/Makefile
 Package: ncdu
 Submenu: Filesystem
-Version: 1.10-1
-Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libncursesw
+Version: 1.11-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libncurses
 Conflicts: 
 Menu-Depends: 
 Provides: 
@@ -10,7 +10,7 @@ Section: utils
 Category: Utilities
 Title: ncurses disk usage viewer
 Maintainer: Charles Lehner <celehner1@gmail.com>
-Source: ncdu-1.10.tar.gz
+Source: ncdu-1.11.tar.gz
 License: MIT
 LicenseFiles: COPYING
 Type: ipkg

@@ -1,7 +1,7 @@
 Source-Makefile: feeds/packages/net/ocserv/Makefile
 Package: ocserv
 Submenu: VPN
-Version: 0.10.8-1
+Version: 0.10.12-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +OCSERV_RADIUS:libradcli +OCSERV_HTTP_PARSER:libhttp-parser +OCSERV_SECCOMP:libseccomp +libgnutls +certtool +libncurses +libreadline +OCSERV_PAM:libpam +OCSERV_PROTOBUF:libprotobuf-c +kmod-tun
 Conflicts: 
 Menu-Depends: 
@@ -11,7 +11,7 @@ Category: Network
 Title: OpenConnect VPN server
 Maintainer: Nikos Mavrogiannopoulos <n.mavrogiannopoulos@gmail.com>
 Require-User: ocserv=72:ocserv=72
-Source: ocserv-0.10.8.tar.xz
+Source: ocserv-0.10.12.tar.xz
 License: GPLv2
 LicenseFiles: COPYING
 Type: ipkg

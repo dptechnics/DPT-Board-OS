@@ -1,7 +1,7 @@
 Source-Makefile: feeds/routing/babeld/Makefile
 Package: babeld
 Submenu: Routing and Redirection
-Version: 1.6.1-1
+Version: 1.7.1-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +kmod-ipv6
 Conflicts: 
 Menu-Depends: 
@@ -10,7 +10,7 @@ Section: net
 Category: Network
 Title: A loop-free distance-vector routing protocol
 Maintainer: Gabriel Kerneis <gabriel@kerneis.info>
-Source: babeld-1.6.1.tar.gz
+Source: babeld-1.7.1.tar.gz
 License: MIT
 Type: ipkg
 Description:  Babel is a loop-avoiding distance-vector routing protocol roughly based

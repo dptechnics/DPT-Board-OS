@@ -1,7 +1,7 @@
 Source-Makefile: feeds/packages/libs/unixodbc/Makefile
 Package: unixodbc
 Submenu: database
-Version: 2.3.4-1
+Version: 2.3.4-2
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libltdl +libpthread
 Conflicts: 
 Menu-Depends: 
@@ -21,7 +21,7 @@ Thomas Heil <heil@terminal-consulting.de>
 
 Package: unixodbc-tools
 Submenu: database
-Version: 2.3.4-1
+Version: 2.3.4-2
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +unixodbc +libncurses +libreadline
 Conflicts: 
 Menu-Depends: 
@@ -40,7 +40,7 @@ Thomas Heil <heil@terminal-consulting.de>
 
 Package: pgsqlodbc
 Submenu: database
-Version: 2.3.4-1
+Version: 2.3.4-2
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +unixodbc +libpq
 Conflicts: 
 Menu-Depends: 

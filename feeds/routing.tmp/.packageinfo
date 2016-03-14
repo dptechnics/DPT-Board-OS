@@ -81,7 +81,7 @@ Gabriel Kerneis <gabriel@kerneis.info>
 Source-Makefile: feeds/routing/babeld/Makefile
 Package: babeld
 Submenu: Routing and Redirection
-Version: 1.6.1-1
+Version: 1.7.1-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +kmod-ipv6
 Conflicts: 
 Menu-Depends: 
@@ -90,7 +90,7 @@ Section: net
 Category: Network
 Title: A loop-free distance-vector routing protocol
 Maintainer: Gabriel Kerneis <gabriel@kerneis.info>
-Source: babeld-1.6.1.tar.gz
+Source: babeld-1.7.1.tar.gz
 License: MIT
 Type: ipkg
 Description:  Babel is a loop-avoiding distance-vector routing protocol roughly based
@@ -581,10 +581,127 @@ Axel Neumann <neumann@cgws.de>
 @@
 
 
+Source-Makefile: feeds/routing/bmx7/Makefile
+Package: bmx7
+Menu: 1
+Submenu: Routing and Redirection
+Version: r2016021505-4
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +zlib +libpolarssl
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: BMX7 layer 3 routing daemon
+Maintainer: Axel Neumann <neumann@cgws.de>
+Source: bmx7-r2016021505.tar.gz
+License: GPL-2.0
+Type: ipkg
+Description: BMX7 routing daemon supporting securely-entrusted IPv6 (and IPv4in6) routing
+http://bmx6.net/
+Axel Neumann <neumann@cgws.de>
+@@
+
+Package: bmx7-uci-config
+Submenu: Routing and Redirection
+Version: r2016021505-4
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread bmx7 +libuci
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: configuration plugin based on uci (recommended!)
+Maintainer: Axel Neumann <neumann@cgws.de>
+Source: bmx7-r2016021505.tar.gz
+License: GPL-2.0
+Type: ipkg
+Description: configuration plugin based on uci (recommended!)
+http://bmx6.net/
+Axel Neumann <neumann@cgws.de>
+@@
+
+Package: bmx7-json
+Submenu: Routing and Redirection
+Version: r2016021505-4
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread bmx7 +libjson-c
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: json plugin based on json-c
+Maintainer: Axel Neumann <neumann@cgws.de>
+Source: bmx7-r2016021505.tar.gz
+License: GPL-2.0
+Type: ipkg
+Description: json plugin based on json-c
+http://bmx6.net/
+Axel Neumann <neumann@cgws.de>
+@@
+
+Package: bmx7-sms
+Submenu: Routing and Redirection
+Version: r2016021505-4
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread bmx7
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: sms plugin
+Maintainer: Axel Neumann <neumann@cgws.de>
+Source: bmx7-r2016021505.tar.gz
+License: GPL-2.0
+Type: ipkg
+Description: sms plugin
+http://bmx6.net/
+Axel Neumann <neumann@cgws.de>
+@@
+
+Package: bmx7-table
+Submenu: Routing and Redirection
+Version: r2016021505-4
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread bmx7 +bmx7-tun
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: plugin to announce routes from tables via tunnels
+Maintainer: Axel Neumann <neumann@cgws.de>
+Source: bmx7-r2016021505.tar.gz
+License: GPL-2.0
+Type: ipkg
+Description: plugin to announce routes from tables via tunnels
+http://bmx6.net/
+Axel Neumann <neumann@cgws.de>
+@@
+
+Package: bmx7-tun
+Submenu: Routing and Redirection
+Version: r2016021505-4
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread bmx7 +kmod-ip6-tunnel +kmod-iptunnel6 +kmod-tun
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: ipip-based tunnel plugin (recommended!)
+Maintainer: Axel Neumann <neumann@cgws.de>
+Source: bmx7-r2016021505.tar.gz
+License: GPL-2.0
+Type: ipkg
+Description: ipip-based tunnel plugin (recommended!)
+http://bmx6.net/
+Axel Neumann <neumann@cgws.de>
+@@
+
+
 Source-Makefile: feeds/routing/cjdns/Makefile
 Package: cjdns
 Submenu: Routing and Redirection
-Version: 0.16-16
+Version: 0.17-2
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +kmod-tun +kmod-ipv6 +libnl-tiny +libpthread +librt +libuci-lua +lua-bencode +dkjson +luasocket +lua-sha2
 Conflicts: 
 Menu-Depends: 
@@ -593,7 +710,7 @@ Section: net
 Category: Network
 Title: Encrypted near-zero-conf mesh routing protocol
 Maintainer: Lars Gierth <larsg@systemli.org>
-Source: cjdns-b2484c8c1a695a103db9e75b7b4445252ff053d6.tar.bz2
+Source: cjdns-40e87d9419c19063e772e39c7c59a8a8771c5ee8.tar.bz2
 License: GPL-3.0
 Type: ipkg
 Description: 	Cjdns implements an encrypted IPv6 network using public-key cryptography for address allocation and a distributed hash table for routing. This provides near-zero-configuration networking, and prevents many of the security and scalability issues that plague existing networks.
@@ -1309,7 +1426,7 @@ Saverio Proto <zioproto@gmail.com>
 Source-Makefile: feeds/routing/oonf-dlep-proxy/Makefile
 Package: oonf-dlep-proxy
 Submenu: OLSR.org network framework
-Version: 0.9.2
+Version: 0.11.0
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +librt +libnl-tiny +libuci +oonf-init-scripts
 Conflicts: 
 Menu-Depends: 
@@ -1318,7 +1435,7 @@ Section: net
 Category: Network
 Title: Build DLEP Radio+Router Agent
 Maintainer: Henning Rogge <hrogge@gmail.com>
-Source: oonf-dlep-proxy-0.9.2.tar.bz2
+Source: oonf-dlep-proxy-0.11.0.tar.bz2
 Type: ipkg
 Description: Build DLEP Radio+Router Agent
 http://www.olsr.org/ 
@@ -1329,7 +1446,7 @@ Henning Rogge <hrogge@gmail.com>
 Source-Makefile: feeds/routing/oonf-dlep-radio/Makefile
 Package: oonf-dlep-radio
 Submenu: OLSR.org network framework
-Version: 0.9.2
+Version: 0.11.0
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +librt +libnl-tiny +libuci +oonf-init-scripts
 Conflicts: 
 Menu-Depends: 
@@ -1338,7 +1455,7 @@ Section: net
 Category: Network
 Title: Build DLEP Radio Agent
 Maintainer: Henning Rogge <hrogge@gmail.com>
-Source: oonf-dlep-radio-0.9.2.tar.bz2
+Source: oonf-dlep-radio-0.11.0.tar.bz2
 Type: ipkg
 Description: Build DLEP Radio Agent
 http://www.olsr.org/ 
@@ -1369,7 +1486,7 @@ Henning Rogge <hrogge@gmail.com>
 Source-Makefile: feeds/routing/oonf-olsrd2/Makefile
 Package: oonf-olsrd2
 Submenu: OLSR.org network framework
-Version: 0.9.2
+Version: 0.11.0
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +librt +libnl-tiny +libuci +oonf-init-scripts
 Conflicts: 
 Menu-Depends: 
@@ -1378,7 +1495,7 @@ Section: net
 Category: Network
 Title: Build Olsrd V2 Routing Agent
 Maintainer: Henning Rogge <hrogge@gmail.com>
-Source: oonf-olsrd2-0.9.2.tar.bz2
+Source: oonf-olsrd2-0.11.0.tar.bz2
 Type: ipkg
 Description: Build Olsrd V2 Routing Agent
 http://www.olsr.org/ 

@@ -1,13 +1,13 @@
 Source-Makefile: feeds/packages/lang/python/Makefile
 Package: python-codecs
 Submenu: Python
-Version: 2.7.9-5
+Version: 2.7.9-6
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +python-light
 Conflicts: 
 Menu-Depends: 
 Provides: 
 Build-Depends: python/host
-Build-Depends/host: bzip2/host
+Build-Depends/host: bzip2/host expat/host
 Build-Types: host
 Section: lang
 Category: Languages
@@ -24,13 +24,13 @@ Alexandru Ardelean <ardeleanalex@gmail.com>
 
 Package: python-compiler
 Submenu: Python
-Version: 2.7.9-5
+Version: 2.7.9-6
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +python-light
 Conflicts: 
 Menu-Depends: 
 Provides: 
 Build-Depends: python/host
-Build-Depends/host: bzip2/host
+Build-Depends/host: bzip2/host expat/host
 Build-Types: host
 Section: lang
 Category: Languages
@@ -47,13 +47,13 @@ Alexandru Ardelean <ardeleanalex@gmail.com>
 
 Package: python-ctypes
 Submenu: Python
-Version: 2.7.9-5
+Version: 2.7.9-6
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +python-light
 Conflicts: 
 Menu-Depends: 
 Provides: 
 Build-Depends: python/host
-Build-Depends/host: bzip2/host
+Build-Depends/host: bzip2/host expat/host
 Build-Types: host
 Section: lang
 Category: Languages
@@ -70,13 +70,13 @@ Alexandru Ardelean <ardeleanalex@gmail.com>
 
 Package: python-db
 Submenu: Python
-Version: 2.7.9-5
+Version: 2.7.9-6
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +python-light +libdb47
 Conflicts: 
 Menu-Depends: 
 Provides: 
 Build-Depends: python/host
-Build-Depends/host: bzip2/host
+Build-Depends/host: bzip2/host expat/host
 Build-Types: host
 Section: lang
 Category: Languages
@@ -93,13 +93,13 @@ Alexandru Ardelean <ardeleanalex@gmail.com>
 
 Package: python-decimal
 Submenu: Python
-Version: 2.7.9-5
+Version: 2.7.9-6
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +python-light
 Conflicts: 
 Menu-Depends: 
 Provides: 
 Build-Depends: python/host
-Build-Depends/host: bzip2/host
+Build-Depends/host: bzip2/host expat/host
 Build-Types: host
 Section: lang
 Category: Languages
@@ -116,13 +116,13 @@ Alexandru Ardelean <ardeleanalex@gmail.com>
 
 Package: python-distutils
 Submenu: Python
-Version: 2.7.9-5
+Version: 2.7.9-6
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +python-light
 Conflicts: 
 Menu-Depends: 
 Provides: 
 Build-Depends: python/host
-Build-Depends/host: bzip2/host
+Build-Depends/host: bzip2/host expat/host
 Build-Types: host
 Section: lang
 Category: Languages
@@ -139,13 +139,13 @@ Alexandru Ardelean <ardeleanalex@gmail.com>
 
 Package: python-email
 Submenu: Python
-Version: 2.7.9-5
+Version: 2.7.9-6
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +python-light
 Conflicts: 
 Menu-Depends: 
 Provides: 
 Build-Depends: python/host
-Build-Depends/host: bzip2/host
+Build-Depends/host: bzip2/host expat/host
 Build-Types: host
 Section: lang
 Category: Languages
@@ -162,13 +162,13 @@ Alexandru Ardelean <ardeleanalex@gmail.com>
 
 Package: python-gdbm
 Submenu: Python
-Version: 2.7.9-5
+Version: 2.7.9-6
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +python-light +libgdbm
 Conflicts: 
 Menu-Depends: 
 Provides: 
 Build-Depends: python/host
-Build-Depends/host: bzip2/host
+Build-Depends/host: bzip2/host expat/host
 Build-Types: host
 Section: lang
 Category: Languages
@@ -185,13 +185,13 @@ Alexandru Ardelean <ardeleanalex@gmail.com>
 
 Package: python-logging
 Submenu: Python
-Version: 2.7.9-5
+Version: 2.7.9-6
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +python-light
 Conflicts: 
 Menu-Depends: 
 Provides: 
 Build-Depends: python/host
-Build-Depends/host: bzip2/host
+Build-Depends/host: bzip2/host expat/host
 Build-Types: host
 Section: lang
 Category: Languages
@@ -208,13 +208,13 @@ Alexandru Ardelean <ardeleanalex@gmail.com>
 
 Package: python-multiprocessing
 Submenu: Python
-Version: 2.7.9-5
+Version: 2.7.9-6
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +python-light
 Conflicts: 
 Menu-Depends: 
 Provides: 
 Build-Depends: python/host
-Build-Depends/host: bzip2/host
+Build-Depends/host: bzip2/host expat/host
 Build-Types: host
 Section: lang
 Category: Languages
@@ -231,13 +231,13 @@ Alexandru Ardelean <ardeleanalex@gmail.com>
 
 Package: python-ncurses
 Submenu: Python
-Version: 2.7.9-5
+Version: 2.7.9-6
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +python-light +libncurses
 Conflicts: 
 Menu-Depends: 
 Provides: 
 Build-Depends: python/host
-Build-Depends/host: bzip2/host
+Build-Depends/host: bzip2/host expat/host
 Build-Types: host
 Section: lang
 Category: Languages
@@ -254,13 +254,13 @@ Alexandru Ardelean <ardeleanalex@gmail.com>
 
 Package: python-openssl
 Submenu: Python
-Version: 2.7.9-5
+Version: 2.7.9-6
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +python-light +libopenssl
 Conflicts: 
 Menu-Depends: 
 Provides: 
 Build-Depends: python/host
-Build-Depends/host: bzip2/host
+Build-Depends/host: bzip2/host expat/host
 Build-Types: host
 Section: lang
 Category: Languages
@@ -277,13 +277,13 @@ Alexandru Ardelean <ardeleanalex@gmail.com>
 
 Package: python-pydoc
 Submenu: Python
-Version: 2.7.9-5
+Version: 2.7.9-6
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +python-light
 Conflicts: 
 Menu-Depends: 
 Provides: 
 Build-Depends: python/host
-Build-Depends/host: bzip2/host
+Build-Depends/host: bzip2/host expat/host
 Build-Types: host
 Section: lang
 Category: Languages
@@ -300,13 +300,13 @@ Alexandru Ardelean <ardeleanalex@gmail.com>
 
 Package: python-sqlite3
 Submenu: Python
-Version: 2.7.9-5
+Version: 2.7.9-6
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +python-light +libsqlite3
 Conflicts: 
 Menu-Depends: 
 Provides: 
 Build-Depends: python/host
-Build-Depends/host: bzip2/host
+Build-Depends/host: bzip2/host expat/host
 Build-Types: host
 Section: lang
 Category: Languages
@@ -323,13 +323,13 @@ Alexandru Ardelean <ardeleanalex@gmail.com>
 
 Package: python-unittest
 Submenu: Python
-Version: 2.7.9-5
+Version: 2.7.9-6
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +python-light
 Conflicts: 
 Menu-Depends: 
 Provides: 
 Build-Depends: python/host
-Build-Depends/host: bzip2/host
+Build-Depends/host: bzip2/host expat/host
 Build-Types: host
 Section: lang
 Category: Languages
@@ -346,13 +346,13 @@ Alexandru Ardelean <ardeleanalex@gmail.com>
 
 Package: python-xml
 Submenu: Python
-Version: 2.7.9-5
+Version: 2.7.9-6
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +python-light
 Conflicts: 
 Menu-Depends: 
 Provides: 
 Build-Depends: python/host
-Build-Depends/host: bzip2/host
+Build-Depends/host: bzip2/host expat/host
 Build-Types: host
 Section: lang
 Category: Languages
@@ -369,13 +369,13 @@ Alexandru Ardelean <ardeleanalex@gmail.com>
 
 Package: python-base
 Submenu: Python
-Version: 2.7.9-5
+Version: 2.7.9-6
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpthread +zlib
 Conflicts: 
 Menu-Depends: 
 Provides: 
 Build-Depends: python/host
-Build-Depends/host: bzip2/host
+Build-Depends/host: bzip2/host expat/host
 Build-Types: host
 Section: lang
 Category: Languages
@@ -393,13 +393,13 @@ Alexandru Ardelean <ardeleanalex@gmail.com>
 
 Package: python-light
 Submenu: Python
-Version: 2.7.9-5
+Version: 2.7.9-6
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +python-base +libffi +libbz2
 Conflicts: 
 Menu-Depends: 
 Provides: 
 Build-Depends: python/host
-Build-Depends/host: bzip2/host
+Build-Depends/host: bzip2/host expat/host
 Build-Types: host
 Section: lang
 Category: Languages
@@ -418,13 +418,13 @@ Alexandru Ardelean <ardeleanalex@gmail.com>
 
 Package: python
 Submenu: Python
-Version: 2.7.9-5
+Version: 2.7.9-6
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +python-light +python-codecs +python-compiler +python-ctypes +python-db +python-decimal +python-distutils +python-email +python-gdbm +python-logging +python-multiprocessing +python-ncurses +python-openssl +python-pydoc +python-sqlite3 +python-unittest +python-xml
 Conflicts: 
 Menu-Depends: 
 Provides: 
 Build-Depends: python/host
-Build-Depends/host: bzip2/host
+Build-Depends/host: bzip2/host expat/host
 Build-Types: host
 Section: lang
 Category: Languages

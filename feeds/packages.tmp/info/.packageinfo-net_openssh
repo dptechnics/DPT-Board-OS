@@ -1,7 +1,7 @@
 Source-Makefile: feeds/packages/net/openssh/Makefile
 Package: openssh-client
 Submenu: SSH
-Version: 6.8p1-1
+Version: 7.1p2-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libopenssl +zlib
 Conflicts: 
 Menu-Depends: 
@@ -12,7 +12,7 @@ Section: net
 Category: Network
 Title: OpenSSH client
 Maintainer: Peter Wagner <tripolar@gmx.at>
-Source: openssh-6.8p1.tar.gz
+Source: openssh-7.1p2.tar.gz
 License: BSD ISC
 LicenseFiles: LICENCE
 Type: ipkg
@@ -23,7 +23,7 @@ Peter Wagner <tripolar@gmx.at>
 
 Package: openssh-moduli
 Submenu: SSH
-Version: 6.8p1-1
+Version: 7.1p2-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libopenssl +zlib +openssh-keygen
 Conflicts: 
 Menu-Depends: 
@@ -34,7 +34,7 @@ Section: net
 Category: Network
 Title: OpenSSH moduli file
 Maintainer: Peter Wagner <tripolar@gmx.at>
-Source: openssh-6.8p1.tar.gz
+Source: openssh-7.1p2.tar.gz
 License: BSD ISC
 LicenseFiles: LICENCE
 Type: ipkg
@@ -45,7 +45,7 @@ Peter Wagner <tripolar@gmx.at>
 
 Package: openssh-client-utils
 Submenu: SSH
-Version: 6.8p1-1
+Version: 7.1p2-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libopenssl +zlib +openssh-client +openssh-keygen
 Conflicts: 
 Menu-Depends: 
@@ -56,7 +56,7 @@ Section: net
 Category: Network
 Title: OpenSSH client utilities
 Maintainer: Peter Wagner <tripolar@gmx.at>
-Source: openssh-6.8p1.tar.gz
+Source: openssh-7.1p2.tar.gz
 License: BSD ISC
 LicenseFiles: LICENCE
 Type: ipkg
@@ -67,7 +67,7 @@ Peter Wagner <tripolar@gmx.at>
 
 Package: openssh-keygen
 Submenu: SSH
-Version: 6.8p1-1
+Version: 7.1p2-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libopenssl +zlib
 Conflicts: 
 Menu-Depends: 
@@ -78,7 +78,7 @@ Section: net
 Category: Network
 Title: OpenSSH keygen
 Maintainer: Peter Wagner <tripolar@gmx.at>
-Source: openssh-6.8p1.tar.gz
+Source: openssh-7.1p2.tar.gz
 License: BSD ISC
 LicenseFiles: LICENCE
 Type: ipkg
@@ -89,7 +89,7 @@ Peter Wagner <tripolar@gmx.at>
 
 Package: openssh-server
 Submenu: SSH
-Version: 6.8p1-1
+Version: 7.1p2-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libopenssl +zlib +openssh-keygen
 Conflicts: 
 Menu-Depends: 
@@ -101,7 +101,7 @@ Category: Network
 Title: OpenSSH server
 Maintainer: Peter Wagner <tripolar@gmx.at>
 Require-User: sshd=22:sshd=22
-Source: openssh-6.8p1.tar.gz
+Source: openssh-7.1p2.tar.gz
 License: BSD ISC
 LicenseFiles: LICENCE
 Type: ipkg
@@ -112,7 +112,7 @@ Peter Wagner <tripolar@gmx.at>
 
 Package: openssh-server-pam
 Submenu: SSH
-Version: 6.8p1-1
+Version: 7.1p2-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libopenssl +zlib +libpthread +openssh-keygen +libpam
 Conflicts: 
 Menu-Depends: 
@@ -124,7 +124,7 @@ Category: Network
 Title: OpenSSH server (with PAM support)
 Maintainer: Peter Wagner <tripolar@gmx.at>
 Require-User: sshd=22:sshd=22
-Source: openssh-6.8p1.tar.gz
+Source: openssh-7.1p2.tar.gz
 License: BSD ISC
 LicenseFiles: LICENCE
 Type: ipkg
@@ -135,7 +135,7 @@ Peter Wagner <tripolar@gmx.at>
 
 Package: openssh-sftp-client
 Submenu: SSH
-Version: 6.8p1-1
+Version: 7.1p2-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libopenssl +zlib
 Conflicts: 
 Menu-Depends: 
@@ -146,7 +146,7 @@ Section: net
 Category: Network
 Title: OpenSSH SFTP client
 Maintainer: Peter Wagner <tripolar@gmx.at>
-Source: openssh-6.8p1.tar.gz
+Source: openssh-7.1p2.tar.gz
 License: BSD ISC
 LicenseFiles: LICENCE
 Type: ipkg
@@ -157,7 +157,7 @@ Peter Wagner <tripolar@gmx.at>
 
 Package: openssh-sftp-server
 Submenu: SSH
-Version: 6.8p1-1
+Version: 7.1p2-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
 Conflicts: 
 Menu-Depends: 
@@ -168,7 +168,7 @@ Section: net
 Category: Network
 Title: OpenSSH SFTP server
 Maintainer: Peter Wagner <tripolar@gmx.at>
-Source: openssh-6.8p1.tar.gz
+Source: openssh-7.1p2.tar.gz
 License: BSD ISC
 LicenseFiles: LICENCE
 Type: ipkg
@@ -179,7 +179,7 @@ Peter Wagner <tripolar@gmx.at>
 
 Package: openssh-sftp-avahi-service
 Submenu: SSH
-Version: 6.8p1-1
+Version: 7.1p2-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +openssh-sftp-server +avahi-daemon
 Conflicts: 
 Menu-Depends: 
@@ -190,7 +190,7 @@ Section: net
 Category: Network
 Title: OpenSSH (SFTP Avahi service)
 Maintainer: Peter Wagner <tripolar@gmx.at>
-Source: openssh-6.8p1.tar.gz
+Source: openssh-7.1p2.tar.gz
 License: BSD ISC
 LicenseFiles: LICENCE
 Type: ipkg

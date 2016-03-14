@@ -1,7 +1,7 @@
 Source-Makefile: feeds/packages/net/wget/Makefile
 Package: wget
 Submenu: File Transfer
-Version: 1.16.3-1
+Version: 1.17.1-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpcre +libopenssl +librt
 Conflicts: 
 Menu-Depends: 
@@ -11,7 +11,7 @@ Section: net
 Category: Network
 Title: Non-interactive network downloader (with SSL support)
 Maintainer: Maxim Storchak <m.storchak@gmail.com>
-Source: wget-1.16.3.tar.xz
+Source: wget-1.17.1.tar.xz
 License: GPL-3.0+
 LicenseFiles: COPYING
 Type: ipkg
@@ -28,7 +28,7 @@ Maxim Storchak <m.storchak@gmail.com>
 
 Package: wget-nossl
 Submenu: File Transfer
-Version: 1.16.3-1
+Version: 1.17.1-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpcre +zlib
 Conflicts: 
 Menu-Depends: 
@@ -38,7 +38,7 @@ Section: net
 Category: Network
 Title: Non-interactive network downloader (without SSL support)
 Maintainer: Maxim Storchak <m.storchak@gmail.com>
-Source: wget-1.16.3.tar.xz
+Source: wget-1.17.1.tar.xz
 License: GPL-3.0+
 LicenseFiles: COPYING
 Type: ipkg

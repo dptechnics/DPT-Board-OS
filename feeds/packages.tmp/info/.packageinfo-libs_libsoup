@@ -1,6 +1,6 @@
 Source-Makefile: feeds/packages/libs/libsoup/Makefile
 Package: libsoup
-Version: 2.44.2-1
+Version: 2.53.2-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +glib2 +libxml2 +libgnutls +libsqlite3 +BUILD_NLS:libiconv-full +BUILD_NLS:libintl-full
 Conflicts: 
 Menu-Depends: 
@@ -10,7 +10,7 @@ Section: libs
 Category: Libraries
 Title: libsoup
 Maintainer: W. Michael Petullo <mike@flyn.org>
-Source: libsoup-2.44.2.tar.xz
+Source: libsoup-2.53.2.tar.xz
 License: GPL-2.0
 LicenseFiles: COPYING
 Type: ipkg
