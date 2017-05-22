@@ -1,6 +1,6 @@
 Source-Makefile: feeds/packages/libs/pcre/Makefile
 Package: libpcre
-Version: 8.38-1
+Version: 8.39-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
 Conflicts: 
 Menu-Depends: 
@@ -9,7 +9,7 @@ Section: libs
 Category: Libraries
 Title: A Perl Compatible Regular Expression library
 Maintainer: Thomas Heil <heil@terminal-consulting.de>
-Source: pcre-8.38.tar.bz2
+Source: pcre-8.39.tar.bz2
 License: BSD-3-Clause
 LicenseFiles: LICENCE
 Type: ipkg
@@ -19,7 +19,7 @@ Thomas Heil <heil@terminal-consulting.de>
 @@
 
 Package: libpcre16
-Version: 8.38-1
+Version: 8.39-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
 Conflicts: 
 Menu-Depends: 
@@ -28,7 +28,7 @@ Section: libs
 Category: Libraries
 Title: A Perl Compatible Regular Expression library (16bit support)
 Maintainer: Thomas Heil <heil@terminal-consulting.de>
-Source: pcre-8.38.tar.bz2
+Source: pcre-8.39.tar.bz2
 License: BSD-3-Clause
 LicenseFiles: LICENCE
 Type: ipkg
@@ -38,7 +38,7 @@ Thomas Heil <heil@terminal-consulting.de>
 @@
 
 Package: libpcrecpp
-Version: 8.38-1
+Version: 8.39-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpcre +libstdcpp
 Conflicts: 
 Menu-Depends: 
@@ -47,7 +47,7 @@ Section: libs
 Category: Libraries
 Title: C++ wrapper for Perl Compatible Regular Expression library
 Maintainer: Thomas Heil <heil@terminal-consulting.de>
-Source: pcre-8.38.tar.bz2
+Source: pcre-8.39.tar.bz2
 License: BSD-3-Clause
 LicenseFiles: LICENCE
 Type: ipkg

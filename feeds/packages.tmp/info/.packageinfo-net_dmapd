@@ -1,6 +1,6 @@
 Source-Makefile: feeds/packages/net/dmapd/Makefile
 Package: dmapd
-Version: 0.0.72-1
+Version: 0.0.73-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libdmapsharing +libdb47 +vips
 Conflicts: 
 Menu-Depends: 
@@ -11,7 +11,7 @@ Category: Network
 Title: dmapd
 Maintainer: W. Michael Petullo <mike@flyn.org>
 Require-User: dmapd=56:dmapd=56
-Source: dmapd-0.0.72.tar.gz
+Source: dmapd-0.0.73.tar.gz
 License: GPLv2
 LicenseFiles: COPYING
 Type: ipkg

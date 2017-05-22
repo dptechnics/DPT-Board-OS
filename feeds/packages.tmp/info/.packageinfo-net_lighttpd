@@ -2,7 +2,7 @@ Source-Makefile: feeds/packages/net/lighttpd/Makefile
 Package: lighttpd
 Menu: 1
 Submenu: Web Servers/Proxies
-Version: 1.4.38-1
+Version: 1.4.41-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +LIGHTTPD_SSL:libopenssl +libpcre +libpthread
 Conflicts: 
 Menu-Depends: 
@@ -11,7 +11,7 @@ Section: net
 Category: Network
 Title: A flexible and lightweight web server
 Maintainer: W. Michael Petullo <mike@flyn.org>
-Source: lighttpd-1.4.38.tar.xz
+Source: lighttpd-1.4.41.tar.xz
 License: BSD-3c
 LicenseFiles: COPYING
 Type: ipkg
@@ -32,7 +32,7 @@ config LIGHTTPD_SSL
 
 Package: lighttpd-mod-redirect
 Submenu: Web Servers/Proxies
-Version: 1.4.38-1
+Version: 1.4.41-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread lighttpd +PACKAGE_lighttpd-mod-redirect:libpcre
 Conflicts: 
 Menu-Depends: 
@@ -41,7 +41,7 @@ Section: net
 Category: Network
 Title: URL redirection module
 Maintainer: W. Michael Petullo <mike@flyn.org>
-Source: lighttpd-1.4.38.tar.xz
+Source: lighttpd-1.4.41.tar.xz
 License: BSD-3c
 LicenseFiles: COPYING
 Type: ipkg
@@ -52,7 +52,7 @@ W. Michael Petullo <mike@flyn.org>
 
 Package: lighttpd-mod-auth
 Submenu: Web Servers/Proxies
-Version: 1.4.38-1
+Version: 1.4.41-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread lighttpd
 Conflicts: 
 Menu-Depends: 
@@ -61,7 +61,7 @@ Section: net
 Category: Network
 Title: Authentication module
 Maintainer: W. Michael Petullo <mike@flyn.org>
-Source: lighttpd-1.4.38.tar.xz
+Source: lighttpd-1.4.41.tar.xz
 License: BSD-3c
 LicenseFiles: COPYING
 Type: ipkg
@@ -72,7 +72,7 @@ W. Michael Petullo <mike@flyn.org>
 
 Package: lighttpd-mod-access
 Submenu: Web Servers/Proxies
-Version: 1.4.38-1
+Version: 1.4.41-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread lighttpd
 Conflicts: 
 Menu-Depends: 
@@ -81,7 +81,7 @@ Section: net
 Category: Network
 Title: Access restrictions module
 Maintainer: W. Michael Petullo <mike@flyn.org>
-Source: lighttpd-1.4.38.tar.xz
+Source: lighttpd-1.4.41.tar.xz
 License: BSD-3c
 LicenseFiles: COPYING
 Type: ipkg
@@ -92,7 +92,7 @@ W. Michael Petullo <mike@flyn.org>
 
 Package: lighttpd-mod-accesslog
 Submenu: Web Servers/Proxies
-Version: 1.4.38-1
+Version: 1.4.41-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread lighttpd
 Conflicts: 
 Menu-Depends: 
@@ -101,7 +101,7 @@ Section: net
 Category: Network
 Title: Access logging module
 Maintainer: W. Michael Petullo <mike@flyn.org>
-Source: lighttpd-1.4.38.tar.xz
+Source: lighttpd-1.4.41.tar.xz
 License: BSD-3c
 LicenseFiles: COPYING
 Type: ipkg
@@ -112,7 +112,7 @@ W. Michael Petullo <mike@flyn.org>
 
 Package: lighttpd-mod-alias
 Submenu: Web Servers/Proxies
-Version: 1.4.38-1
+Version: 1.4.41-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread lighttpd
 Conflicts: 
 Menu-Depends: 
@@ -121,7 +121,7 @@ Section: net
 Category: Network
 Title: Directory alias module
 Maintainer: W. Michael Petullo <mike@flyn.org>
-Source: lighttpd-1.4.38.tar.xz
+Source: lighttpd-1.4.41.tar.xz
 License: BSD-3c
 LicenseFiles: COPYING
 Type: ipkg
@@ -132,7 +132,7 @@ W. Michael Petullo <mike@flyn.org>
 
 Package: lighttpd-mod-cgi
 Submenu: Web Servers/Proxies
-Version: 1.4.38-1
+Version: 1.4.41-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread lighttpd
 Conflicts: 
 Menu-Depends: 
@@ -141,7 +141,7 @@ Section: net
 Category: Network
 Title: CGI module
 Maintainer: W. Michael Petullo <mike@flyn.org>
-Source: lighttpd-1.4.38.tar.xz
+Source: lighttpd-1.4.41.tar.xz
 License: BSD-3c
 LicenseFiles: COPYING
 Type: ipkg
@@ -152,7 +152,7 @@ W. Michael Petullo <mike@flyn.org>
 
 Package: lighttpd-mod-cml
 Submenu: Web Servers/Proxies
-Version: 1.4.38-1
+Version: 1.4.41-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread lighttpd +liblua
 Conflicts: 
 Menu-Depends: 
@@ -161,7 +161,7 @@ Section: net
 Category: Network
 Title: Cache Meta Language module
 Maintainer: W. Michael Petullo <mike@flyn.org>
-Source: lighttpd-1.4.38.tar.xz
+Source: lighttpd-1.4.41.tar.xz
 License: BSD-3c
 LicenseFiles: COPYING
 Type: ipkg
@@ -172,7 +172,7 @@ W. Michael Petullo <mike@flyn.org>
 
 Package: lighttpd-mod-compress
 Submenu: Web Servers/Proxies
-Version: 1.4.38-1
+Version: 1.4.41-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread lighttpd +PACKAGE_lighttpd-mod-compress:zlib
 Conflicts: 
 Menu-Depends: 
@@ -181,7 +181,7 @@ Section: net
 Category: Network
 Title: Compress output module
 Maintainer: W. Michael Petullo <mike@flyn.org>
-Source: lighttpd-1.4.38.tar.xz
+Source: lighttpd-1.4.41.tar.xz
 License: BSD-3c
 LicenseFiles: COPYING
 Type: ipkg
@@ -192,7 +192,7 @@ W. Michael Petullo <mike@flyn.org>
 
 Package: lighttpd-mod-evasive
 Submenu: Web Servers/Proxies
-Version: 1.4.38-1
+Version: 1.4.41-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread lighttpd
 Conflicts: 
 Menu-Depends: 
@@ -201,7 +201,7 @@ Section: net
 Category: Network
 Title: Evasive module
 Maintainer: W. Michael Petullo <mike@flyn.org>
-Source: lighttpd-1.4.38.tar.xz
+Source: lighttpd-1.4.41.tar.xz
 License: BSD-3c
 LicenseFiles: COPYING
 Type: ipkg
@@ -212,7 +212,7 @@ W. Michael Petullo <mike@flyn.org>
 
 Package: lighttpd-mod-evhost
 Submenu: Web Servers/Proxies
-Version: 1.4.38-1
+Version: 1.4.41-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread lighttpd
 Conflicts: 
 Menu-Depends: 
@@ -221,7 +221,7 @@ Section: net
 Category: Network
 Title: Exnhanced Virtual-Hosting module
 Maintainer: W. Michael Petullo <mike@flyn.org>
-Source: lighttpd-1.4.38.tar.xz
+Source: lighttpd-1.4.41.tar.xz
 License: BSD-3c
 LicenseFiles: COPYING
 Type: ipkg
@@ -232,7 +232,7 @@ W. Michael Petullo <mike@flyn.org>
 
 Package: lighttpd-mod-expire
 Submenu: Web Servers/Proxies
-Version: 1.4.38-1
+Version: 1.4.41-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread lighttpd
 Conflicts: 
 Menu-Depends: 
@@ -241,7 +241,7 @@ Section: net
 Category: Network
 Title: Expire module
 Maintainer: W. Michael Petullo <mike@flyn.org>
-Source: lighttpd-1.4.38.tar.xz
+Source: lighttpd-1.4.41.tar.xz
 License: BSD-3c
 LicenseFiles: COPYING
 Type: ipkg
@@ -252,7 +252,7 @@ W. Michael Petullo <mike@flyn.org>
 
 Package: lighttpd-mod-extforward
 Submenu: Web Servers/Proxies
-Version: 1.4.38-1
+Version: 1.4.41-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread lighttpd
 Conflicts: 
 Menu-Depends: 
@@ -261,7 +261,7 @@ Section: net
 Category: Network
 Title: Extract client module
 Maintainer: W. Michael Petullo <mike@flyn.org>
-Source: lighttpd-1.4.38.tar.xz
+Source: lighttpd-1.4.41.tar.xz
 License: BSD-3c
 LicenseFiles: COPYING
 Type: ipkg
@@ -272,7 +272,7 @@ W. Michael Petullo <mike@flyn.org>
 
 Package: lighttpd-mod-fastcgi
 Submenu: Web Servers/Proxies
-Version: 1.4.38-1
+Version: 1.4.41-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread lighttpd
 Conflicts: 
 Menu-Depends: 
@@ -281,7 +281,7 @@ Section: net
 Category: Network
 Title: FastCGI module
 Maintainer: W. Michael Petullo <mike@flyn.org>
-Source: lighttpd-1.4.38.tar.xz
+Source: lighttpd-1.4.41.tar.xz
 License: BSD-3c
 LicenseFiles: COPYING
 Type: ipkg
@@ -292,7 +292,7 @@ W. Michael Petullo <mike@flyn.org>
 
 Package: lighttpd-mod-flv_streaming
 Submenu: Web Servers/Proxies
-Version: 1.4.38-1
+Version: 1.4.41-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread lighttpd
 Conflicts: 
 Menu-Depends: 
@@ -301,7 +301,7 @@ Section: net
 Category: Network
 Title: FLV streaming module
 Maintainer: W. Michael Petullo <mike@flyn.org>
-Source: lighttpd-1.4.38.tar.xz
+Source: lighttpd-1.4.41.tar.xz
 License: BSD-3c
 LicenseFiles: COPYING
 Type: ipkg
@@ -312,7 +312,7 @@ W. Michael Petullo <mike@flyn.org>
 
 Package: lighttpd-mod-magnet
 Submenu: Web Servers/Proxies
-Version: 1.4.38-1
+Version: 1.4.41-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread lighttpd +liblua
 Conflicts: 
 Menu-Depends: 
@@ -321,7 +321,7 @@ Section: net
 Category: Network
 Title: Magnet module
 Maintainer: W. Michael Petullo <mike@flyn.org>
-Source: lighttpd-1.4.38.tar.xz
+Source: lighttpd-1.4.41.tar.xz
 License: BSD-3c
 LicenseFiles: COPYING
 Type: ipkg
@@ -332,7 +332,7 @@ W. Michael Petullo <mike@flyn.org>
 
 Package: lighttpd-mod-mysql_vhost
 Submenu: Web Servers/Proxies
-Version: 1.4.38-1
+Version: 1.4.41-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread lighttpd +PACKAGE_lighttpd-mod-mysql_vhost:libmysqlclient
 Conflicts: 
 Menu-Depends: 
@@ -341,7 +341,7 @@ Section: net
 Category: Network
 Title: Mysql virtual hosting module
 Maintainer: W. Michael Petullo <mike@flyn.org>
-Source: lighttpd-1.4.38.tar.xz
+Source: lighttpd-1.4.41.tar.xz
 License: BSD-3c
 LicenseFiles: COPYING
 Type: ipkg
@@ -352,7 +352,7 @@ W. Michael Petullo <mike@flyn.org>
 
 Package: lighttpd-mod-proxy
 Submenu: Web Servers/Proxies
-Version: 1.4.38-1
+Version: 1.4.41-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread lighttpd
 Conflicts: 
 Menu-Depends: 
@@ -361,7 +361,7 @@ Section: net
 Category: Network
 Title: Proxy module
 Maintainer: W. Michael Petullo <mike@flyn.org>
-Source: lighttpd-1.4.38.tar.xz
+Source: lighttpd-1.4.41.tar.xz
 License: BSD-3c
 LicenseFiles: COPYING
 Type: ipkg
@@ -372,7 +372,7 @@ W. Michael Petullo <mike@flyn.org>
 
 Package: lighttpd-mod-rewrite
 Submenu: Web Servers/Proxies
-Version: 1.4.38-1
+Version: 1.4.41-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread lighttpd +PACKAGE_lighttpd-mod-rewrite:libpcre
 Conflicts: 
 Menu-Depends: 
@@ -381,7 +381,7 @@ Section: net
 Category: Network
 Title: URL rewriting module
 Maintainer: W. Michael Petullo <mike@flyn.org>
-Source: lighttpd-1.4.38.tar.xz
+Source: lighttpd-1.4.41.tar.xz
 License: BSD-3c
 LicenseFiles: COPYING
 Type: ipkg
@@ -392,7 +392,7 @@ W. Michael Petullo <mike@flyn.org>
 
 Package: lighttpd-mod-rrdtool
 Submenu: Web Servers/Proxies
-Version: 1.4.38-1
+Version: 1.4.41-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread lighttpd
 Conflicts: 
 Menu-Depends: 
@@ -401,7 +401,7 @@ Section: net
 Category: Network
 Title: RRDtool module
 Maintainer: W. Michael Petullo <mike@flyn.org>
-Source: lighttpd-1.4.38.tar.xz
+Source: lighttpd-1.4.41.tar.xz
 License: BSD-3c
 LicenseFiles: COPYING
 Type: ipkg
@@ -412,7 +412,7 @@ W. Michael Petullo <mike@flyn.org>
 
 Package: lighttpd-mod-scgi
 Submenu: Web Servers/Proxies
-Version: 1.4.38-1
+Version: 1.4.41-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread lighttpd
 Conflicts: 
 Menu-Depends: 
@@ -421,7 +421,7 @@ Section: net
 Category: Network
 Title: SCGI module
 Maintainer: W. Michael Petullo <mike@flyn.org>
-Source: lighttpd-1.4.38.tar.xz
+Source: lighttpd-1.4.41.tar.xz
 License: BSD-3c
 LicenseFiles: COPYING
 Type: ipkg
@@ -432,7 +432,7 @@ W. Michael Petullo <mike@flyn.org>
 
 Package: lighttpd-mod-secdownload
 Submenu: Web Servers/Proxies
-Version: 1.4.38-1
+Version: 1.4.41-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread lighttpd
 Conflicts: 
 Menu-Depends: 
@@ -441,7 +441,7 @@ Section: net
 Category: Network
 Title: Secure and fast download module
 Maintainer: W. Michael Petullo <mike@flyn.org>
-Source: lighttpd-1.4.38.tar.xz
+Source: lighttpd-1.4.41.tar.xz
 License: BSD-3c
 LicenseFiles: COPYING
 Type: ipkg
@@ -452,7 +452,7 @@ W. Michael Petullo <mike@flyn.org>
 
 Package: lighttpd-mod-setenv
 Submenu: Web Servers/Proxies
-Version: 1.4.38-1
+Version: 1.4.41-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread lighttpd
 Conflicts: 
 Menu-Depends: 
@@ -461,7 +461,7 @@ Section: net
 Category: Network
 Title: Environment variable setting module
 Maintainer: W. Michael Petullo <mike@flyn.org>
-Source: lighttpd-1.4.38.tar.xz
+Source: lighttpd-1.4.41.tar.xz
 License: BSD-3c
 LicenseFiles: COPYING
 Type: ipkg
@@ -472,7 +472,7 @@ W. Michael Petullo <mike@flyn.org>
 
 Package: lighttpd-mod-simple_vhost
 Submenu: Web Servers/Proxies
-Version: 1.4.38-1
+Version: 1.4.41-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread lighttpd
 Conflicts: 
 Menu-Depends: 
@@ -481,7 +481,7 @@ Section: net
 Category: Network
 Title: Simple virtual hosting module
 Maintainer: W. Michael Petullo <mike@flyn.org>
-Source: lighttpd-1.4.38.tar.xz
+Source: lighttpd-1.4.41.tar.xz
 License: BSD-3c
 LicenseFiles: COPYING
 Type: ipkg
@@ -492,7 +492,7 @@ W. Michael Petullo <mike@flyn.org>
 
 Package: lighttpd-mod-ssi
 Submenu: Web Servers/Proxies
-Version: 1.4.38-1
+Version: 1.4.41-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread lighttpd +libpcre
 Conflicts: 
 Menu-Depends: 
@@ -501,7 +501,7 @@ Section: net
 Category: Network
 Title: SSI module
 Maintainer: W. Michael Petullo <mike@flyn.org>
-Source: lighttpd-1.4.38.tar.xz
+Source: lighttpd-1.4.41.tar.xz
 License: BSD-3c
 LicenseFiles: COPYING
 Type: ipkg
@@ -512,7 +512,7 @@ W. Michael Petullo <mike@flyn.org>
 
 Package: lighttpd-mod-status
 Submenu: Web Servers/Proxies
-Version: 1.4.38-1
+Version: 1.4.41-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread lighttpd
 Conflicts: 
 Menu-Depends: 
@@ -521,7 +521,7 @@ Section: net
 Category: Network
 Title: Server status display module
 Maintainer: W. Michael Petullo <mike@flyn.org>
-Source: lighttpd-1.4.38.tar.xz
+Source: lighttpd-1.4.41.tar.xz
 License: BSD-3c
 LicenseFiles: COPYING
 Type: ipkg
@@ -532,7 +532,7 @@ W. Michael Petullo <mike@flyn.org>
 
 Package: lighttpd-mod-trigger_b4_dl
 Submenu: Web Servers/Proxies
-Version: 1.4.38-1
+Version: 1.4.41-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread lighttpd +PACKAGE_lighttpd-mod-trigger_b4_dl:libpcre
 Conflicts: 
 Menu-Depends: 
@@ -541,7 +541,7 @@ Section: net
 Category: Network
 Title: Trigger before download module
 Maintainer: W. Michael Petullo <mike@flyn.org>
-Source: lighttpd-1.4.38.tar.xz
+Source: lighttpd-1.4.41.tar.xz
 License: BSD-3c
 LicenseFiles: COPYING
 Type: ipkg
@@ -552,7 +552,7 @@ W. Michael Petullo <mike@flyn.org>
 
 Package: lighttpd-mod-userdir
 Submenu: Web Servers/Proxies
-Version: 1.4.38-1
+Version: 1.4.41-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread lighttpd
 Conflicts: 
 Menu-Depends: 
@@ -561,7 +561,7 @@ Section: net
 Category: Network
 Title: User directory module
 Maintainer: W. Michael Petullo <mike@flyn.org>
-Source: lighttpd-1.4.38.tar.xz
+Source: lighttpd-1.4.41.tar.xz
 License: BSD-3c
 LicenseFiles: COPYING
 Type: ipkg
@@ -572,7 +572,7 @@ W. Michael Petullo <mike@flyn.org>
 
 Package: lighttpd-mod-usertrack
 Submenu: Web Servers/Proxies
-Version: 1.4.38-1
+Version: 1.4.41-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread lighttpd
 Conflicts: 
 Menu-Depends: 
@@ -581,7 +581,7 @@ Section: net
 Category: Network
 Title: User tracking module
 Maintainer: W. Michael Petullo <mike@flyn.org>
-Source: lighttpd-1.4.38.tar.xz
+Source: lighttpd-1.4.41.tar.xz
 License: BSD-3c
 LicenseFiles: COPYING
 Type: ipkg
@@ -592,7 +592,7 @@ W. Michael Petullo <mike@flyn.org>
 
 Package: lighttpd-mod-webdav
 Submenu: Web Servers/Proxies
-Version: 1.4.38-1
+Version: 1.4.41-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread lighttpd +PACKAGE_lighttpd-mod-webdav:libsqlite3 +PACKAGE_lighttpd-mod-webdav:libuuid +PACKAGE_lighttpd-mod-webdav:libxml2
 Conflicts: 
 Menu-Depends: 
@@ -601,7 +601,7 @@ Section: net
 Category: Network
 Title: WebDAV module
 Maintainer: W. Michael Petullo <mike@flyn.org>
-Source: lighttpd-1.4.38.tar.xz
+Source: lighttpd-1.4.41.tar.xz
 License: BSD-3c
 LicenseFiles: COPYING
 Type: ipkg

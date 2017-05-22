@@ -4,13 +4,13 @@
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
             <name>dpt-breakout-server</name>
-            <c-extensions/>
+            <c-extensions>c</c-extensions>
             <cpp-extensions/>
-            <header-extensions>c,h</header-extensions>
+            <header-extensions>h</header-extensions>
             <sourceEncoding>UTF-8</sourceEncoding>
             <make-dep-projects/>
             <sourceRootList>
-                <sourceRootElem>/home/dpape/buildserverhome/dpt-board-os/package/network/services/dpt-breakout-server/src</sourceRootElem>
+                <sourceRootElem>/home/dpape/buildserverhome/DPT-Board-OS/package/network/services/dpt-breakout-server/src</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>

@@ -1,4 +1,12 @@
-/* 
+/**
+ * @file ssh.h
+ * @author Daan Pape <daan@dptechnics.com>
+ * @date 7 Mar 2015
+ * @copyright DPTechnics
+ * @brief DPT-connector IoT-connector SSH connection functions 
+ *
+ * @section LICENSE
+ *
  * Copyright (c) 2014, Daan Pape
  * All rights reserved.
  *
@@ -23,88 +31,52 @@
  * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
  * POSSIBILITY OF SUCH DAMAGE.
- * 
- * File:   ssh.h
- * Created on March 7, 2015, 3:48 AM
+ *
+ * @section DESCRIPTION
+ *
+ * This file contains all the SSH related functions needed for the BlueCherry
+ * IoT-connection.
  */
 
 #ifndef SSH_H
 #define	SSH_H
 
-#include <poll.h>
-#include <stddef.h>
-#include <sys/time.h>
-#include <netinet/in.h>
-#include <stdarg.h>
 #include <stdbool.h>
 
-#include "dptnetwork.h"
-
-/* SSH connection monitor states */
-#define P_CONTINUE                  0                                           /* Do nothing and continue connection monitoring */
-#define P_RESTART                   1                                           /* Restart the SSH child process */
-#define P_EXIT                      2                                           /* Exit the program  */
+#include "network.h"
 
 /**
- * Initialize SSH connection monitor
+ * @brief This enumeration contains all actions to take on the child OpenSSH 
+ * connection.
  */
+enum ssh_control_action {
+    SSH_CONTINUE = 0,
+    SSH_RESTART,
+    SSH_EXIT
+};
+
 void ssh_init();
 
-/**
- * Wait for an active connection to BlueCherry
- */
 void ssh_internet_wait();
 
-/**
- * Get an SSH server to connect to. 
- * @param serv the server structure to fill up. 
- */
-void ssh_get_server(ssh_server *serv);
+void ssh_get_server(struct ssh_server *serv);
 
-/**
- * Overwrite or create a known hosts file with an entry
- * for the server parameters given to this server. 
- * @param ip the IP of the remote host. 
- * @param port the port of the remote host. 
- * @param key the hostkey. 
- * @return true on success, false on error.
- */
 bool ssh_set_known_host(char *ip, int port, char *key);
 
-/**
- * Start the SSH data connection. This connection
- * will also be used to tunnel the connection to the
- * DPT-Monitor.
- */
+void ssh_wait_for_active();
+
+void ssh_prepare_keys();
+
 void ssh_start_data_connection();
 
-/**
- * Watch the SSH connection based on OpenSSH signals and exit codes. 
- * @return control code on what to do with the child SSH process. 
- */
-int ssh_watch();
+enum ssh_control_action ssh_watch();
 
-/**
- * Wait for the OpenSSH child process to change state. This function
- * returns immediately when the child process did not exit. 
- * @return control code on what to do with this signal. 
- */
-int ssh_wait();
+enum ssh_control_action ssh_wait();
 
-/**
- * Kill the SSH child process
- */
 void ssh_kill();
 
-/**
- * Handler for signals from the kernel. 
- * @param sig the number of the signal. 
- */
 void ssh_signal_handler(int sig);
 
-/**
- * Exit the program/fork with an error
- */
 void ssh_exit_with_error();
 
 #endif

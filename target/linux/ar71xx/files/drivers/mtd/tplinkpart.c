@@ -16,11 +16,11 @@
 #include <linux/mtd/mtd.h>
 #include <linux/mtd/partitions.h>
 
-#define TPLINK_NUM_PARTS	6
+#define TPLINK_NUM_PARTS	7
 #define TPLINK_HEADER_V1	0x01000000
 #define MD5SUM_LEN		16
 
-#define DPT_PERSISTANT_SIZE	0x10000
+#define DPT_PERSISTENT_SIZE	0x10000
 #define TPLINK_ART_LEN		0x10000
 #define TPLINK_KERNEL_OFFS	0x20000
 
@@ -154,24 +154,29 @@ static int tplink_parse_partitions(struct mtd_info *master,
 
 	parts[1].name = "dpt-persistent";
 	parts[1].offset = offset/2;
-	parts[1].size = DPT_PERSISTANT_SIZE;
+	parts[1].size = DPT_PERSISTENT_SIZE/2;
 
-	parts[2].name = "kernel";
-	parts[2].offset = offset;
+	parts[2].name = "dpt-factory";
+	parts[2].offset = (offset/2) + DPT_PERSISTENT_SIZE/2;
+	parts[2].size = DPT_PERSISTENT_SIZE/2;
+	parts[2].mask_flags = MTD_WRITEABLE;
+
+	parts[3].name = "kernel";
+	parts[3].offset = offset;
 	parts[3].size = rootfs_offset - offset;
 
-	parts[3].name = "rootfs";
-	parts[3].offset = rootfs_offset;
-	parts[3].size = art_offset - rootfs_offset;
+	parts[4].name = "rootfs";
+	parts[4].offset = rootfs_offset;
+	parts[4].size = art_offset - rootfs_offset;
 
-	parts[4].name = "art";
-	parts[4].offset = art_offset;
-	parts[4].size = TPLINK_ART_LEN;
-	parts[4].mask_flags = MTD_WRITEABLE;
+	parts[5].name = "art";
+	parts[5].offset = art_offset;
+	parts[5].size = TPLINK_ART_LEN;
+	parts[5].mask_flags = MTD_WRITEABLE;
 
-	parts[5].name = "firmware";
-	parts[5].offset = offset;
-	parts[5].size = art_offset - offset;
+	parts[6].name = "firmware";
+	parts[6].offset = offset;
+	parts[6].size = art_offset - offset;
 
 	vfree(header);
 

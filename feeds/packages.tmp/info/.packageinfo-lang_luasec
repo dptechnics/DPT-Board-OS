@@ -1,7 +1,7 @@
 Source-Makefile: feeds/packages/lang/luasec/Makefile
 Package: luasec
 Submenu: Lua
-Version: 0.5.1-1
+Version: 0.6-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +lua +libopenssl +luasocket
 Conflicts: 
 Menu-Depends: 
@@ -10,7 +10,7 @@ Section: lang
 Category: Languages
 Title: LuaSec
 Maintainer: 
-Source: luasec-0.5.1.tar.gz
+Source: luasec-0.6.tar.gz
 License: MIT
 LicenseFiles: LICENSE
 Type: ipkg

@@ -1,4 +1,12 @@
-/* 
+/**
+ * @file network.h
+ * @author Daan Pape <daan@dptechnics.com>
+ * @date 4 Nov 2014
+ * @copyright DPTechnics
+ * @brief DPT-connector IoT-connector network functions
+ *
+ * @section LICENSE
+ *
  * Copyright (c) 2014, Daan Pape
  * All rights reserved.
  *
@@ -23,22 +31,48 @@
  * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
  * POSSIBILITY OF SUCH DAMAGE.
- * 
- * File:   logger.h
- * Created on November 5, 2014, 9:40 AM
+ *
+ * @section DESCRIPTION
+ *
+ * This file contains all the network functions for the DPTechnics BlueCherry
+ * Internet-of-Things connector.
  */
 
-#ifndef LOGGER_H
-#define	LOGGER_H
+#ifndef DPTNETWORK_H
+#define	DPTNETWORK_H
+
+#include <stdint.h>
+#include <stdbool.h>
+#include <netinet/in.h>
 
 /**
- * Initialize the logging function
+ * @defgroup NETWORK Constants which describe network functions.
+ * @{
  */
-void log_init();
 
 /**
- * Close the logging function
+ * @brief The length of the server host key.
  */
-void log_close();
+#define NETWORK_SERVER_HKEY_LEN      512
+
+/** @}*/
+
+/**
+ * @brief This structure represents a BlueCherry platform SSH endpoint.
+ */
+struct ssh_server {
+    int port;                               /**< Port to reverse tunnel to */
+    char ipv4[INET_ADDRSTRLEN];             /**< IPv4 address of SSH node */
+    char ipv6[INET6_ADDRSTRLEN];            /**< IPv6 address of SSH node */
+    int serverport;                         /**< SSH listening port of SSH node */
+    char hostkey[NETWORK_SERVER_HKEY_LEN];  /**< Hostkey of the SSH node */
+};
+
+bool network_request_ssh_server(struct ssh_server *serv);
+
+bool network_check_bluecherry_conn();
+
+bool network_update_ssh_key();
+
 #endif
 

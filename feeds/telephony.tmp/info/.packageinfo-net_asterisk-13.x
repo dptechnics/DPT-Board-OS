@@ -2,17 +2,17 @@ Source-Makefile: feeds/telephony/net/asterisk-13.x/Makefile
 Package: asterisk13
 Menu: 1
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +jansson +libncurses +libopenssl +libpopt +libsqlite3 +libstdcpp +libuuid +libxml2 +libxslt +zlib
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
 Section: net
 Category: Network
-Title: Complete open source PBX, v13.6.0
+Title: Complete open source PBX, v13.8.0
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -26,9 +26,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-sounds
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -36,7 +36,7 @@ Section: net
 Category: Network
 Title: Sounds support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -47,9 +47,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-app-alarmreceiver
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -57,7 +57,7 @@ Section: net
 Category: Network
 Title: Alarm receiver support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -68,9 +68,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-app-authenticate
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -78,7 +78,7 @@ Section: net
 Category: Network
 Title: Authenticate commands support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -89,9 +89,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-app-chanisavail
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -99,7 +99,7 @@ Section: net
 Category: Network
 Title: Channel availability check support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -110,9 +110,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-app-chanspy
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -120,7 +120,7 @@ Section: net
 Category: Network
 Title: Channel listen in support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -131,9 +131,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-app-confbridge
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13 +PACKAGE_asterisk13-app-confbridge:asterisk13-bridge-builtin-features +PACKAGE_asterisk13-app-confbridge:asterisk13-bridge-simple +PACKAGE_asterisk13-app-confbridge:asterisk13-bridge-softmix
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -141,7 +141,7 @@ Section: net
 Category: Network
 Title: ConfBridge support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -152,9 +152,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-app-dahdiras
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13 +PACKAGE_asterisk13-app-dahdiras:asterisk13-chan-dahdi
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -162,7 +162,7 @@ Section: net
 Category: Network
 Title: Execute an ISDN RAS support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -173,9 +173,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-app-directed_pickup
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -183,7 +183,7 @@ Section: net
 Category: Network
 Title: Directed call pickup support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -194,9 +194,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-app-disa
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -204,7 +204,7 @@ Section: net
 Category: Network
 Title: Direct Inward System Access support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -215,9 +215,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-app-exec
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -225,7 +225,7 @@ Section: net
 Category: Network
 Title: Exec application support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -236,9 +236,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-app-minivm
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -246,7 +246,7 @@ Section: net
 Category: Network
 Title: Minimal voicemail system support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -257,9 +257,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-app-mixmonitor
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -267,7 +267,7 @@ Section: net
 Category: Network
 Title: Record a call and mix the audio support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -278,9 +278,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-app-originate
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -288,7 +288,7 @@ Section: net
 Category: Network
 Title: Originate a call support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -299,9 +299,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-app-playtones
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -309,7 +309,7 @@ Section: net
 Category: Network
 Title: Playtones application support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -318,11 +318,32 @@ http://www.asterisk.org/
 Jiri Slachta <slachta@cesnet.cz>
 @@
 
+Package: asterisk13-app-queue
+Submenu: Telephony
+Version: 13.8.0-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
+Conflicts: asterisk11 asterisk18
+Menu-Depends: 
+Provides: 
+Build-Depends: libxml2/host
+Section: net
+Category: Network
+Title: True Call Queueing support
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Source: asterisk-13.8.0.tar.gz
+License: GPL-2.0
+LicenseFiles: COPYING LICENSE
+Type: ipkg
+Description: This package provides support for 'support for ACD' in Asterisk.
+http://www.asterisk.org/
+Jiri Slachta <slachta@cesnet.cz>
+@@
+
 Package: asterisk13-app-read
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -330,7 +351,7 @@ Section: net
 Category: Network
 Title: Variable read support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -341,9 +362,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-app-readexten
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -351,7 +372,7 @@ Section: net
 Category: Network
 Title: Extension to variable support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -362,9 +383,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-app-record
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -372,7 +393,7 @@ Section: net
 Category: Network
 Title: Record sound file support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -383,9 +404,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-app-sayunixtime
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -393,7 +414,7 @@ Section: net
 Category: Network
 Title: Say Unix time support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -404,9 +425,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-app-senddtmf
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -414,7 +435,7 @@ Section: net
 Category: Network
 Title: Send DTMF digits support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -425,9 +446,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-app-sms
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13 +PACKAGE_asterisk13-app-sms:libpopt +PACKAGE_asterisk13-app-sms:libstdcpp
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -435,7 +456,7 @@ Section: net
 Category: Network
 Title: SMS support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -446,9 +467,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-app-stack
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13 +PACKAGE_asterisk13-app-stack:asterisk13-res-agi
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -456,7 +477,7 @@ Section: net
 Category: Network
 Title: Stack applications support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -467,9 +488,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-app-system
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -477,7 +498,7 @@ Section: net
 Category: Network
 Title: System exec support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -488,9 +509,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-app-talkdetect
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -498,7 +519,7 @@ Section: net
 Category: Network
 Title: File playback with audio detect support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -509,9 +530,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-app-verbose
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -519,7 +540,7 @@ Section: net
 Category: Network
 Title: Verbose logging support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -530,9 +551,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-app-waituntil
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -540,7 +561,7 @@ Section: net
 Category: Network
 Title: Sleep support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -551,9 +572,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-app-while
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -561,7 +582,7 @@ Section: net
 Category: Network
 Title: While loop support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -572,9 +593,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-bridge-builtin-features
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -582,7 +603,7 @@ Section: net
 Category: Network
 Title: Bridging features support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -593,9 +614,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-bridge-builtin-interval-features
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -603,7 +624,7 @@ Section: net
 Category: Network
 Title: Built in bridging interval features support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -614,9 +635,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-bridge-holding
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -624,7 +645,7 @@ Section: net
 Category: Network
 Title: Bridging for storing channels in a bridge support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -635,9 +656,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-bridge-native-rtp
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -645,7 +666,7 @@ Section: net
 Category: Network
 Title: Native RTP bridging technology module support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -656,9 +677,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-bridge-simple
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -666,7 +687,7 @@ Section: net
 Category: Network
 Title: Simple two channel bridging module support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -677,9 +698,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-bridge-softmix
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -687,7 +708,7 @@ Section: net
 Category: Network
 Title: Multi-party software based channel mixing support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -698,9 +719,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-cdr
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -708,7 +729,7 @@ Section: net
 Category: Network
 Title: Provides CDR support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -719,9 +740,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-cdr-csv
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -729,7 +750,7 @@ Section: net
 Category: Network
 Title: Provides CDR CSV support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -740,9 +761,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-cdr-sqlite3
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13 libsqlite3
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -750,7 +771,7 @@ Section: net
 Category: Network
 Title: Provides CDR SQLITE3 support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -761,9 +782,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-chan-dahdi
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13 +PACKAGE_asterisk13-chan-dahdi:dahdi-tools-libtonezone +PACKAGE_asterisk13-chan-dahdi:kmod-dahdi +PACKAGE_asterisk13-chan-dahdi:libpri
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -771,7 +792,7 @@ Section: net
 Category: Network
 Title: DAHDI channel support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -782,9 +803,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-chan-iax2
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13 +PACKAGE_asterisk13-chan-iax2:asterisk13-res-timing-timerfd
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -792,7 +813,7 @@ Section: net
 Category: Network
 Title: IAX2 channel support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -803,9 +824,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-chan-sip
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13 +PACKAGE_asterisk13-chan-sip:asterisk13-app-confbridge
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -813,7 +834,7 @@ Section: net
 Category: Network
 Title: SIP channel support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -824,9 +845,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-chan-skinny
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -834,7 +855,7 @@ Section: net
 Category: Network
 Title: Skinny channel support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -845,9 +866,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-chan-unistim
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -855,7 +876,7 @@ Section: net
 Category: Network
 Title: Unistim channel support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -866,9 +887,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-codec-a-mu
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -876,7 +897,7 @@ Section: net
 Category: Network
 Title: Alaw to ulaw translation support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -887,9 +908,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-codec-adpcm
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -897,7 +918,7 @@ Section: net
 Category: Network
 Title: ADPCM text support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -908,9 +929,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-codec-alaw
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -918,7 +939,7 @@ Section: net
 Category: Network
 Title: Signed linear to alaw translation support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -929,9 +950,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-codec-dahdi
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13 +PACKAGE_asterisk13-codec-dahdi:asterisk13-chan-dahdi
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -939,7 +960,7 @@ Section: net
 Category: Network
 Title: DAHDI codec support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -950,9 +971,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-codec-g722
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -960,7 +981,7 @@ Section: net
 Category: Network
 Title: G.722 support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -971,9 +992,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-codec-g726
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -981,7 +1002,7 @@ Section: net
 Category: Network
 Title: Signed linear to G.726 translation support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -992,9 +1013,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-codec-gsm
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1002,7 +1023,7 @@ Section: net
 Category: Network
 Title: linear to GSM translation support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1013,9 +1034,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-codec-ilbc
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1023,7 +1044,7 @@ Section: net
 Category: Network
 Title: linear to ILBC translation support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1034,9 +1055,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-codec-lpc10
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1044,7 +1065,7 @@ Section: net
 Category: Network
 Title: Linear to LPC10 translation support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1055,9 +1076,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-codec-resample
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1065,7 +1086,7 @@ Section: net
 Category: Network
 Title: resample sLinear audio support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1076,9 +1097,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-codec-ulaw
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1086,7 +1107,7 @@ Section: net
 Category: Network
 Title: Signed linear to ulaw translation support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1097,9 +1118,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-curl
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13 +PACKAGE_asterisk13-curl:libcurl
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1107,7 +1128,7 @@ Section: net
 Category: Network
 Title: CURL support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1118,9 +1139,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-format-g726
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1128,7 +1149,7 @@ Section: net
 Category: Network
 Title: G.726 support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1139,9 +1160,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-format-g729
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1149,7 +1170,7 @@ Section: net
 Category: Network
 Title: G.729 support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1160,9 +1181,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-format-gsm
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1170,7 +1191,7 @@ Section: net
 Category: Network
 Title: GSM format support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1181,9 +1202,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-format-h263
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1191,7 +1212,7 @@ Section: net
 Category: Network
 Title: H263 format support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1202,9 +1223,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-format-h264
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1212,7 +1233,7 @@ Section: net
 Category: Network
 Title: H264 format support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1223,9 +1244,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-format-ilbc
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1233,7 +1254,7 @@ Section: net
 Category: Network
 Title: ILBC format support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1244,9 +1265,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-format-pcm
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1254,7 +1275,7 @@ Section: net
 Category: Network
 Title: PCM format support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1265,9 +1286,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-format-sln
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1275,7 +1296,7 @@ Section: net
 Category: Network
 Title: Raw slinear format support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1286,9 +1307,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-format-vox
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1296,7 +1317,7 @@ Section: net
 Category: Network
 Title: VOX format support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1307,9 +1328,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-format-wav
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1317,7 +1338,7 @@ Section: net
 Category: Network
 Title: WAV format (8000hz Signed Linear) support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1328,9 +1349,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-format-wav-gsm
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1338,7 +1359,7 @@ Section: net
 Category: Network
 Title: WAV format (Proprietary GSM) support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1349,9 +1370,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-func-base64
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1359,7 +1380,7 @@ Section: net
 Category: Network
 Title: base64 support support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1370,9 +1391,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-func-blacklist
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1380,7 +1401,7 @@ Section: net
 Category: Network
 Title: Blacklist on callerid support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1391,9 +1412,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-func-channel
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1401,7 +1422,7 @@ Section: net
 Category: Network
 Title: Channel info support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1412,9 +1433,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-func-cut
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1422,7 +1443,7 @@ Section: net
 Category: Network
 Title: CUT function support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1433,9 +1454,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-func-db
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1443,7 +1464,7 @@ Section: net
 Category: Network
 Title: Database interaction support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1454,9 +1475,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-func-devstate
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1464,7 +1485,7 @@ Section: net
 Category: Network
 Title: Blinky lights control support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1475,9 +1496,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-func-enum
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1485,7 +1506,7 @@ Section: net
 Category: Network
 Title: ENUM support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1496,9 +1517,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-func-env
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1506,7 +1527,7 @@ Section: net
 Category: Network
 Title: Environment functions support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1517,9 +1538,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-func-extstate
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1527,7 +1548,7 @@ Section: net
 Category: Network
 Title: Hinted extension state support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1538,9 +1559,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-func-global
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1548,7 +1569,7 @@ Section: net
 Category: Network
 Title: Global variable support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1559,9 +1580,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-func-groupcount
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1569,7 +1590,7 @@ Section: net
 Category: Network
 Title: Group count support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1580,9 +1601,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-func-math
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1590,7 +1611,7 @@ Section: net
 Category: Network
 Title: Math functions support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1601,9 +1622,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-func-module
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1611,7 +1632,7 @@ Section: net
 Category: Network
 Title: Simple module check function support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1622,9 +1643,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-func-realtime
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1632,7 +1653,7 @@ Section: net
 Category: Network
 Title: realtime support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1643,9 +1664,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-func-shell
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1653,7 +1674,7 @@ Section: net
 Category: Network
 Title: Shell support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1664,9 +1685,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-func-uri
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1674,7 +1695,7 @@ Section: net
 Category: Network
 Title: URI encoding and decoding support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1685,9 +1706,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-func-vmcount
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1695,7 +1716,7 @@ Section: net
 Category: Network
 Title: vmcount dialplan support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1706,9 +1727,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-odbc
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13 +PACKAGE_asterisk13-odbc:libpthread +PACKAGE_asterisk13-odbc:libc +PACKAGE_asterisk13-odbc:unixodbc
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1716,7 +1737,7 @@ Section: net
 Category: Network
 Title: ODBC support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1727,9 +1748,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-pbx-ael
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1737,7 +1758,7 @@ Section: net
 Category: Network
 Title: Asterisk Extension Logic support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1748,9 +1769,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-pbx-dundi
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1758,7 +1779,7 @@ Section: net
 Category: Network
 Title: Dundi support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1769,9 +1790,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-pbx-realtime
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1779,7 +1800,7 @@ Section: net
 Category: Network
 Title: Realtime Switch support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1790,9 +1811,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-pbx-spool
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1800,7 +1821,7 @@ Section: net
 Category: Network
 Title: Call Spool support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1811,9 +1832,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-pgsql
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13 +PACKAGE_asterisk13-pgsql:libpq
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1821,7 +1842,7 @@ Section: net
 Category: Network
 Title: PostgreSQL support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1832,9 +1853,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-pjsip
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13 +PACKAGE_asterisk13-pjsip:asterisk13-res-sorcery +PACKAGE_asterisk13-pjsip:libpjsip +PACKAGE_asterisk13-pjsip:libpjmedia +PACKAGE_asterisk13-pjsip:libpjnath +PACKAGE_asterisk13-pjsip:libpjsip-simple +PACKAGE_asterisk13-pjsip:libpjsip-ua +PACKAGE_asterisk13-pjsip:libpjsua +PACKAGE_asterisk13-pjsip:libpjsua2
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1842,7 +1863,7 @@ Section: net
 Category: Network
 Title: pjsip channel support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1853,9 +1874,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-res-adsi
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1863,7 +1884,7 @@ Section: net
 Category: Network
 Title: Provide ADSI support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1874,9 +1895,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-res-ael-share
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1884,7 +1905,7 @@ Section: net
 Category: Network
 Title: Shareable AEL code support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1895,9 +1916,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-res-agi
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1905,7 +1926,7 @@ Section: net
 Category: Network
 Title: Asterisk Gateway Interface support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1916,9 +1937,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-res-calendar
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1926,7 +1947,7 @@ Section: net
 Category: Network
 Title: Calendaring API support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1937,9 +1958,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-res-clioriginate
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1947,7 +1968,7 @@ Section: net
 Category: Network
 Title: Calls via CLI support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1958,9 +1979,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-res-fax
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13 +PACKAGE_asterisk13-res-fax:asterisk13-res-timing-pthread
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1968,7 +1989,7 @@ Section: net
 Category: Network
 Title: FAX modules support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -1977,11 +1998,74 @@ http://www.asterisk.org/
 Jiri Slachta <slachta@cesnet.cz>
 @@
 
+Package: asterisk13-res-hep
+Submenu: Telephony
+Version: 13.8.0-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
+Conflicts: asterisk11 asterisk18
+Menu-Depends: 
+Provides: 
+Build-Depends: libxml2/host
+Section: net
+Category: Network
+Title: HEPv3 API support
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Source: asterisk-13.8.0.tar.gz
+License: GPL-2.0
+LicenseFiles: COPYING LICENSE
+Type: ipkg
+Description: This package provides support for '' in Asterisk.
+http://www.asterisk.org/
+Jiri Slachta <slachta@cesnet.cz>
+@@
+
+Package: asterisk13-res-hep-pjsip
+Submenu: Telephony
+Version: 13.8.0-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13 +PACKAGE_asterisk13-res-hep-pjsip:asterisk13-res-hep +PACKAGE_asterisk13-res-hep-pjsip:asterisk13-pjsip
+Conflicts: asterisk11 asterisk18
+Menu-Depends: 
+Provides: 
+Build-Depends: libxml2/host
+Section: net
+Category: Network
+Title: PJSIP HEPv3 Logger support
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Source: asterisk-13.8.0.tar.gz
+License: GPL-2.0
+LicenseFiles: COPYING LICENSE
+Type: ipkg
+Description: This package provides support for '' in Asterisk.
+http://www.asterisk.org/
+Jiri Slachta <slachta@cesnet.cz>
+@@
+
+Package: asterisk13-res-hep-rtcp
+Submenu: Telephony
+Version: 13.8.0-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13 +PACKAGE_asterisk13-res-hep-rtcp:asterisk13-res-hep
+Conflicts: asterisk11 asterisk18
+Menu-Depends: 
+Provides: 
+Build-Depends: libxml2/host
+Section: net
+Category: Network
+Title: RTCP HEPv3 Logger support
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Source: asterisk-13.8.0.tar.gz
+License: GPL-2.0
+LicenseFiles: COPYING LICENSE
+Type: ipkg
+Description: This package provides support for '' in Asterisk.
+http://www.asterisk.org/
+Jiri Slachta <slachta@cesnet.cz>
+@@
+
 Package: asterisk13-res-http-websocket
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -1989,7 +2073,7 @@ Section: net
 Category: Network
 Title: HTTP websocket support support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -2000,9 +2084,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-res-monitor
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -2010,7 +2094,7 @@ Section: net
 Category: Network
 Title: Provide Monitor support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -2021,9 +2105,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-res-musiconhold
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -2031,7 +2115,7 @@ Section: net
 Category: Network
 Title: MOH support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -2042,9 +2126,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-res-parking
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -2052,7 +2136,7 @@ Section: net
 Category: Network
 Title: Phone Parking support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -2063,9 +2147,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-res-phoneprov
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -2073,7 +2157,7 @@ Section: net
 Category: Network
 Title: Phone Provisioning support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -2084,9 +2168,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-res-realtime
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -2094,7 +2178,7 @@ Section: net
 Category: Network
 Title: Realtime support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -2105,9 +2189,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-res-rtp-asterisk
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13 +PACKAGE_asterisk13-res-rtp-asterisk:libpjsip +PACKAGE_asterisk13-res-rtp-asterisk:libpjmedia +PACKAGE_asterisk13-res-rtp-asterisk:libpjnath +PACKAGE_asterisk13-res-rtp-asterisk:libpjsip-simple +PACKAGE_asterisk13-res-rtp-asterisk:libpjsip-ua +PACKAGE_asterisk13-res-rtp-asterisk:libpjsua +PACKAGE_asterisk13-res-rtp-asterisk:libpjsua2
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -2115,7 +2199,7 @@ Section: net
 Category: Network
 Title: RTP stack support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -2126,9 +2210,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-res-rtp-multicast
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -2136,7 +2220,7 @@ Section: net
 Category: Network
 Title: RTP multicast engine support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -2147,9 +2231,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-res-smdi
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -2157,7 +2241,7 @@ Section: net
 Category: Network
 Title: Provide SMDI support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -2168,9 +2252,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-res-sorcery
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -2178,7 +2262,7 @@ Section: net
 Category: Network
 Title: Sorcery data layer support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -2189,9 +2273,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-res-srtp
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13 +PACKAGE_asterisk13-res-srtp:libsrtp
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -2199,7 +2283,7 @@ Section: net
 Category: Network
 Title: SRTP Support support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -2210,9 +2294,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-res-timing-dahdi
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13 +PACKAGE_asterisk13-res-timing-dahdi:asterisk13-chan-dahdi
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -2220,7 +2304,7 @@ Section: net
 Category: Network
 Title: DAHDI Timing Interface support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -2231,9 +2315,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-res-timing-pthread
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -2241,7 +2325,7 @@ Section: net
 Category: Network
 Title: pthread Timing Interface support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -2252,9 +2336,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-res-timing-timerfd
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -2262,7 +2346,7 @@ Section: net
 Category: Network
 Title: Timerfd Timing Interface support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg
@@ -2273,9 +2357,9 @@ Jiri Slachta <slachta@cesnet.cz>
 
 Package: asterisk13-voicemail
 Submenu: Telephony
-Version: 13.6.0-1
+Version: 13.8.0-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread asterisk13 +PACKAGE_asterisk13-voicemail:asterisk13-res-adsi +PACKAGE_asterisk13-voicemail:asterisk13-res-smdi
-Conflicts: 
+Conflicts: asterisk11 asterisk18
 Menu-Depends: 
 Provides: 
 Build-Depends: libxml2/host
@@ -2283,7 +2367,7 @@ Section: net
 Category: Network
 Title: Voicemail support
 Maintainer: Jiri Slachta <slachta@cesnet.cz>
-Source: asterisk-13.6.0.tar.gz
+Source: asterisk-13.8.0.tar.gz
 License: GPL-2.0
 LicenseFiles: COPYING LICENSE
 Type: ipkg

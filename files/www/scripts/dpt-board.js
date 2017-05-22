@@ -29,9 +29,16 @@ var WIFI_ERROR_SSID_TO_LONG             = 102;
 var WIFI_ERROR_NO_RESTART               = 103;
 
 /* BlueCherry status codes */
-var BLUECHERRY_NOT_INITIALISED          = 1;
-var BLUECHERRY_NO_INTERNET              = 2;
-var BLUECHERRY_CONNECTED                = 3;
+var BLUECHERRY_STATUS_INACTIVE          = 0;
+var BLUECHERRY_STATUS_NO_NETWORK        = 1;
+var BLUECHERRY_STATUS_REQUESTING_PORTS  = 2;
+var BLUECHERRY_STATUS_CONNECTING        = 3;
+var BLUECHERRY_STATUS_GENERATING_KEYS   = 4;
+var BLUECHERRY_STATUS_CONNECTED         = 5;
+
+/* BlueCherry claim state codes */
+var BLUECHERRY_CLAIM_STATE_UNCLAIMED    = 0;
+var BLUECHERRY_CLAIM_STATE_CLAIMED      = 1;
 
 /* BlueCherry init status codes */
 var BLUECHERRY_INIT_SUCCESS             = 0;
@@ -351,7 +358,7 @@ function dpt_blueCherryConnect(username, password, callback, errorhandler)
     $.ajax({
         type: "POST",
         contentType: "application/json; charset=utf-8",
-        url: DPT_AJAX_PREFIX + 'api/bluecherry/init',
+        url: DPT_AJAX_PREFIX + 'api/bluecherry/connect',
         data: JSON.stringify({username : username, password: password}),
         dataType: "json",
         success: callback,
@@ -368,6 +375,13 @@ function dpt_blueCherryConnect(username, password, callback, errorhandler)
 function dpt_blueCherryStatus(callback, errorhandler)
 {
     $.getJSON(DPT_AJAX_PREFIX + 'api/bluecherry/status', function(data) {
+        callback(data.status);
+    }).error(errorhandler);
+}
+
+function dpt_blueCherryClaimStatus(callback, errorhandler)
+{
+    $.getJSON(DPT_AJAX_PREFIX + 'api/bluecherry/claimstatus', function(data) {
         callback(data.status);
     }).error(errorhandler);
 }

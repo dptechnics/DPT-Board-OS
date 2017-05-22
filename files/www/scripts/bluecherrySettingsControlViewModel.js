@@ -24,6 +24,22 @@ function pageViewModel(gvm) {
     gvm.blueCherryNoInternet = ko.computed(function(){i18n.setLocale(gvm.lang()); return i18n.__("BlueCherryNoInternet");}, gvm);
 }
 
+function bluecherry_claim_check()
+{
+    dpt_blueCherryClaimStatus(function(status) {
+       switch(status) {
+           case BLUECHERRY_CLAIM_STATE_CLAIMED:
+               $('#bluecherry_status_connected').show();
+               break;
+           default:
+               $('#bluecherry_connect').show();
+               break;
+       } 
+    }, function(error) {
+        BootstrapDialog.alert("Could not load BlueCherry connection status");
+    });
+}
+
 /**
  * Called when page is loaded
  */
@@ -31,19 +47,19 @@ function initPage() {
     /* Check the current BlueCherry status */
     dpt_blueCherryStatus(function(status){
        switch(status) {
-           case BLUECHERRY_NOT_INITIALISED:
-               $('#bluecherry_connect').show();
+           case BLUECHERRY_STATUS_INACTIVE:
+               $('#bluecherry_status_inactive').show();
                break;
-           case BLUECHERRY_NO_INTERNET:
+           case BLUECHERRY_STATUS_NO_NETWORK:
                $('#bluecherry_status_no_inet').show();
                break;
-           case BLUECHERRY_CONNECTED:
-               $('#bluecherry_status_connected').show();
+           case BLUECHERRY_STATUS_CONNECTED:
+               bluecherry_claim_check();
                break;
        } 
     }, function(error) {
         BootstrapDialog.alert("Could not load BlueCherry connection status");
-    })
+    });
     
     /* Attach bluecherry connect handler */
     $('#loginbtn').click(function() {

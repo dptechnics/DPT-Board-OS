@@ -1,4 +1,12 @@
-/* 
+/**
+ * @file config.h
+ * @author Daan Pape <daan@dptechnics.com>
+ * @date 6 Mar 2016
+ * @copyright DPTechnics
+ * @brief DPT-connector daemon configuration module
+ *
+ * @section LICENSE
+ *
  * Copyright (c) 2014, Daan Pape
  * All rights reserved.
  *
@@ -23,75 +31,67 @@
  * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
  * POSSIBILITY OF SUCH DAMAGE.
- * 
- * File:   config.h
- * Created on November 5, 2014, 1:14 PM
+ *
+ * @section DESCRIPTION
+ *
+ * This file contains the public methods and constants of the configuration module which
+ * parses the JSON configuration file at start-up and loads the complete configuration
+ * in memory so it can be accessed fast at run-time.
  */
 
 #ifndef CONFIG_H
 #define	CONFIG_H
 
-#include <stdint.h>
 #include <stdbool.h>
 
-#define DEBUG                                                                   /* The application will log debug messages if defined */
-#define NO_SSL_CHECK                                                            /* Curl will not check the SSL certificate validity */
-#define FORK_ON_START               false                                       /* Do not fork when configuratin file could not be found */
-
-/* Platform settings */
-#define PLATFORM_BASE_ADDRESS       "platform.bluecherry.io"                    /* The DNS name of the BlueCherry platform */
-
-/* Path settings */
-#define SSH_PATH                    "/usr/bin/ssh"                              /* Path to OpenSSH client */                             
-#define PATH_DEVNULL                "/dev/null"                                 /* Path to discard file */
-
-/* SSH monitor settings */
-#define POLL_TIME                   20                                          /* Check SSH connection every 20 seconds */
-
-/* Config parser settings */
-#define CONFIG_BUFF_SIZE            512                                         /* Maximum number of bytes on 1 config line */
-
-/* Curl settings */
-#define CURL_SSL_ROOT_CERT_PATH     "/etc/curlssl/cacert.pem"                   /* Default curl root certificate path */
-#define CURL_USER_AGENT             "dpt-connector/1.0"                         /* The DPT-Connector agent */
-
-/* Fixed configuration parameters */
-#define DPT_TYPE_ID_SIZE            8
-#define DPT_DEVICE_ID_SIZE          8
-#define DPT_DEVICE_KEY_SIZE         128
-
-/* Configuration structure */
-typedef struct{
-    bool daemon;
-    char* typeid;
-    char* devid;
-    char* devkey;
-    char* platform_url;
-    char* ssh_path;
-    char* null_path;
-    char* ssl_cert_path;
-    int ssh_poll_time;
-} config;
-
-/* Application wide configuration */
-extern config* conf;
+#include "log.h"
 
 /**
- * Parse configuration file at /etc/config/dpt-connector
- * @return true when parse was successfull
+ * @defgroup CONFIG Compile time configuration.
+ * @{
  */
-bool config_parse();
 
 /**
- * Free the parsed configuration data
+ * @brief The interval in seconds to check the BlueCherry connection.
  */
-void config_free();
+#define CONFIG_SSH_CONN_POLL_TIME                   5
+
+/** @}*/
 
 /**
- * Returns true if the configuration file has a filled 
- * in typeid, devid and devkey. 
- * @return true if the config is ready, false otherways. 
+ * @brief The application configuration parameters.
+ * 
+ * This structure contains all the parameters the application will use. This
+ * structure will be created one at start-up and it will be kept in memory 
+ * until the application stops.
  */
-bool config_ready();
+struct config {
+    bool daemonize;             /**< When this boolean is true the application will run in the background */
+    int ssh_poll_time;          /**< The SSH connection poll time */
+    char *bluecherry_address;   /**< The address of the IoT platform */
+    char *ssh_path;             /**< The path of the OpenSSH deaemon */
+    char *ssh_keygen_path;      /**< The path of the OpenSSH key generator */
+    enum log_level loglevel;    /**< The application logging level priority */
+    FILE *logfile;              /**< The path of the application logfile */
+    bool log_to_syslog;         /**< When this is true, the logger should ignore the logfile and write to syslog */
+    char *pidfile;              /**< The filepath to write the PID in on start-up */
+    char *identity_file;        /**< The SSH identity file to use */
+    char *identity_file_pub;    /**< The SSH public identity file */
+    char *ipc_file;             /**< The filepath to write the IPC status to */
+};
+
+/**
+ * @brief The application wide configuration.
+ * 
+ * This external variable is accessible from all source files and contains
+ * the current in memory copy of the application configuration.
+ */
+extern struct config *appconf;
+
+bool config_load(const char *path);
+
+bool config_reload(const char *path);
+
+void config_destroy();
+
 #endif
-

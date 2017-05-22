@@ -1,6 +1,6 @@
 Source-Makefile: feeds/packages/libs/libuv/Makefile
 Package: libuv
-Version: 1.4.2-1
+Version: 1.9.1-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpthread +librt
 Conflicts: 
 Menu-Depends: 
@@ -9,7 +9,7 @@ Section: libs
 Category: Libraries
 Title: Cross-platform asychronous I/O library
 Maintainer: Luka Perkov <luka@openwrt.org>
-Source: libuv-v1.4.2.tar.gz
+Source: libuv-v1.9.1.tar.gz
 LicenseFiles: LICENSE
 Type: ipkg
 Description:  libuv is a multi-platform support library with a focus on asynchronous I/O. It

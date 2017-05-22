@@ -1,6 +1,13 @@
 # Put your custom commands here that should be executed once
 # the system init finished. By default this file does nothing.
 
+# Place the serial port in RAW mode.
 stty -F /dev/ttyATH0 raw -clocal -echo
+
+# Register the PWM GPIO pins for the DPT-Robot
+echo 18 > /sys/class/sw_pwm/register_gpio
+echo 21 > /sys/class/sw_pwm/register_gpio
+echo 22 > /sys/class/sw_pwm/register_gpio
+echo 24 > /sys/class/sw_pwm/register_gpio
 
 exit 0

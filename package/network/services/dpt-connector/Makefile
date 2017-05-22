@@ -30,11 +30,9 @@ include $(INCLUDE_DIR)/kernel.mk
 
 PKG_NAME:=dpt-connector
 PKG_RELEASE:=1
-
 PKG_BUILD_DIR := $(KERNEL_BUILD_DIR)/$(PKG_NAME)
 PKG_MAINTAINER := Daan Pape <daan@dptechnics.com>
-
-PKG_BUILD_DEPENDS = libcurl libblobmsg-json
+PKG_BUILD_DEPENDS = libcurl libjson-c
 
 include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/cmake.mk
@@ -42,14 +40,14 @@ include $(INCLUDE_DIR)/cmake.mk
 define Package/dpt-connector
   SECTION:=net
   CATEGORY:=Network
-  SUBMENU:=Web Servers/Proxies
-  TITLE:=DPT-Platform connector
-  DEPENDS:=+libcurl +libjson-c +libblobmsg-json
+  SUBMENU:=BlueCherry
+  TITLE:=BlueCherry IoT platform connector
+  DEPENDS:=+libcurl +libjson-c
 endef
 
 define Package/dpt-connector/description
-  The DPTechnics dpt-connector integrates with OpenSSH-client to 
-  connect to the www.bluecherry.io Internet of Things platform. 
+  The DPT-Connector manages the IoT-connection to the BlueCherry
+  platform on platform.bluecherry.io
 endef
 
 define Build/Prepare
@@ -64,8 +62,10 @@ endef
 define Package/dpt-connector/install
 	$(INSTALL_DIR) $(1)/etc/init.d
 	$(INSTALL_BIN) ./files/dpt-connector.init $(1)/etc/init.d/dpt-connector
+
 	$(INSTALL_DIR) $(1)/etc/config
 	$(INSTALL_CONF) ./files/dpt-connector.config $(1)/etc/config/dpt-connector
+
 	$(INSTALL_DIR) $(1)/usr/sbin
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/dpt-connector $(1)/usr/sbin/dpt-connector
 endef

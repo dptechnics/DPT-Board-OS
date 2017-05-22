@@ -1,7 +1,7 @@
 Source-Makefile: feeds/packages/net/openconnect/Makefile
 Package: openconnect
 Submenu: VPN
-Version: 7.06-3
+Version: 7.06-5
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libxml2 +kmod-tun +resolveip +vpnc-scripts +OPENCONNECT_OPENSSL:libopenssl +OPENCONNECT_GNUTLS:libgnutls +OPENCONNECT_STOKEN:libstoken
 Conflicts: 
 Menu-Depends: 
@@ -11,6 +11,7 @@ Category: Network
 Title: OpenConnect VPN client (Cisco AnyConnect compatible)
 Maintainer: Nikos Mavrogiannopoulos <n.mavrogiannopoulos@gmail.com>
 Source: openconnect-7.06.tar.gz
+License: LGPLv2.1+
 Type: ipkg
 Description: 	A VPN client compatible with Cisco's AnyConnect SSL VPN and ocserv.
 

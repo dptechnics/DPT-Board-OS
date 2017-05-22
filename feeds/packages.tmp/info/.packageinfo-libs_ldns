@@ -1,6 +1,6 @@
 Source-Makefile: feeds/packages/libs/ldns/Makefile
 Package: libldns
-Version: 1.6.17-1
+Version: 1.6.17-2
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libopenssl
 Conflicts: 
 Menu-Depends: 
@@ -23,7 +23,7 @@ Nicolas Thill <nico@openwrt.org>
 
 Package: drill
 Submenu: IP Addresses and Names
-Version: 1.6.17-1
+Version: 1.6.17-2
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libopenssl +libldns
 Conflicts: 
 Menu-Depends: 

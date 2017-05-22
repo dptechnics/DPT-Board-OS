@@ -31,24 +31,13 @@ INCLUDE(CheckFunctionExists)
 SET(CMAKE_SHARED_LIBRARY_LINK_C_FLAGS "")
 ADD_DEFINITIONS(-Os -Wall -Werror -Wmissing-declarations --std=gnu99 -g3)
 
-IF(APPLE)
-  INCLUDE_DIRECTORIES(/opt/local/include)
-  LINK_DIRECTORIES(/opt/local/lib)
-ENDIF()
-
-SET(SOURCES main.c dptnetwork.c logger.c ssh.c config.c)
-
-CHECK_FUNCTION_EXISTS(getspnam HAVE_SHADOW)
-IF(HAVE_SHADOW)
-    ADD_DEFINITIONS(-DHAVE_SHADOW)
-ENDIF()
+SET(SOURCES main.c network.c log.c ssh.c config.c device.c keymanagement.c ipc-status.c)
 
 ADD_EXECUTABLE(dpt-connector ${SOURCES})
 
 FIND_LIBRARY(libcurl NAMES curl libcurl)
 FIND_LIBRARY(libjson NAMES json-c json)
-FIND_LIBRARY(libblobmsg_json NAMES libblobmsg-json blobmsg_json)
-TARGET_LINK_LIBRARIES(dpt-connector ${libcurl} ${libjson} ${libblobmsg_json} ${LIBS})
+TARGET_LINK_LIBRARIES(dpt-connector ${libcurl} ${libjson} ${LIBS})
 
 INSTALL(TARGETS dpt-connector
 	RUNTIME DESTINATION bin

@@ -1,7 +1,7 @@
 Source-Makefile: feeds/routing/ohybridproxy/Makefile
 Package: ohybridproxy
 Submenu: IP Addresses and Names
-Version: 2015-01-12-f2ba152799c481471ddc0213b3f98b1c143d97a3-1
+Version: 2016-05-17-8a28ae92c97099e771c9ede5641e3782ae809c27-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libubox +mdnsd
 Conflicts: 
 Menu-Depends: 
@@ -10,7 +10,7 @@ Section: net
 Category: Network
 Title: mdns/dns hybrid-proxy
 Maintainer: Steven Barth <cyrus@openwrt.org>
-Source: ohybridproxy-2015-01-12-f2ba152799c481471ddc0213b3f98b1c143d97a3.tar.bz2
+Source: ohybridproxy-2016-05-17-8a28ae92c97099e771c9ede5641e3782ae809c27.tar.bz2
 License: GPL-2.0
 Type: ipkg
 Description:  This package provides a statically configured daemon for translating DNS

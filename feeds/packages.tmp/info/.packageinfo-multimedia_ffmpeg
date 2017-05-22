@@ -1,6 +1,6 @@
 Source-Makefile: feeds/packages/multimedia/ffmpeg/Makefile
 Package: ffmpeg
-Version: 2.6.2-1
+Version: 2.6.9-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpthread +libffmpeg-full
 Conflicts: 
 Menu-Depends: 
@@ -10,7 +10,7 @@ Section: multimedia
 Category: Multimedia
 Title: FFmpeg program
 Maintainer: Ted Hess <thess@kitschensync.net>
-Source: ffmpeg-2.6.2.tar.bz2
+Source: ffmpeg-2.6.9.tar.bz2
 License: LGPL-2.1+ GPL-2+ LGPL-3
 LicenseFiles: COPYING.GPLv2 COPYING.GPLv3 COPYING.LGPLv2.1 COPYING.LGPLv3
 Type: ipkg
@@ -23,7 +23,7 @@ Ted Hess <thess@kitschensync.net>
 @@
 
 Package: ffprobe
-Version: 2.6.2-1
+Version: 2.6.9-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libffmpeg-full
 Conflicts: 
 Menu-Depends: 
@@ -33,7 +33,7 @@ Section: multimedia
 Category: Multimedia
 Title: FFmpeg CLI media identifier
 Maintainer: Ted Hess <thess@kitschensync.net>
-Source: ffmpeg-2.6.2.tar.bz2
+Source: ffmpeg-2.6.9.tar.bz2
 License: LGPL-2.1+ GPL-2+ LGPL-3
 LicenseFiles: COPYING.GPLv2 COPYING.GPLv3 COPYING.LGPLv2.1 COPYING.LGPLv3
 Type: ipkg
@@ -46,7 +46,7 @@ Ted Hess <thess@kitschensync.net>
 @@
 
 Package: ffserver
-Version: 2.6.2-1
+Version: 2.6.9-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpthread +libffmpeg-full
 Conflicts: 
 Menu-Depends: 
@@ -56,7 +56,7 @@ Section: multimedia
 Category: Multimedia
 Title:  streaming server
 Maintainer: Ted Hess <thess@kitschensync.net>
-Source: ffmpeg-2.6.2.tar.bz2
+Source: ffmpeg-2.6.9.tar.bz2
 License: LGPL-2.1+ GPL-2+ LGPL-3
 LicenseFiles: COPYING.GPLv2 COPYING.GPLv3 COPYING.LGPLv2.1 COPYING.LGPLv3
 Type: ipkg
@@ -69,7 +69,7 @@ Ted Hess <thess@kitschensync.net>
 
 Package: libffmpeg-custom
 Menu: 1
-Version: 2.6.2-1
+Version: 2.6.9-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpthread +zlib +libbz2 @DEVEL @!ALL +libopus +libspeex
 Conflicts: 
 Menu-Depends: 
@@ -79,7 +79,7 @@ Section: libs
 Category: Libraries
 Title: FFmpeg libraries (custom)
 Maintainer: Ted Hess <thess@kitschensync.net>
-Source: ffmpeg-2.6.2.tar.bz2
+Source: ffmpeg-2.6.9.tar.bz2
 License: LGPL-2.1+ GPL-2+ LGPL-3
 LicenseFiles: COPYING.GPLv2 COPYING.GPLv3 COPYING.LGPLv2.1 COPYING.LGPLv3
 Type: ipkg
@@ -95,7 +95,7 @@ source "feeds/packages/multimedia/ffmpeg/Config.in"
 @@
 
 Package: libffmpeg-full
-Version: 2.6.2-1
+Version: 2.6.9-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpthread +zlib +libbz2 @BUILD_PATENTED +alsa-lib
 Conflicts: 
 Menu-Depends: 
@@ -105,7 +105,7 @@ Section: libs
 Category: Libraries
 Title: FFmpeg libraries (full)
 Maintainer: Ted Hess <thess@kitschensync.net>
-Source: ffmpeg-2.6.2.tar.bz2
+Source: ffmpeg-2.6.9.tar.bz2
 License: LGPL-2.1+ GPL-2+ LGPL-3
 LicenseFiles: COPYING.GPLv2 COPYING.GPLv3 COPYING.LGPLv2.1 COPYING.LGPLv3
 Type: ipkg
@@ -118,7 +118,7 @@ Ted Hess <thess@kitschensync.net>
 @@
 
 Package: libffmpeg-mini
-Version: 2.6.2-1
+Version: 2.6.9-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpthread +zlib +libbz2 @BUILD_PATENTED
 Conflicts: 
 Menu-Depends: 
@@ -128,7 +128,7 @@ Section: libs
 Category: Libraries
 Title: FFmpeg libraries (mini)
 Maintainer: Ted Hess <thess@kitschensync.net>
-Source: ffmpeg-2.6.2.tar.bz2
+Source: ffmpeg-2.6.9.tar.bz2
 License: LGPL-2.1+ GPL-2+ LGPL-3
 LicenseFiles: COPYING.GPLv2 COPYING.GPLv3 COPYING.LGPLv2.1 COPYING.LGPLv3
 Type: ipkg
@@ -141,7 +141,7 @@ Ted Hess <thess@kitschensync.net>
 @@
 
 Package: libffmpeg-audio-dec
-Version: 2.6.2-1
+Version: 2.6.9-1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpthread +zlib +libbz2 @DEVEL +libopus +libspeex
 Conflicts: 
 Menu-Depends: 
@@ -151,7 +151,7 @@ Section: libs
 Category: Libraries
 Title: FFmpeg libraries (audio)
 Maintainer: Ted Hess <thess@kitschensync.net>
-Source: ffmpeg-2.6.2.tar.bz2
+Source: ffmpeg-2.6.9.tar.bz2
 License: LGPL-2.1+ GPL-2+ LGPL-3
 LicenseFiles: COPYING.GPLv2 COPYING.GPLv3 COPYING.LGPLv2.1 COPYING.LGPLv3
 Type: ipkg

@@ -1,4 +1,12 @@
-/* 
+/**
+ * @file log.h
+ * @author Daan Pape <daan@dptechnics.com>
+ * @date 6 Mar 2016
+ * @copyright DPTechnics
+ * @brief DPT-connector daemon logger module
+ *
+ * @section LICENSE
+ *
  * Copyright (c) 2014, Daan Pape
  * All rights reserved.
  *
@@ -23,57 +31,32 @@
  * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
  * POSSIBILITY OF SUCH DAMAGE.
- * 
- * File: dptnetwork.h
- * Created on November 4, 2014, 10:41 PM
+ *
+ * @section DESCRIPTION
+ *
+ * This file contains all the public log module functions and constants.
  */
 
-#ifndef DPTNETWORK_H
-#define	DPTNETWORK_H
+#ifndef LOG_H
+#define	LOG_H
 
-#include <stdint.h>
-#include <stdbool.h>
-#include <netinet/in.h>
-
-#define DPTNET_SERVER_HKEY_LEN      512
+#include <stdio.h>
 
 /**
- * An SSH server to connect to
+ * @brief The level to log a message with.
+ * 
+ * This enum represents the different log levels in the application. 
  */
-typedef struct {
-        int port;                           /* Port to reverse tunnel to */
-    char ipv4[INET_ADDRSTRLEN];             /* IPv4 address of SSH node */
-    char ipv6[INET6_ADDRSTRLEN];            /* IPv6 address of SSH node */
-    int serverport;                         /* SSH listening port of SSH node */
-    char hostkey[DPTNET_SERVER_HKEY_LEN];   /* Hostkey of the SSH node */
-} ssh_server;
-
-/*
- * Memory structure to save HTTP responses in. 
- */
-struct curl_mem_struct {
-  char *memory;
-  size_t size;
+enum log_level {
+    LG_NONE = 0,   /**< Do not log anything */
+    LG_ERROR,      /**< Only log application errors */
+    LG_WARNING,    /**< Log warnings and errors */
+    LG_INFO,       /**< Log info, warnings and errors */
+    LG_DEBUG       /**< Print all logging information */ 
 };
 
-/**
- * Request an SSH server node to connect to. 
- * @param serv structure to fill up on success. 
- * @return true on success, false on error. 
- */
-bool dptnet_request_ssh_server(ssh_server* serv);
+void log_basic(FILE *stream, enum log_level level, const char *format, ...);
 
-/**
- * Returns true when the board can reach the BlueCherry server
- * @return true when there is a connection
- */
-
-/**
- * Returns true when the DPT-Connector can reach
- * the BlueCherry platform. 
- * @return true when the BlueCherry platform is reachable. 
- */
-bool dptnet_check_bluecherry_conn();
+void log_event(enum log_level level, const char *format, ...);
 
 #endif
-

@@ -34,7 +34,7 @@ PKG_RELEASE=1
 PKG_BUILD_DIR := $(KERNEL_BUILD_DIR)/$(PKG_NAME)
 PKG_MAINTAINER:=Daan Pape <daan@dptechnics.com>
 
-PKG_BUILD_DEPENDS = ustream-ssl libiwinfo libuci libubus libubox libblobmsg-json libcurl libpthread libmbedtls
+PKG_BUILD_DEPENDS = ustream-ssl libiwinfo libuci libubus libubox libblobmsg-json libcurl libpthread
 
 include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/cmake.mk
@@ -48,7 +48,7 @@ endef
 
 define Package/dpt-breakout-server
   $(Package/dpt-breakout-server/default)
-  DEPENDS:=+libubox +libjson-c +libiwinfo +libsqlite3 +libuci +libubus +libblobmsg-json +libcurl +libpthread +libmbedtls
+  DEPENDS:=+libubox +libjson-c +libiwinfo +libsqlite3 +libuci +libubus +libblobmsg-json +libcurl +libpthread
 endef
 
 define Package/dpt-breakout-server/description

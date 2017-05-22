@@ -2,7 +2,7 @@ Source-Makefile: feeds/luci/applications/luci-app-olsr/Makefile
 Package: luci-app-olsr
 Submenu: 3. Applications
 Version: x-1
-Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +olsrd +olsrd-mod-jsoninfo +luci-lib-luaneightbl
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +olsrd +olsrd-mod-jsoninfo +luci-lib-luaneightbl +luci-lib-json
 Conflicts: 
 Menu-Depends: 
 Provides: 

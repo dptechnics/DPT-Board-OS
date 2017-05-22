@@ -1,4 +1,12 @@
-/* 
+/**
+ * @file config.c
+ * @author Daan Pape <daan@dptechnics.com>
+ * @date 6 Mar 2016
+ * @copyright DPTechnics
+ * @brief DPT-connector daemon configuration module
+ *
+ * @section LICENSE
+ *
  * Copyright (c) 2014, Daan Pape
  * All rights reserved.
  *
@@ -23,301 +31,315 @@
  * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
  * POSSIBILITY OF SUCH DAMAGE.
- * 
- * File:   config.c
- * Created on March 10, 2015, 6:28 PM
+ *
+ * @section DESCRIPTION
+ *
+ * This file contains the implementation of the configuration module which
+ * parses the JSON configuration file at start-up and loads the complete configuration
+ * in memory so it can be accessed fast at run-time.
  */
 
-#include <stdbool.h>
 #include <stddef.h>
 #include <stdio.h>
-#include <errno.h>
-#include <stdlib.h>
+#include <unistd.h>
+#include <json-c/json.h>
 #include <string.h>
-#include <ctype.h>
+#include <stdlib.h>
 #include <syslog.h>
-#include <limits.h>
+#include <malloc.h>
 
 #include "config.h"
-#include "logger.h"
 
 /**
- * Trim leading and trailing whitespace from a function. Original
- * by Adam Rosenfield on http://stackoverflow.com/questions/122616/how-do-i-trim-leading-trailing-whitespace-in-a-standard-way
- * @param str the string to trim.
- * @return the trimmed string. Do not call free on this one. 
+ * @brief The size of the configuration file buffer.
  */
-static char* trimwhitespace(char *str) {
-    char *end;
+#define CONFIG_BUFF_SIZE        4096
 
-    // Trim leading space
-    while (isspace(*str)) str++;
+/**
+ * @brief The application wide configuration structure.
+ */
+struct config *appconf = NULL;
 
-    if (*str == 0)
-        return str;
-
-    // Trim trailing space
-    end = str + strlen(str) - 1;
-    while (end > str && isspace(*end)) end--;
-
-    // Write new null terminator
-    *(end + 1) = 0;
-
-    return str;
+/**
+ * @brief Load the configuration file.
+ * 
+ * This function will read the configuration JSON file and parse it into the 
+ * application wide @ref appconf structure. After this function is called the
+ * configuration struct must be deleted with the @ref config_destroy function.
+ * 
+ * The config file has the following structure:
+ * @code
+ * {
+ *    "daemonize" : true/false,
+ *    "ssh_poll_time" : 0-100,
+ *    "bluecherry_address" : "url.to.iot.server",
+ *    "ssh_path" : "/usr/bin/ssh",
+ *    "ssh_keygen_path" : "/usr/bin/ssh-keygen",
+ *    "loglevel" : "NONE/ERROR/WARNING/INFO/DEBUG",
+ *    "logfile" : "/tmp/path/to/logfile",
+ *    "pid_file" : "/path/to/pidfile.pid",
+ *    "identity_file" : "/path/to/id_rsa",
+ *    "ipc_path" : "/path/to/ipc_file"
+ * }
+ * @endcode
+ * 
+ * @param path The path where to find the configuration JSON file.
+ * 
+ * @return True if the configuration could be parsed successfully.
+ */
+bool config_load(const char *path)
+{
+    appconf = (struct config*) malloc(sizeof(struct config));
+    if(appconf == NULL) {
+        log_basic(stderr, LG_ERROR, "There was not enough memory to reserve the configuration memory\n");
+        return false;
+    }
+    
+    return config_reload(path);
 }
 
 /**
- * Reserve memory and copy a string to it, be assured the string
- * is 0-terminated. 
- * @param destination the destination to copy to, if NULL new memory will be allocated. 
- * @param source the source string to copy. 
- * @return NULL on 
+ * @brief Reload the application wide configuration structure.
+ * 
+ * This function will read the configuration JSON file and parse it into the 
+ * already existing application wide @ref appconf structure. This function can
+ * only be used if the @ref config_load function has been called earlier.
+ * 
+ * @param path The path where to find the configuration JSON file.
+ * 
+ * @return True if the configuration structure could be parsed successfully.
  */
-static char* strmalloc(char* destination, const char* source) {
-    size_t s_size = strlen(source);
-    
-    char* buff = (char*) realloc(destination, (s_size + 1) * sizeof(char));
-    
-    if(buff == NULL) {
-        // Could not allocate memory, out of memory?
-        syslog(LOG_ERR, "Could not allocate memory in config.c:63, out of memory?");
-        return NULL;
+bool config_reload(const char *path)
+{
+    /* Check if the appconf structure has already been allocated */
+    if(appconf == NULL) {
+        return false;
     }
     
-    memcpy(buff, source, s_size);
+    /* Try to open the configuration file */
+    FILE *fp = fopen(path, "r");
+    if(fp == NULL) {
+        return false;
+    }
     
-    // Make sure string is null terminated
-    *(buff+s_size) = '\0';
+    char buff[CONFIG_BUFF_SIZE];
+    size_t len = fread(buff, sizeof(char), CONFIG_BUFF_SIZE, fp);
+    if(len == 0) {
+        log_basic(stderr, LG_ERROR, "The configuration file '%s' was empty\n", path);
+        fclose(fp);
+        return false;
+    } else if(len >= CONFIG_BUFF_SIZE) {
+        log_basic(stderr, LG_ERROR, "The configuration file is to big for the config buffer (%dB)\n", CONFIG_BUFF_SIZE);
+        fclose(fp);
+        return false;
+    }
     
-    return buff;
-}
+    /* 0-terminate the buffer and close the config file */
+    buff[len] = '\0';
+    fclose(fp);
+    
+    /* Try to parse the configuration file */
+    json_object *j_config = json_tokener_parse(buff);
+    if(json_object_is_type(j_config, json_type_null)) {
+        log_basic(stderr, LG_ERROR, "The configuration file could not be parsed\n");
+        return false;
+    }
+    
+    json_object *j_daemonize;
+    json_object *j_ssh_poll_time;
+    json_object *j_bluecherry_address;
+    json_object *j_ssh_path;
+    json_object *j_ssh_keygen_path;
+    json_object *j_loglevel;
+    json_object *j_logfile;
+    json_object *j_pid_file;
+    json_object *j_identity_file;
+    json_object *j_ipc_file_path;
+    
+    if(!json_object_object_get_ex(j_config, "daemonize", &j_daemonize) ||
+       !json_object_object_get_ex(j_config, "ssh_poll_time", &j_ssh_poll_time) ||
+       !json_object_object_get_ex(j_config, "bluecherry_address", &j_bluecherry_address) ||
+       !json_object_object_get_ex(j_config, "ssh_path", &j_ssh_path) ||
+       !json_object_object_get_ex(j_config, "ssh_keygen_path", &j_ssh_keygen_path) ||
+       !json_object_object_get_ex(j_config, "loglevel", &j_loglevel) ||
+       !json_object_object_get_ex(j_config, "logfile", &j_logfile) ||
+       !json_object_object_get_ex(j_config, "pid_file", &j_pid_file) ||
+       !json_object_object_get_ex(j_config, "identity_file", &j_identity_file) ||
+       !json_object_object_get_ex(j_config, "ipc_path", &j_ipc_file_path))
+    {
+        json_object_put(j_config);
+        log_basic(stderr, LG_ERROR, "The configuration file syntax is malformed or incomplete\n");
+        return false;
+    }
+    
+    /* Read out if this application should run as a daemon or not */
+    appconf->daemonize = json_object_get_boolean(j_daemonize);
+    
+    /* Read out SSH poll time */
+    appconf->ssh_poll_time = json_object_get_int(j_ssh_poll_time);
+    
+    /* Read out the BlueCherry server address  */
+    const char* bluecherry_address = json_object_get_string(j_bluecherry_address);
+    size_t bc_addr_len = strlen(bluecherry_address);
+    if(bc_addr_len <= 0) {
+        log_basic(stderr, LG_ERROR, "The BlueCherry server URL is empty and required\n");
+        json_object_put(j_config);
+        return false;
+    }
+    appconf->bluecherry_address = (char*) realloc(appconf->bluecherry_address, (bc_addr_len + 1) * sizeof(char));
+    memcpy(appconf->bluecherry_address, bluecherry_address, bc_addr_len);
+    appconf->bluecherry_address[bc_addr_len] = '\0';
+    
+    /* Read out the SSH path */
+    const char* ssh_path = json_object_get_string(j_ssh_path);
+    size_t ssh_path_len = strlen(ssh_path);
+    if(ssh_path_len <= 0) {
+        log_basic(stderr, LG_ERROR, "The OpenSSH path is empty and required\n");
+        json_object_put(j_config);
+        return false;
+    }
+    appconf->ssh_path = (char*) realloc(appconf->ssh_path, (ssh_path_len + 1) * sizeof(char));
+    memcpy(appconf->ssh_path, ssh_path, ssh_path_len);
+    appconf->ssh_path[ssh_path_len] = '\0';
+    
+    /* Read out the SSH keygen path */
+    const char* ssh_keygen_path = json_object_get_string(j_ssh_keygen_path);
+    size_t ssh_keygen_path_len = strlen(ssh_keygen_path);
+    if(ssh_keygen_path_len <= 0) {
+        log_basic(stderr, LG_ERROR, "The OpenSSH keygen path is empty and required\n");
+        json_object_put(j_config);
+        return false;
+    }
+    appconf->ssh_keygen_path = (char*) realloc(appconf->ssh_keygen_path, (ssh_keygen_path_len + 1) * sizeof(char));
+    memcpy(appconf->ssh_keygen_path, ssh_keygen_path, ssh_keygen_path_len);
+    appconf->ssh_keygen_path[ssh_keygen_path_len] = '\0';
 
-/**
- * Parse an integer from a string on a safe way. 
- * @param string the string to parse to integer.
- * @param unsignedint if set to true, the fallback value will be used if the integer is negative.  
- * @param integer to fallback to if parsing fails.
- * @return the parsed integer on success, fallback on failure. 
- */
-static int parseint(char* string, bool unsignedint, int fallback) {
-    errno = 0;
-    char* end = string;
-    long result =  strtol(string, &end, 10);   
-    
-    if (errno == ERANGE) {
-        syslog(LOG_WARNING, "Configuration parameter is to large  (overflow), falling back to default");
-        return fallback;
+    /* Read out the application wide logging level */
+    const char* loglevel = json_object_get_string(j_loglevel);
+    if(strlen(loglevel) <= 0) {
+        log_basic(stderr, LG_ERROR, "The configuration file did not contain a valid logging level, falling back to LOG_ERROR\n");
+        appconf->loglevel = LG_ERROR;
+    }
+    switch(loglevel[0]) {
+        case 'N':
+            appconf->loglevel = LG_NONE;
+            break;
+        case 'E':
+            appconf->loglevel = LG_ERROR;
+            break;
+        case 'W' :
+            appconf->loglevel = LOG_WARNING;
+            break;
+        case 'I':
+            appconf->loglevel = LOG_INFO;
+            break;
+        case 'D':
+            appconf->loglevel = LOG_DEBUG;
+            break;
+        default:
+            log_basic(stderr, LG_ERROR, "The configuration file did not contain a valid logging level, falling back to LOG_ERROR\n");
+            appconf->loglevel = LG_ERROR;
+            break;
     }
     
-    if(unsignedint) {
-        if(result > UINT_MAX || result < 0) {
-            syslog(LOG_WARNING, "Parsed string is not within unsigned integer range");
-            return fallback;
-        }
+    /* Read out the path of the logfile and open it if necessary */
+    const char* logfile = json_object_get_string(j_logfile);
+    appconf->log_to_syslog = false;
+    
+    if(strlen(logfile) == 0) {
+        /* Fall back to stdout if the path is empty */
+        appconf->logfile = stdout;
     } else {
-        /* Parse as signed integer */
-        if(result > INT_MAX || result < INT_MIN) {
-            syslog(LOG_WARNING, "Parsed string is not within signed integer range");
-            return fallback;
-        }
-    }
-    
-    if(end == string) {
-        syslog(LOG_WARNING, "String is not numeric");
-        return fallback;
-    }
-    
-    if('\0' != *end) {
-        syslog(LOG_WARNING, "parseint got extra characters on input line");
-        return fallback;
-    }
-    
-    return (int) result;
-}
-
-
-config* conf = NULL;
-
-/**
- * Parse configuration file at /etc/config/dpt-connector
- * @return true when parse was successfull
- */
-bool config_parse() {
-    /* Read buffer */
-    char buffer[CONFIG_BUFF_SIZE];
-    char* cfgl;
-    FILE * fd;
-    char* key;
-    char* value;
-    errno = 0;
-    
-    printf("Starting to parse configuration\r\n");
-    
-    /* Reserve memory for configuration and null terminate every string */
-    if(conf == NULL) {
-        conf = (config*) calloc(1, sizeof(config));
-        
-        /* Put in default configuration */
-        conf->daemon = FORK_ON_START;
-#ifdef DEBUG
-        printf("conf->daemon = %s\r\n", FORK_ON_START ? "true" : "false");
-#endif
-        
-        conf->platform_url = strmalloc(conf->platform_url, PLATFORM_BASE_ADDRESS);
-#ifdef DEBUG
-        printf("conf->platfrom_url = %s\r\n", conf->platform_url);
-#endif
-        
-        conf->ssh_path = strmalloc(conf->ssh_path, SSH_PATH);
-#ifdef DEBUG  
-        printf("conf->ssh_path = %s\r\n", conf->ssh_path);
-#endif
-          
-        conf->null_path = strmalloc(conf->null_path, PATH_DEVNULL);
-#ifdef DEBUG
-        printf("conf->null_path = %s\r\n", conf->null_path);
-#endif
-         
-        conf->ssh_poll_time = POLL_TIME;
-#ifdef DEBUG 
-        printf("conf->ssh_poll_time = %d\r\n", conf->ssh_poll_time);
-#endif
-        
-        conf->ssl_cert_path = strmalloc(conf->ssl_cert_path, CURL_SSL_ROOT_CERT_PATH);
-#ifdef DEBUG 
-        printf("conf->ssl_cert_path = %s\r\n", conf->ssl_cert_path);
-#endif
-
-        /* Make sure the essentials are initialized */
-        conf->typeid = strmalloc(conf->typeid, "");
-#ifdef DEBUG 
-        printf("conf->typeid = %s\r\n", conf->typeid);
-#endif
-        
-        conf->devid = strmalloc(conf->devid, "");
-#ifdef DEBUG 
-        printf("conf->devid = %s\r\n", conf->devid);
-#endif
-        
-        conf->devkey = strmalloc(conf->devkey, "");
-#ifdef DEBUG 
-        printf("conf->devkey = %s\r\n", conf->devkey);
-#endif
-    }
-
-    if ((fd = fopen("/etc/config/dpt-connector", "r")) != NULL) {
-#ifdef DEBUG 
-        printf("Opened configruation file: /etc/config/dpt-connector\r\n");
-#endif
-        
-        while ((cfgl = fgets(buffer, CONFIG_BUFF_SIZE - 1, fd)) != NULL) {
-            /* Ignore lines starting with '#', ';' or whitespace  */
-            if (cfgl[0] != '#' && cfgl[0] != ';' && cfgl[0] != ' ' && cfgl[0] != '\t' && cfgl[0] != '\r' && cfgl[0] != '\n') {
-                char* trimmed = trimwhitespace(buffer);
-                key = strtok(trimmed, " \t");
-                value = strtok (NULL, " ,-");
-
-#ifdef DEBUG 
-        printf("Parsing configuration line '%s' = '%s'\r\n", key, value);
-#endif                
-                if(key != NULL && value != NULL) {
-                    if(strcmp(key, "daemon") == 0) 
-                    {
-                        conf->daemon = value[0] == 't';
-                    } 
-                    else if (strcmp(key, "typeid") == 0) 
-                    {
-                        conf->typeid = strmalloc(conf->typeid, value);
-                    } 
-                    else if (strcmp(key, "devid") == 0)
-                    {
-                        conf->devid = strmalloc(conf->devid, value);
-                    }
-                    else if (strcmp(key, "devkey") == 0)
-                    {
-                        conf->devkey = strmalloc(conf->devkey, value);
-                    }
-                    else if (strcmp(key, "platform_base_address") == 0)
-                    {
-                        conf->platform_url = strmalloc(conf->platform_url, value);
-                    }
-                    else if (strcmp(key, "ssh_path") == 0)
-                    {
-                        conf->ssh_path = strmalloc(conf->ssh_path, value);
-                    }
-                    else if (strcmp(key, "null_path") == 0)
-                    {
-                        conf->null_path = strmalloc(conf->null_path, value);
-                    }
-                    else if (strcmp(key, "ssh_poll_time") == 0)
-                    {
-                        conf->ssh_poll_time = parseint(value, true, POLL_TIME);
-                    }
-                    else if(strcmp(key, "curl_root_cert_path") == 0)
-                    {
-                        conf->ssl_cert_path = strmalloc(conf->ssl_cert_path, value);
-                    }
-                    else 
-                    {
-                        syslog(LOG_WARNING, "Unknown configuration option: '%s'", key);
-                    }
-                }
+        if(strcmp(logfile, "stdout") == 0) {
+            appconf->logfile = stdout;
+        } else if(strcmp(logfile, "stderr") == 0) {
+            appconf->logfile = stderr;
+        } else if(strcmp(logfile, "syslog") == 0) {
+            appconf->logfile = NULL;
+            appconf->log_to_syslog = true;
+            
+            /* Open the syslogger for this app */
+            openlog("DPT-connector", LOG_CONS | LOG_PID, LOG_DAEMON);
+            
+        } else {
+            appconf->logfile = fopen(logfile, "a");
+            if(appconf->logfile == NULL) {
+                /* When the logfile could not be opened and/or created, use stdout */
+                appconf->logfile = stdout;
+                log_basic(stderr, LG_ERROR, "The logfile '%s' could not be opened\n", logfile);
             }
         }
-
-        if (errno != 0) {
-            free(conf);
-            fclose(fd);
-            syslog(LOG_ERR, "Could not reload configuration: %s", strerror(errno));
-            return false;
-        }
-        syslog(LOG_INFO, "Successfully reloaded dpt-connector configuration");
-        fclose(fd);
-        return true;
     }
     
-    syslog(LOG_ERR, "Could not reload configuration: config file not found");
-    return false;
-}
-
-/**
- * Returns true if the configuration file has a filled 
- * in typeid, devid and devkey. 
- * @return true if the config is ready, false otherways. 
- */
-bool config_ready() {
-    if(strlen(conf->typeid) != DPT_TYPE_ID_SIZE) {
+    /* Read out the PID file path */
+    const char* pid_filepath = json_object_get_string(j_pid_file);
+    size_t pid_filepath_len = strlen(pid_filepath);
+    if(pid_filepath_len <= 0) {
+        log_basic(stderr, LG_ERROR, "The pid file path is required");
+        json_object_put(j_config);
         return false;
     }
+    appconf->pidfile = (char*) realloc(appconf->pidfile, (pid_filepath_len + 1) * sizeof(char));
+    memcpy(appconf->pidfile, pid_filepath, pid_filepath_len);
+    appconf->pidfile[pid_filepath_len] = '\0';
     
-    if(strlen(conf->devid) != DPT_DEVICE_ID_SIZE) {
+    /* Read out the identity file path */
+    const char* identity_filepath = json_object_get_string(j_identity_file);
+    size_t identity_filepath_len = strlen(identity_filepath);
+    if(identity_filepath_len <= 0) {
+        log_basic(stderr, LG_ERROR, "The identity file path is required");
+        json_object_put(j_config);
         return false;
     }
+    appconf->identity_file = (char*) realloc(appconf->identity_file, (identity_filepath_len + 1) * sizeof(char));
+    memcpy(appconf->identity_file, identity_filepath, identity_filepath_len);
+    appconf->identity_file[identity_filepath_len] = '\0';
     
-    if(strlen(conf->devkey) != DPT_DEVICE_KEY_SIZE) {
-        return false;
-    }
+    /* Create the public filename */
+    size_t identity_file_pub_len = identity_filepath_len + strlen(".pub");
+    appconf->identity_file_pub = (char*) realloc(appconf->identity_file_pub, (identity_file_pub_len + 1) * sizeof(char));
+    snprintf(appconf->identity_file_pub, identity_file_pub_len + 1, "%s.pub", appconf->identity_file);
     
-    if(strlen(conf->ssl_cert_path) < 2) {
+    /* Read out the IPC file path */
+    const char* ipc_file_path = json_object_get_string(j_ipc_file_path);
+    size_t ipc_file_path_len = strlen(ipc_file_path);
+    if(ipc_file_path_len <= 0) {
+        log_basic(stderr, LG_ERROR, "The IPC file path is required");
+        json_object_put(j_config);
         return false;
     }
-
-#ifdef DEBUG
-    printf("Configuration is ready\r\n");
-#endif    
-    /* Configuration is correct and ready */
+    appconf->ipc_file = (char*) realloc(appconf->ipc_file, (ipc_file_path_len + 1) * sizeof(char));
+    memcpy(appconf->ipc_file, ipc_file_path, ipc_file_path_len);
+    appconf->ipc_file[ipc_file_path_len] = '\0';
+    
+    /* Release parsed JSON and return */
+    json_object_put(j_config);
     return true;
 }
 
 /**
- * Free the parsed configuration data
+ * @brief Destroy the application wide configuration.
+ * 
+ * This function will release the memory used by the application wide configuration.
+ * 
+ * @return None
  */
-void config_free() {
-    free(conf->devid);
-    free(conf->devkey);
-    free(conf->null_path);
-    free(conf->platform_url);
-    free(conf->ssh_path);
-    free(conf->typeid);
-    free(conf);
+void config_destroy()
+{
+    if(appconf == NULL) {
+        return;
+    }
+    
+    /* Close logfile entries */
+    if(appconf->logfile != stdout) {
+        fclose(appconf->logfile);
+    }
+    
+    free(appconf->bluecherry_address);
+    free(appconf->ssh_path);
+    free(appconf->pidfile);
+    
+    /* Release the memory */
+    free(appconf);
+    appconf = NULL;
 }

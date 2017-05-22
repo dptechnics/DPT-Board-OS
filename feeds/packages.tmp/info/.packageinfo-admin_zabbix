@@ -1,8 +1,8 @@
 Source-Makefile: feeds/packages/admin/zabbix/Makefile
 Package: zabbix-agent
 Submenu: zabbix
-Version: 2.4.6-2
-Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Version: 2.4.6-3
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +BUILD_NLS:libiconv-full
 Conflicts: 
 Menu-Depends: 
 Provides: 
@@ -23,8 +23,8 @@ Etienne CHAMPETIER <champetier.etienne@gmail.com>
 
 Package: zabbix-agentd
 Submenu: zabbix
-Version: 2.4.6-2
-Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Version: 2.4.6-3
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +BUILD_NLS:libiconv-full
 Conflicts: 
 Menu-Depends: 
 Provides: 
@@ -45,7 +45,7 @@ Etienne CHAMPETIER <champetier.etienne@gmail.com>
 
 Package: zabbix-extra-mac80211
 Submenu: zabbix
-Version: 2.4.6-2
+Version: 2.4.6-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +zabbix-agentd @PACKAGE_MAC80211_DEBUGFS @KERNEL_DEBUG_FS
 Conflicts: 
 Menu-Depends: 
@@ -69,7 +69,7 @@ Etienne CHAMPETIER <champetier.etienne@gmail.com>
 
 Package: zabbix-extra-network
 Submenu: zabbix
-Version: 2.4.6-2
+Version: 2.4.6-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +zabbix-agentd +libuci-lua +lua
 Conflicts: 
 Menu-Depends: 
@@ -93,7 +93,7 @@ Etienne CHAMPETIER <champetier.etienne@gmail.com>
 
 Package: zabbix-extra-wifi
 Submenu: zabbix
-Version: 2.4.6-2
+Version: 2.4.6-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +zabbix-agentd +libiwinfo-lua +libuci-lua +lua
 Conflicts: 
 Menu-Depends: 
@@ -117,8 +117,8 @@ Etienne CHAMPETIER <champetier.etienne@gmail.com>
 
 Package: zabbix-sender
 Submenu: zabbix
-Version: 2.4.6-2
-Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Version: 2.4.6-3
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +BUILD_NLS:libiconv-full
 Conflicts: 
 Menu-Depends: 
 Provides: 
@@ -139,8 +139,8 @@ Etienne CHAMPETIER <champetier.etienne@gmail.com>
 
 Package: zabbix-server
 Submenu: zabbix
-Version: 2.4.6-2
-Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libsqlite3
+Version: 2.4.6-3
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +BUILD_NLS:libiconv-full +libsqlite3
 Conflicts: 
 Menu-Depends: 
 Provides: 
@@ -161,8 +161,8 @@ Etienne CHAMPETIER <champetier.etienne@gmail.com>
 
 Package: zabbix-proxy
 Submenu: zabbix
-Version: 2.4.6-2
-Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libsqlite3
+Version: 2.4.6-3
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +BUILD_NLS:libiconv-full +libsqlite3
 Conflicts: 
 Menu-Depends: 
 Provides: 
@@ -183,8 +183,8 @@ Etienne CHAMPETIER <champetier.etienne@gmail.com>
 
 Package: zabbix-get
 Submenu: zabbix
-Version: 2.4.6-2
-Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Version: 2.4.6-3
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +BUILD_NLS:libiconv-full
 Conflicts: 
 Menu-Depends: 
 Provides: 

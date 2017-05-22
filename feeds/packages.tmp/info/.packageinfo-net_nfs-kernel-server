@@ -1,7 +1,7 @@
 Source-Makefile: feeds/packages/net/nfs-kernel-server/Makefile
 Package: nfs-kernel-server
 Submenu: Filesystem
-Version: 1.3.2-2
+Version: 1.3.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libwrap +libblkid +libuuid +librpc +kmod-fs-nfsd +kmod-fs-nfs +portmap
 Conflicts: 
 Menu-Depends: 
@@ -21,7 +21,7 @@ Peter Wagner <tripolar@gmx.at>
 
 Package: nfs-kernel-server-utils
 Submenu: Filesystem
-Version: 1.3.2-2
+Version: 1.3.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread nfs-kernel-server
 Conflicts: 
 Menu-Depends: 
@@ -41,7 +41,7 @@ Peter Wagner <tripolar@gmx.at>
 
 Package: nfs-utils
 Submenu: Filesystem
-Version: 1.3.2-2
+Version: 1.3.2-3
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libwrap +libblkid +libuuid +librpc +libevent +USE_UCLIBC:librpc
 Conflicts: 
 Menu-Depends: 
