@@ -1,3 +1,5 @@
+# This repository is deprecated, go to: https://github.com/dptechnics/DPT-Board-OS2
+
 DPT-Board-OS
 ============
 
